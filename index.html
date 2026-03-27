@@ -2,109 +2,717 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aevar Amundinusarson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aevar Oefjoerd — Controls & Robotics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --cream: #faf7f2;
+      --beige: #f0ead8;
+      --beige-mid: #e8dfc8;
+      --beige-dark: #d4c9ad;
+      --sand: #c9ba98;
+      --warm-brown: #6b5c3e;
+      --dark-brown: #3a2e1e;
+      --ink: #1a1510;
+      --accent: #8b6914;
+      --accent-light: #b8942a;
+      --muted: #8a7d68;
+      --rule: #d4c9ad;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f4;
-      color: #1f2937;
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(ellipse at 10% 0%, rgba(212,201,173,0.35) 0%, transparent 55%),
+        radial-gradient(ellipse at 90% 100%, rgba(200,186,152,0.25) 0%, transparent 50%);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+
+    .page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 48px 100px;
     }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 5px;
+
+    @media (max-width: 640px) {
+      .page { padding: 40px 24px 80px; }
     }
-    h2 {
-      margin-top: 40px;
-      font-size: 24px;
+
+    /* HEADER */
+    .header {
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards;
     }
-    .subtitle {
-      color: #065f46;
-      font-weight: bold;
-      font-size: 20px;
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
     }
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.6rem, 6vw, 3.8rem);
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+      color: var(--dark-brown);
     }
-    .skills span {
-      display: inline-block;
-      background: #ecfdf5;
-      color: #065f46;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 999px;
-      font-size: 14px;
+
+    .name span {
+      display: block;
+      font-size: 0.38em;
+      font-weight: 400;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 6px;
+      font-family: 'Jost', sans-serif;
     }
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 16px;
-      background: #065f46;
-      color: white;
+
+    .contact-block {
+      text-align: right;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-block a {
+      color: var(--accent);
       text-decoration: none;
-      border-radius: 8px;
-      margin-right: 10px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .contact-block a:hover { border-color: var(--accent-light); }
+
+    .header-rule {
+      height: 1px;
+      background: linear-gradient(to right, var(--beige-dark), var(--sand), var(--beige-dark));
+      margin-bottom: 24px;
+    }
+
+    .summary {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--warm-brown);
+      line-height: 1.75;
+      max-width: 720px;
+      border-left: 2px solid var(--sand);
+      padding-left: 20px;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .section:nth-child(2)  { animation-delay: 0.10s; }
+    .section:nth-child(3)  { animation-delay: 0.18s; }
+    .section:nth-child(4)  { animation-delay: 0.26s; }
+    .section:nth-child(5)  { animation-delay: 0.34s; }
+    .section:nth-child(6)  { animation-delay: 0.42s; }
+    .section:nth-child(7)  { animation-delay: 0.50s; }
+    .section:nth-child(8)  { animation-delay: 0.58s; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* EDUCATION */
+    .edu-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2px 20px;
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--beige);
+    }
+    .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .edu-school {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--dark-brown);
+      letter-spacing: 0.01em;
+    }
+
+    .edu-dates {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: right;
+      padding-top: 3px;
+    }
+
+    .edu-degree {
+      font-size: 0.85rem;
+      color: var(--muted);
+      grid-column: 1;
+    }
+
+    .edu-gpa {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--accent);
+      text-align: right;
+    }
+
+    .edu-note {
+      grid-column: 1 / -1;
+      font-style: italic;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--beige);
+    }
+    .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .exp-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 4px 16px;
+      margin-bottom: 10px;
+    }
+
+    .exp-company {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--dark-brown);
+    }
+
+    .exp-location {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: right;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .exp-title {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    .exp-dates {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.70rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* PROJECTS */
+    .project-item {
+      margin-bottom: 12px;
+      padding: 18px 22px;
+      background: var(--beige);
+      border-radius: 4px;
+      border-left: 3px solid var(--sand);
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .project-item:hover {
+      border-color: var(--accent);
+      background: var(--beige-mid);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .project-title {
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--dark-brown);
+    }
+
+    .project-title a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      margin-left: 10px;
+      border-bottom: 1px solid var(--sand);
+      transition: border-color 0.2s;
+    }
+    .project-title a:hover { border-color: var(--accent); }
+
+    .project-dates {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* BULLETS */
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.bullets li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 0.845rem;
+      color: var(--ink);
+      margin-bottom: 5px;
+      line-height: 1.65;
+    }
+
+    ul.bullets li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--sand);
+      font-weight: 300;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 560px) { .skills-grid { grid-template-columns: 1fr; } }
+
+    .skill-row {
+      display: flex;
+      flex-direction: column;
+      padding: 12px 16px;
+      background: var(--beige);
+      border-radius: 4px;
+      border: 1px solid var(--beige-dark);
+    }
+
+    .skill-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .skill-value {
+      font-size: 0.82rem;
+      color: var(--warm-brown);
+      line-height: 1.5;
+    }
+
+    /* CERTS */
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cert-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      color: var(--warm-brown);
+      background: var(--beige);
+      border: 1px solid var(--beige-dark);
+      border-radius: 2px;
+      padding: 5px 13px;
+    }
+
+    /* LEADERSHIP */
+    .leadership-list { display: flex; flex-direction: column; gap: 7px; }
+
+    .leadership-item {
+      font-size: 0.855rem;
+      color: var(--ink);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .leadership-item::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--sand);
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-links { display: flex; gap: 20px; }
+
+    .footer-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.63rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .footer-links a:hover { border-color: var(--accent); }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* PRINT */
+    @media print {
+      body { background: #fff; }
+      .page { padding: 20px 32px; }
+      .section, .header { opacity: 1; animation: none; }
+      .project-item:hover { background: var(--beige); border-color: var(--sand); }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
+<div class="page">
 
-    <h1>Aevar Amundinusarson</h1>
-    <div class="subtitle">
-      M.S. Mechanical Engineer — Robotics, Controls, Autonomous Systems
-    </div>
-
-    <p>
-      I design and build engineering systems that move from analytical models to physical deployment. My work combines control theory, mechanical design, simulation, and hardware validation.
-    </p>
-
-    <a class="button" href="mailto:ofjord99@gmail.com">Email</a>
-    <a class="button" href="https://www.linkedin.com/in/aevaroefjoerd/" target="_blank">LinkedIn</a>
-
-    <div class="card">
-      <h2>Highlights</h2>
-      <ul>
-        <li>Developed MPC-based control system for a 2D inspection satellite</li>
-        <li>Achieved real-time control (~60 ms loop, ~4.6 ms solve time)</li>
-        <li>Built asset and maintenance system for 20+ facilities</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>MPC</span>
-        <span>Robotics</span>
-        <span>Python</span>
-        <span>MATLAB</span>
-        <span>Fusion 360</span>
-        <span>SolidWorks</span>
-        <span>Optimization</span>
-        <span>System Design</span>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <div class="name">
+        Aevar Oefjoerd
+        <span>Controls &amp; Robotics Engineer</span>
+      </div>
+      <div class="contact-block">
+        Plainfield, IL &nbsp;·&nbsp; (812) 204-6919<br>
+        <a href="mailto:ofjord99@gmail.com">ofjord99@gmail.com</a><br>
+        <a href="https://linkedin.com/in/aevaroefjoerd" target="_blank">linkedin.com/in/aevaroefjoerd</a><br>
+        <a href="https://github.com/AevarOfjord" target="_blank">github.com/AevarOfjord</a>
       </div>
     </div>
+    <div class="header-rule"></div>
+    <p class="summary">
+      Controls and Robotics Engineer with an M.S. in Mechanical Engineering, specializing in real-time MPC,
+      constrained optimization, and simulation-to-hardware deployment for autonomous systems. Designed and
+      deployed a hardware-validated inspection satellite platform achieving 0.024&nbsp;m position error and
+      0.51° attitude error at 16.7&nbsp;Hz under binary thruster constraints. Leverages AI-assisted
+      development workflows (Claude, Codex) to accelerate system design, testing, and iteration while
+      maintaining full engineering ownership.
+    </p>
+  </header>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>2D Inspection Satellite:</strong> MPC + hardware validation</li>
-        <li><strong>Robotic Arm:</strong> AI + embedded control system</li>
-        <li><strong>Lava Rock System:</strong> sustainable mechanical design</li>
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Education</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">University of Kentucky</div>
+      <div class="edu-dates">Aug 2024 – Dec 2025</div>
+      <div class="edu-degree">M.Sc. Mechanical Engineering</div>
+      <div class="edu-gpa">GPA 3.63</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">University of Southern Indiana</div>
+      <div class="edu-dates">Aug 2020 – May 2024</div>
+      <div class="edu-degree">B.Sc. Mechanical Engineering</div>
+      <div></div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">University of Iceland</div>
+      <div class="edu-dates">2019 – 2020</div>
+      <div class="edu-degree">B.Sc. Civil Engineering (Incomplete)</div>
+      <div></div>
+      <div class="edu-note">Transferred to USI on athletic scholarship to pursue Mechanical Engineering</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Certifications &amp; Awards</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="cert-list">
+      <span class="cert-tag">LEED Green Associate</span>
+      <span class="cert-tag">Academic Honor Roll — Spring &amp; Fall 2023, Spring 2024</span>
+      <span class="cert-tag">OVC Commissioner's Honor Roll — Fall 2023–Spring 2024</span>
+      <span class="cert-tag">Academic All-GLVC — Fall 2021–Spring 2022</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Experience</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Blue Lagoon Iceland</div>
+        <div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Maintenance Software Specialist <em style="color:var(--muted);font-size:0.8rem">(Contractor)</em></div>
+        <div class="exp-dates">Jul – Aug 2025</div>
+      </div>
+      <ul class="bullets">
+        <li>Led migration from legacy CMMS platform to MaintainX across 20+ facilities, building asset hierarchies and preventive maintenance workflows aligned with operational requirements</li>
+        <li>Standardized maintenance processes facility-wide, delivering a streamlined platform with improved scheduling efficiency and documentation consistency</li>
       </ul>
     </div>
 
-  </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">University of Kentucky</div>
+        <div class="exp-location">Lexington, KY</div>
+        <div class="exp-title">Graduate Research Assistant</div>
+        <div class="exp-dates">Jan – Aug 2025</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and built a planar inspection satellite testbed with 8 binary solenoid thrusters and air-bearing platform, serving as the primary hardware validation environment for thesis research</li>
+        <li>Developed a real-time MPC controller (MIQP, Gurobi) for trajectory tracking at 16.7&nbsp;Hz, achieving 0.024&nbsp;m position error and 0.51° attitude error on physical hardware</li>
+        <li>Built simulation-to-hardware pipeline (digital twin) with &lt;2% deviation in thruster usage, validating controller performance across sim and physical system</li>
+        <li>Developed simulation, visualization, and data logging tools in Python for rapid controller testing and hardware-in-the-loop validation</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">University of Kentucky</div>
+        <div class="exp-location">Lexington, KY</div>
+        <div class="exp-title">Teaching Assistant — Machine Design</div>
+        <div class="exp-dates">Aug – Dec 2024</div>
+      </div>
+      <ul class="bullets">
+        <li>Provided technical feedback on stress analysis, failure criteria, fatigue, fracture, and component design for undergraduate Machine Design coursework</li>
+        <li>Held office hours assisting students through complex mechanical design problem sets and exam preparation</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Blue Lagoon Iceland</div>
+        <div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Project Manager <em style="color:var(--muted);font-size:0.8rem">(Part Time)</em></div>
+        <div class="exp-dates">May 2022 – Jan 2025</div>
+      </div>
+      <ul class="bullets">
+        <li>Managed facility maintenance programs across geothermal spa operations, coordinating vendors, contractors, and internal teams</li>
+        <li>Delivered projects on time under severe operational constraints, including sustained execution during the 2023 Grindavík volcanic crisis with zero loss of critical systems</li>
+        <li>Led planning meetings, defined project requirements, and tracked execution across concurrent workstreams</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <div class="exp-company">Blue Lagoon Iceland</div>
+        <div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Maintenance Technician <em style="color:var(--muted);font-size:0.8rem">(Part Time)</em></div>
+        <div class="exp-dates">May 2017 – May 2022</div>
+      </div>
+      <ul class="bullets">
+        <li>Performed preventive and corrective maintenance on mechanical, pneumatic, and fluid systems across geothermal spa facilities</li>
+        <li>Diagnosed and repaired equipment failures, maintaining service records across 20+ facility assets</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Projects</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">3D MPC-Based Inspection Satellite Simulation (Thrusters + Reaction Wheels)</div>
+        <div class="project-dates">Jan – Mar 2026</div>
+      </div>
+      <ul class="bullets">
+        <li>Extended planar testbed architecture into full 6-DOF motion with coupled position and attitude control using MPC</li>
+        <li>Integrated thruster-based translation with reaction wheel-based attitude control in a unified architecture</li>
+        <li>Built browser-based Mission Studio for trajectory design and mission configuration</li>
+        <li>Developed simulation, visualization, and telemetry tools; implemented automated sweeps for control interval and horizon tuning</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">
+          Nonlinear MPC for Multi-Link Inverted Pendulum
+          <a href="https://github.com/AevarOfjord/Inverted-Pendulum" target="_blank">↗ github</a>
+        </div>
+        <div class="project-dates">Mar 2026</div>
+      </div>
+      <ul class="bullets">
+        <li>Developed a nonlinear MPC framework (acados/CasADi, HPIPM backend) to swing up and stabilize 1–8 linked inverted pendulums using a unified controller architecture</li>
+        <li>Achieved real-time feasibility for 1–5 link systems (avg solve &lt;5&nbsp;ms at 30–70&nbsp;ms control intervals); demonstrated convergence for 6–7 links beyond deadline-safe margins</li>
+        <li>Built dual Python/C++ runtime reusing acados-generated solver artifacts; tuned weights via CMA-ES and systematic horizon/interval sweeps</li>
+        <li>Evaluated SQP_RTI vs full SQP solver trade-offs across link counts, documenting performance scaling up to 8-DOF systems</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">2D MPC-Controlled Inspection Satellite (Thesis)</div>
+        <div class="project-dates">Jan – Nov 2025</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed and built a planar inspection satellite with 8 binary thrusters and air-bearing system</li>
+        <li>Developed real-time MPC (MIQP, Gurobi) at 16.7&nbsp;Hz; achieved 0.024&nbsp;m position error and 0.51° attitude error on physical hardware</li>
+        <li>Built digital twin with &lt;2% thruster deviation; integrated OptiTrack motion capture for closed-loop state estimation</li>
+        <li>Designed full system: mechanical structure, embedded control (ESP32), and software stack (Python/C++)</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">3D Printed Robotic Arm</div>
+        <div class="project-dates">In Progress</div>
+      </div>
+      <ul class="bullets">
+        <li>Designing a 5-DOF robotic arm with vision-based object detection and autonomous path planning</li>
+        <li>Developing Python-based control interface for real-time feedback and system control</li>
+      </ul>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">Undergraduate Capstone — Lava Rock Processing System</div>
+        <div class="project-dates">Jan – Apr 2024</div>
+      </div>
+      <ul class="bullets">
+        <li>Designed machinery for processing volcanic lava rock into commercial materials; performed structural and force analysis in SolidWorks</li>
+        <li>Built and tested a scaled functional prototype using 3D printing and real material samples</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Skills</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Control &amp; Optimization</span>
+        <span class="skill-value">MPC, NMPC, MILP/MIQP, CMA-ES, Gurobi, acados (HPIPM), CasADi</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Programming</span>
+        <span class="skill-value">Python, C++, MATLAB, R, pybind11, Eigen</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Robotics &amp; Autonomy</span>
+        <span class="skill-value">State Estimation, Trajectory Planning, Hardware-in-the-Loop, Real-Time Systems, OptiTrack</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Embedded Systems</span>
+        <span class="skill-value">ESP32, ESP-NOW, Arduino, Raspberry Pi</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">CAD &amp; Design</span>
+        <span class="skill-value">SolidWorks, Fusion 360, 3D Printing</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">AI-Assisted Engineering</span>
+        <span class="skill-value">LLM-accelerated development (Claude, Codex) for prototyping, architecture design, and debugging</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Tools &amp; Other</span>
+        <span class="skill-value">Git, LaTeX, RMarkdown, Microsoft Word, Microsoft Excel, LEED Green Associate</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-label">Leadership &amp; Activities</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="leadership-list">
+      <div class="leadership-item">NCAA Division I Varsity Soccer — University of Southern Indiana (2020–2024)</div>
+      <div class="leadership-item">Senior Team Player — Grindavík (2017–2019, 2020–2023) and Víðir (2019) Football Clubs, Iceland</div>
+      <div class="leadership-item">Volunteer Soccer Referee — Ungmennafélag Grindavíkur, Iceland (2014–2020)</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-note">AEVAR OEFJOERD &nbsp;·&nbsp; CONTROLS &amp; ROBOTICS ENGINEER &nbsp;·&nbsp; 2026</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/aevaroefjoerd" target="_blank">LinkedIn</a>
+      <a href="https://github.com/AevarOfjord" target="_blank">GitHub</a>
+      <a href="mailto:ofjord99@gmail.com">Email</a>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
