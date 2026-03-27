@@ -6,35 +6,33 @@
   <title>Aevar Oefjoerd — Controls & Robotics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --cream: #faf7f2;
-      --beige: #f0ead8;
-      --beige-mid: #e8dfc8;
-      --beige-dark: #d4c9ad;
-      --sand: #c9ba98;
-      --warm-brown: #6b5c3e;
-      --dark-brown: #3a2e1e;
-      --ink: #1a1510;
-      --accent: #8b6914;
-      --accent-light: #b8942a;
-      --muted: #8a7d68;
-      --rule: #d4c9ad;
+      --bg:         #F5F5EE;
+      --surface:    #EDEDЕ5;
+      --surface:    #EEEEE6;
+      --surface2:   #E5E5DC;
+      --border:     #D6D6CA;
+      --border2:    #C4C4B4;
+      --ink:        #1A1A1A;
+      --ink2:       #3A3A32;
+      --muted:      #6A6A5E;
+      --muted2:     #98988A;
+      --accent-warm:#7A6020;
+      --rule:       #CCCCBE;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--cream);
-      background-image:
-        radial-gradient(ellipse at 10% 0%, rgba(212,201,173,0.35) 0%, transparent 55%),
-        radial-gradient(ellipse at 90% 100%, rgba(200,186,152,0.25) 0%, transparent 50%);
+      background-color: var(--bg);
       color: var(--ink);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
+      font-family: 'General Sans', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
       line-height: 1.7;
       min-height: 100vh;
     }
@@ -42,18 +40,15 @@
     .page {
       max-width: 860px;
       margin: 0 auto;
-      padding: 64px 48px 100px;
+      padding: 72px 48px 100px;
     }
-
-    @media (max-width: 640px) {
-      .page { padding: 40px 24px 80px; }
-    }
+    @media (max-width: 640px) { .page { padding: 40px 24px 80px; } }
 
     /* HEADER */
     .header {
-      margin-bottom: 52px;
+      margin-bottom: 56px;
       opacity: 0;
-      animation: fadeUp 0.9s ease forwards;
+      animation: fadeUp 0.8s ease forwards;
     }
 
     .header-top {
@@ -62,153 +57,119 @@
       align-items: flex-end;
       flex-wrap: wrap;
       gap: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .name {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
-      font-size: clamp(2.6rem, 6vw, 3.8rem);
-      letter-spacing: 0.02em;
-      line-height: 1.05;
-      color: var(--dark-brown);
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      letter-spacing: 0.01em;
+      line-height: 1.0;
+      color: var(--ink);
     }
 
     .name span {
       display: block;
-      font-size: 0.38em;
+      font-family: 'General Sans', sans-serif;
+      font-size: 0.29em;
       font-weight: 400;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-top: 6px;
-      font-family: 'Jost', sans-serif;
+      color: var(--muted);
+      margin-top: 10px;
     }
 
     .contact-block {
       text-align: right;
       font-size: 0.78rem;
       color: var(--muted);
-      line-height: 1.9;
-      letter-spacing: 0.03em;
+      line-height: 2;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
     }
 
     .contact-block a {
-      color: var(--accent);
+      color: var(--ink2);
       text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
     }
-    .contact-block a:hover { border-color: var(--accent-light); }
+    .contact-block a:hover { color: var(--ink); border-color: var(--ink); }
 
     .header-rule {
       height: 1px;
-      background: linear-gradient(to right, var(--beige-dark), var(--sand), var(--beige-dark));
-      margin-bottom: 24px;
+      background: var(--rule);
+      margin-bottom: 28px;
     }
 
     .summary {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 300;
       font-style: italic;
-      color: var(--warm-brown);
-      line-height: 1.75;
-      max-width: 720px;
-      border-left: 2px solid var(--sand);
+      color: var(--ink2);
+      line-height: 1.8;
+      max-width: 740px;
       padding-left: 20px;
+      border-left: 2px solid var(--border2);
     }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 44px;
+      margin-bottom: 48px;
       opacity: 0;
-      animation: fadeUp 0.8s ease forwards;
+      animation: fadeUp 0.7s ease forwards;
     }
-
-    .section:nth-child(2)  { animation-delay: 0.10s; }
-    .section:nth-child(3)  { animation-delay: 0.18s; }
-    .section:nth-child(4)  { animation-delay: 0.26s; }
-    .section:nth-child(5)  { animation-delay: 0.34s; }
-    .section:nth-child(6)  { animation-delay: 0.42s; }
-    .section:nth-child(7)  { animation-delay: 0.50s; }
-    .section:nth-child(8)  { animation-delay: 0.58s; }
+    .section:nth-child(2) { animation-delay: 0.08s; }
+    .section:nth-child(3) { animation-delay: 0.14s; }
+    .section:nth-child(4) { animation-delay: 0.20s; }
+    .section:nth-child(5) { animation-delay: 0.26s; }
+    .section:nth-child(6) { animation-delay: 0.32s; }
+    .section:nth-child(7) { animation-delay: 0.38s; }
+    .section:nth-child(8) { animation-delay: 0.44s; }
 
     .section-header {
       display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .section-label {
       font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.63rem;
       font-weight: 500;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--muted);
       white-space: nowrap;
     }
 
-    .section-line {
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
+    .section-line { flex: 1; height: 1px; background: var(--rule); }
 
     /* EDUCATION */
     .edu-item {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 2px 20px;
-      margin-bottom: 18px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--beige);
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--surface2);
     }
     .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-    .edu-school {
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--dark-brown);
-      letter-spacing: 0.01em;
-    }
-
-    .edu-dates {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--muted);
-      text-align: right;
-      padding-top: 3px;
-    }
-
-    .edu-degree {
-      font-size: 0.85rem;
-      color: var(--muted);
-      grid-column: 1;
-    }
-
-    .edu-gpa {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--accent);
-      text-align: right;
-    }
-
-    .edu-note {
-      grid-column: 1 / -1;
-      font-style: italic;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 3px;
-    }
+    .edu-school { font-weight: 500; font-size: 0.92rem; color: var(--ink); }
+    .edu-dates  { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--muted2); text-align: right; padding-top: 3px; }
+    .edu-degree { font-size: 0.84rem; color: var(--muted); grid-column: 1; }
+    .edu-gpa    { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--accent-warm); text-align: right; }
+    .edu-note   { grid-column: 1 / -1; font-style: italic; font-size: 0.79rem; color: var(--muted2); margin-top: 3px; }
 
     /* EXPERIENCE */
     .exp-item {
-      margin-bottom: 28px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid var(--beige);
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--surface2);
     }
     .exp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
@@ -216,49 +177,25 @@
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: baseline;
-      gap: 4px 16px;
+      gap: 3px 16px;
       margin-bottom: 10px;
     }
 
-    .exp-company {
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--dark-brown);
-    }
-
-    .exp-location {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: right;
-      font-family: 'DM Mono', monospace;
-    }
-
-    .exp-title {
-      font-style: italic;
-      font-size: 0.85rem;
-      color: var(--accent);
-    }
-
-    .exp-dates {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.70rem;
-      color: var(--muted);
-      text-align: right;
-    }
+    .exp-company  { font-weight: 500; font-size: 0.92rem; color: var(--ink); }
+    .exp-location { font-family: 'DM Mono', monospace; font-size: 0.66rem; color: var(--muted2); text-align: right; }
+    .exp-title    { font-size: 0.84rem; color: var(--muted); font-style: italic; }
+    .exp-dates    { font-family: 'DM Mono', monospace; font-size: 0.66rem; color: var(--muted2); text-align: right; }
 
     /* PROJECTS */
     .project-item {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       padding: 18px 22px;
-      background: var(--beige);
-      border-radius: 4px;
-      border-left: 3px solid var(--sand);
-      transition: border-color 0.25s, background 0.25s;
+      background: var(--surface);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
     }
-    .project-item:hover {
-      border-color: var(--accent);
-      background: var(--beige-mid);
-    }
+    .project-item:hover { background: var(--surface2); border-color: var(--border2); }
 
     .project-header {
       display: flex;
@@ -269,42 +206,29 @@
       margin-bottom: 10px;
     }
 
-    .project-title {
-      font-weight: 500;
-      font-size: 0.92rem;
-      color: var(--dark-brown);
-    }
+    .project-title { font-weight: 500; font-size: 0.89rem; color: var(--ink); }
 
     .project-title a {
-      color: var(--accent);
+      color: var(--muted);
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.70rem;
       font-family: 'DM Mono', monospace;
       margin-left: 10px;
-      border-bottom: 1px solid var(--sand);
-      transition: border-color 0.2s;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
     }
-    .project-title a:hover { border-color: var(--accent); }
+    .project-title a:hover { color: var(--ink); border-color: var(--ink); }
 
-    .project-dates {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--muted);
-      white-space: nowrap;
-    }
+    .project-dates { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted2); white-space: nowrap; }
 
     /* BULLETS */
-    ul.bullets {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+    ul.bullets { list-style: none; padding: 0; margin: 0; }
 
     ul.bullets li {
       position: relative;
       padding-left: 16px;
-      font-size: 0.845rem;
-      color: var(--ink);
+      font-size: 0.84rem;
+      color: var(--ink2);
       margin-bottom: 5px;
       line-height: 1.65;
     }
@@ -313,58 +237,45 @@
       content: "—";
       position: absolute;
       left: 0;
-      color: var(--sand);
+      color: var(--muted2);
       font-weight: 300;
     }
 
     /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 560px) { .skills-grid { grid-template-columns: 1fr; } }
 
     .skill-row {
       display: flex;
       flex-direction: column;
-      padding: 12px 16px;
-      background: var(--beige);
-      border-radius: 4px;
-      border: 1px solid var(--beige-dark);
+      padding: 13px 16px;
+      background: var(--surface);
+      border-radius: 6px;
+      border: 1px solid var(--border);
     }
 
     .skill-label {
       font-family: 'DM Mono', monospace;
-      font-size: 0.63rem;
-      letter-spacing: 0.12em;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 4px;
+      color: var(--muted);
+      margin-bottom: 5px;
     }
 
-    .skill-value {
-      font-size: 0.82rem;
-      color: var(--warm-brown);
-      line-height: 1.5;
-    }
+    .skill-value { font-size: 0.81rem; color: var(--ink2); line-height: 1.5; }
 
     /* CERTS */
-    .cert-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    .cert-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
     .cert-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
-      color: var(--warm-brown);
-      background: var(--beige);
-      border: 1px solid var(--beige-dark);
-      border-radius: 2px;
+      font-size: 0.66rem;
+      letter-spacing: 0.02em;
+      color: var(--ink2);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
       padding: 5px 13px;
     }
 
@@ -372,22 +283,17 @@
     .leadership-list { display: flex; flex-direction: column; gap: 7px; }
 
     .leadership-item {
-      font-size: 0.855rem;
-      color: var(--ink);
+      font-size: 0.84rem;
+      color: var(--ink2);
       padding-left: 16px;
       position: relative;
       line-height: 1.6;
     }
-    .leadership-item::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: var(--sand);
-    }
+    .leadership-item::before { content: "—"; position: absolute; left: 0; color: var(--muted2); }
 
     /* FOOTER */
     .footer {
-      margin-top: 64px;
+      margin-top: 72px;
       padding-top: 24px;
       border-top: 1px solid var(--rule);
       display: flex;
@@ -397,45 +303,35 @@
       gap: 12px;
     }
 
-    .footer-note {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.63rem;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-    }
-
+    .footer-note { font-family: 'DM Mono', monospace; font-size: 0.58rem; color: var(--muted2); letter-spacing: 0.1em; }
     .footer-links { display: flex; gap: 20px; }
 
     .footer-links a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.63rem;
-      color: var(--accent);
+      font-size: 0.58rem;
+      color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.06em;
       border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
+      transition: color 0.2s, border-color 0.2s;
     }
-    .footer-links a:hover { border-color: var(--accent); }
+    .footer-links a:hover { color: var(--ink); border-color: var(--ink); }
 
-    /* ANIMATION */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
+      from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* PRINT */
     @media print {
       body { background: #fff; }
       .page { padding: 20px 32px; }
       .section, .header { opacity: 1; animation: none; }
-      .project-item:hover { background: var(--beige); border-color: var(--sand); }
     }
   </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- HEADER -->
   <header class="header">
     <div class="header-top">
       <div class="name">
@@ -460,42 +356,25 @@
     </p>
   </header>
 
-  <!-- EDUCATION -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Education</span>
-      <div class="section-line"></div>
-    </div>
-
+    <div class="section-header"><span class="section-label">Education</span><div class="section-line"></div></div>
     <div class="edu-item">
-      <div class="edu-school">University of Kentucky</div>
-      <div class="edu-dates">Aug 2024 – Dec 2025</div>
-      <div class="edu-degree">M.Sc. Mechanical Engineering</div>
-      <div class="edu-gpa">GPA 3.63</div>
+      <div class="edu-school">University of Kentucky</div><div class="edu-dates">Aug 2024 – Dec 2025</div>
+      <div class="edu-degree">M.Sc. Mechanical Engineering</div><div class="edu-gpa">GPA 3.63</div>
     </div>
-
     <div class="edu-item">
-      <div class="edu-school">University of Southern Indiana</div>
-      <div class="edu-dates">Aug 2020 – May 2024</div>
-      <div class="edu-degree">B.Sc. Mechanical Engineering</div>
-      <div></div>
+      <div class="edu-school">University of Southern Indiana</div><div class="edu-dates">Aug 2020 – May 2024</div>
+      <div class="edu-degree">B.Sc. Mechanical Engineering</div><div></div>
     </div>
-
     <div class="edu-item">
-      <div class="edu-school">University of Iceland</div>
-      <div class="edu-dates">2019 – 2020</div>
-      <div class="edu-degree">B.Sc. Civil Engineering (Incomplete)</div>
-      <div></div>
+      <div class="edu-school">University of Iceland</div><div class="edu-dates">2019 – 2020</div>
+      <div class="edu-degree">B.Sc. Civil Engineering (Incomplete)</div><div></div>
       <div class="edu-note">Transferred to USI on athletic scholarship</div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Certifications &amp; Awards</span>
-      <div class="section-line"></div>
-    </div>
+    <div class="section-header"><span class="section-label">Certifications &amp; Awards</span><div class="section-line"></div></div>
     <div class="cert-list">
       <span class="cert-tag">LEED Green Associate</span>
       <span class="cert-tag">Academic Honor Roll — Spring &amp; Fall 2023, Spring 2024</span>
@@ -504,18 +383,13 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Experience</span>
-      <div class="section-line"></div>
-    </div>
+    <div class="section-header"><span class="section-label">Experience</span><div class="section-line"></div></div>
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-company">Blue Lagoon Iceland</div>
-        <div class="exp-location">Grindavík, Iceland</div>
-        <div class="exp-title">Maintenance Software Specialist <em style="color:var(--muted);font-size:0.8rem">(Contractor)</em></div>
+        <div class="exp-company">Blue Lagoon Iceland</div><div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Maintenance Software Specialist <em style="color:var(--muted2);font-size:0.8rem">(Contractor)</em></div>
         <div class="exp-dates">Jul – Aug 2025</div>
       </div>
       <ul class="bullets">
@@ -526,10 +400,8 @@
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-company">University of Kentucky</div>
-        <div class="exp-location">Lexington, KY</div>
-        <div class="exp-title">Graduate Research Assistant</div>
-        <div class="exp-dates">Jan – Aug 2025</div>
+        <div class="exp-company">University of Kentucky</div><div class="exp-location">Lexington, KY</div>
+        <div class="exp-title">Graduate Research Assistant</div><div class="exp-dates">Jan – Aug 2025</div>
       </div>
       <ul class="bullets">
         <li>Designed and built a planar inspection satellite testbed with 8 binary solenoid thrusters and air-bearing platform, serving as the primary hardware validation environment for thesis research</li>
@@ -541,10 +413,8 @@
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-company">University of Kentucky</div>
-        <div class="exp-location">Lexington, KY</div>
-        <div class="exp-title">Teaching Assistant — Machine Design</div>
-        <div class="exp-dates">Aug – Dec 2024</div>
+        <div class="exp-company">University of Kentucky</div><div class="exp-location">Lexington, KY</div>
+        <div class="exp-title">Teaching Assistant — Machine Design</div><div class="exp-dates">Aug – Dec 2024</div>
       </div>
       <ul class="bullets">
         <li>Provided technical feedback on stress analysis, failure criteria, fatigue, fracture, and component design for undergraduate Machine Design coursework</li>
@@ -554,9 +424,8 @@
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-company">Blue Lagoon Iceland</div>
-        <div class="exp-location">Grindavík, Iceland</div>
-        <div class="exp-title">Project Manager <em style="color:var(--muted);font-size:0.8rem">(Part Time)</em></div>
+        <div class="exp-company">Blue Lagoon Iceland</div><div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Project Manager <em style="color:var(--muted2);font-size:0.8rem">(Part Time)</em></div>
         <div class="exp-dates">May 2022 – Jan 2025</div>
       </div>
       <ul class="bullets">
@@ -568,9 +437,8 @@
 
     <div class="exp-item">
       <div class="exp-header">
-        <div class="exp-company">Blue Lagoon Iceland</div>
-        <div class="exp-location">Grindavík, Iceland</div>
-        <div class="exp-title">Maintenance Technician <em style="color:var(--muted);font-size:0.8rem">(Part Time)</em></div>
+        <div class="exp-company">Blue Lagoon Iceland</div><div class="exp-location">Grindavík, Iceland</div>
+        <div class="exp-title">Maintenance Technician <em style="color:var(--muted2);font-size:0.8rem">(Part Time)</em></div>
         <div class="exp-dates">May 2017 – May 2022</div>
       </div>
       <ul class="bullets">
@@ -580,12 +448,8 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Projects</span>
-      <div class="section-line"></div>
-    </div>
+    <div class="section-header"><span class="section-label">Projects</span><div class="section-line"></div></div>
 
     <div class="project-item">
       <div class="project-header">
@@ -602,10 +466,7 @@
 
     <div class="project-item">
       <div class="project-header">
-        <div class="project-title">
-          Nonlinear MPC for Multi-Link Inverted Pendulum
-          <a href="https://github.com/AevarOfjord/Inverted-Pendulum" target="_blank">↗ github</a>
-        </div>
+        <div class="project-title">Nonlinear MPC for Multi-Link Inverted Pendulum <a href="https://github.com/AevarOfjord/Inverted-Pendulum" target="_blank">↗ github</a></div>
         <div class="project-dates">Mar 2026</div>
       </div>
       <ul class="bullets">
@@ -652,50 +513,21 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Skills</span>
-      <div class="section-line"></div>
-    </div>
+    <div class="section-header"><span class="section-label">Skills</span><div class="section-line"></div></div>
     <div class="skills-grid">
-      <div class="skill-row">
-        <span class="skill-label">Control &amp; Optimization</span>
-        <span class="skill-value">MPC, NMPC, MILP/MIQP, CMA-ES, Gurobi, acados (HPIPM), CasADi</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Programming</span>
-        <span class="skill-value">Python, C++, MATLAB, R, pybind11, Eigen</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Robotics &amp; Autonomy</span>
-        <span class="skill-value">State Estimation, Trajectory Planning, Hardware-in-the-Loop, Real-Time Systems, OptiTrack</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Embedded Systems</span>
-        <span class="skill-value">ESP32, ESP-NOW, Arduino, Raspberry Pi</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">CAD &amp; Design</span>
-        <span class="skill-value">SolidWorks, Fusion 360, 3D Printing</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">AI-Assisted Engineering</span>
-        <span class="skill-value">LLM-accelerated development (Claude, Codex) for prototyping, architecture design, and debugging</span>
-      </div>
-      <div class="skill-row">
-        <span class="skill-label">Tools &amp; Other</span>
-        <span class="skill-value">Git, LaTeX, RMarkdown, Microsoft Word, Microsoft Excel, LEED Green Associate</span>
-      </div>
+      <div class="skill-row"><span class="skill-label">Control &amp; Optimization</span><span class="skill-value">MPC, NMPC, MILP/MIQP, CMA-ES, Gurobi, acados (HPIPM), CasADi</span></div>
+      <div class="skill-row"><span class="skill-label">Programming</span><span class="skill-value">Python, C++, MATLAB, R, pybind11, Eigen</span></div>
+      <div class="skill-row"><span class="skill-label">Robotics &amp; Autonomy</span><span class="skill-value">State Estimation, Trajectory Planning, Hardware-in-the-Loop, Real-Time Systems, OptiTrack</span></div>
+      <div class="skill-row"><span class="skill-label">Embedded Systems</span><span class="skill-value">ESP32, ESP-NOW, Arduino, Raspberry Pi</span></div>
+      <div class="skill-row"><span class="skill-label">CAD &amp; Design</span><span class="skill-value">SolidWorks, Fusion 360, 3D Printing</span></div>
+      <div class="skill-row"><span class="skill-label">AI-Assisted Engineering</span><span class="skill-value">LLM-accelerated development (Claude, Codex) for prototyping, architecture design, and debugging</span></div>
+      <div class="skill-row"><span class="skill-label">Tools &amp; Other</span><span class="skill-value">Git, LaTeX, RMarkdown, Microsoft Word, Microsoft Excel, LEED Green Associate</span></div>
     </div>
   </section>
 
-  <!-- LEADERSHIP -->
   <section class="section">
-    <div class="section-header">
-      <span class="section-label">Leadership &amp; Activities</span>
-      <div class="section-line"></div>
-    </div>
+    <div class="section-header"><span class="section-label">Leadership &amp; Activities</span><div class="section-line"></div></div>
     <div class="leadership-list">
       <div class="leadership-item">NCAA Division I Varsity Soccer — University of Southern Indiana (2020–2024)</div>
       <div class="leadership-item">Senior Team Player — Grindavík (2017–2019, 2020–2023) and Víðir (2019) Soccer Clubs, Iceland</div>
@@ -703,7 +535,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <span class="footer-note">AEVAR OEFJOERD &nbsp;·&nbsp; CONTROLS &amp; ROBOTICS ENGINEER &nbsp;·&nbsp; 2026</span>
     <div class="footer-links">
