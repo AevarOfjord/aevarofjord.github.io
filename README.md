@@ -12,5 +12,5 @@ Then open `http://localhost:8080`.
 
 - `index.html` — portfolio
 - `styles.css` — layout and print styles
-- `fonts/` — self-hosted SIL Open Font License webfonts
+- `fonts/` — self-hosted SIL Open Font License webfonts (Geist and Instrument Serif)
 - `Aevar-Oefjoerd-Resume.pdf` — resume
