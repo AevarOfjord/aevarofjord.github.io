@@ -1,4 +1,4 @@
-# Ævar Öfjörð
+# Aevar Oefjoerd
 
 Personal site published with GitHub Pages from `main`. Static HTML and CSS — no build step.
 
