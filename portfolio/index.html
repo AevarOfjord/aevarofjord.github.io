@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planar CubeSat air-bearing testbed — Aevar Oefjoerd</title>
+  <meta name="description" content="Mechanical design portfolio: a planar CubeSat air-bearing testbed designed and built for simulation-to-hardware validation of mixed-integer MPC. M.S. thesis, University of Kentucky, 2025." />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#f6f6f4" />
+  <link rel="canonical" href="https://aevarofjord.github.io/portfolio/" />
+  <meta property="og:title" content="Planar CubeSat air-bearing testbed — Aevar Oefjoerd" />
+  <meta property="og:description" content="Mechanical design case study of a planar CubeSat air-bearing testbed: structure, pneumatics, electronics, design iterations, and hardware results." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aevarofjord.github.io/portfolio/" />
+  <meta property="og:image" content="https://aevarofjord.github.io/portfolio/assets/hero_0038.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="../fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/geist-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip" href="#overview">Skip to portfolio</a>
+  <div class="page case">
+    <nav class="nav" aria-label="Portfolio">
+      <a href="../">Resume</a>
+      <a href="#overview" aria-current="true">Overview</a>
+      <a href="#mechanical">Mechanical</a>
+      <a href="#pneumatics">Pneumatics</a>
+      <a href="#electronics">Electronics</a>
+      <a href="#iterations">Iterations</a>
+      <a href="#testing">Testing</a>
+    </nav>
+
+    <header class="hero case-hero">
+      <p class="kicker">Mechanical design portfolio</p>
+      <h1>Planar CubeSat air-bearing testbed</h1>
+      <p class="lede">A ground testbed for simulation-to-hardware validation of mixed&#8209;integer MPC on a binary&#8209;thruster free flyer.</p>
+      <p class="case-meta">M.S. thesis · University of Kentucky, 2025 · NASA KY EPSCoR</p>
+      <p class="links">
+        <a href="https://uknowledge.uky.edu/me_etds/250/">Thesis</a>
+        <a href="../files/Aevar_Ofjord_Portfolio.pdf" download>Download portfolio (PDF)</a>
+        <a href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">Project code</a>
+      </p>
+    </header>
+
+    <main>
+      <section id="overview">
+        <figure class="shot hero-shot">
+          <div class="frame">
+            <button type="button" class="zoom" aria-label="Enlarge image: Planar CubeSat testbed floating on a black epoxy floor">
+              <img
+                src="assets/hero_0038.jpg"
+                width="1620"
+                height="1060"
+                alt="Planar CubeSat testbed floating on a black epoxy floor"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </button>
+          </div>
+          <figcaption>Planar CubeSat testbed on the 6 × 6 m epoxy floor.</figcaption>
+        </figure>
+        <p class="enlarge-hint">Select an image to enlarge it.</p>
+
+        <div class="section-head"><h2>Overview &amp; role</h2></div>
+        <div class="split">
+          <div class="prose">
+            <p>Satellites that inspect or assemble hardware in orbit need precise, fuel-aware planar maneuvering, but that behavior is expensive to test in space. I designed and built a ground testbed that floats a cubic platform on three air bearings over an epoxy floor, giving near-frictionless translation in x–y and rotation about the vertical axis. I used the testbed to validate a mixed-integer model-predictive controller for eight binary cold-gas thrusters against a digital twin.</p>
+            <p>I designed and built the entire testbed myself — the mechanical structure, pneumatics, electronics, and the control and simulation software. Advisors provided guidance.</p>
+            <p>The work was supported in part by NASA KY EPSCoR and is documented in my M.S. thesis, <a href="https://uknowledge.uky.edu/me_etds/250/"><em>Simulation-to-Hardware Validation of MPC for Binary Thruster 2D CubeSat Control</em></a>.</p>
+          </div>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Assembled testbed with OptiTrack markers, Milwaukee M12 packs, and air-bearing plate">
+                <img
+                  src="assets/photo_build.jpg"
+                  width="1074"
+                  height="1800"
+                  alt="Assembled testbed with OptiTrack markers, Milwaukee M12 packs, and air-bearing plate"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            </div>
+            <figcaption>Assembled platform with OptiTrack markers. The air cylinder is removed in this photograph; the 3D-printed tank mount, wiring, and triangular bearing plate are visible.</figcaption>
+          </figure>
+        </div>
+
+        <dl class="spec-grid">
+          <div>
+            <dt>Body</dt>
+            <dd>290 × 290 × 150 mm</dd>
+          </div>
+          <div>
+            <dt>Porous-carbon air bearings</dt>
+            <dd>3 × 40 mm</dd>
+          </div>
+          <div>
+            <dt>Solenoid thrusters</dt>
+            <dd>8 binary, 12 V</dd>
+          </div>
+          <div>
+            <dt>40 ft³ cylinder, then dual legs</dt>
+            <dd>~2015 → 80 psi</dd>
+          </div>
+          <div>
+            <dt>Bearings / thrusters</dt>
+            <dd>~60 / ~40 psi</dd>
+          </div>
+          <div>
+            <dt>Mass · Fusion 360</dt>
+            <dd>~23 kg</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="mechanical">
+        <div class="section-head"><h2>Mechanical design</h2></div>
+        <h3>Structure, packaging, and air-bearing support</h3>
+        <div class="prose">
+          <p>The chassis is a 290 × 290 × 150 mm frame of 2020 aluminum extrusion, assembled with corner brackets and T-nuts. Two internal decks and four side panels are 3 mm 3D-printed PLA, fastened with brass heat-set inserts. Level 1 carries the pneumatic manifold; Level 2, 50 mm above, carries the solenoids and electronics — isolating tubing from wiring and leaving a clear perimeter for the thrusters.</p>
+          <p>A triangular 6061 aluminum plate under the chassis holds three 40 mm porous-carbon air bearings. Radial grooves machined at 0°, 120°, and −120° let each bearing slide for load balance.</p>
+          <p>I built the design in Autodesk Fusion 360 and used the model for packaging, interference checks, hole locations and tolerances, and to export thruster geometry into the digital twin.</p>
+        </div>
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled CAD of the triangular air-bearing plate">
+                <img src="assets/cad_bearings.jpg" width="2200" height="806" alt="Labeled CAD of the triangular air-bearing plate" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Air-bearing plate: 6061 aluminum sheet, three 40 mm bearings, 1-to-3 manifold, and machined radial adjustment grooves.</figcaption>
+          </figure>
+        </div>
+        <div class="fig-grid cols-2">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled three-view CAD of the complete assembled testbed">
+                <img src="assets/cad_assembly.jpg" width="2200" height="1119" alt="Labeled three-view CAD of the complete assembled testbed" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Complete assembly, three views. Cylinder, regulators, filter, shutoffs, M12 packs, chassis, and bearing plate.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled mechanical-platform montage of major subassemblies">
+                <img src="assets/cad_platform.jpg" width="2200" height="1198" alt="Labeled mechanical-platform montage of major subassemblies" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Subsystem montage: tank module, closed chassis, electronics deck, Level 1 pneumatics, air-bearing plate, and assembled vehicle.</figcaption>
+          </figure>
+        </div>
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Final closed chassis CAD with side-panel features">
+                <img src="assets/cad_chassis.jpg" width="2033" height="866" alt="Final closed chassis CAD with side-panel features" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Final closed chassis: side-panel LEDs, nozzles, ultrasonics, and cameras.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="pneumatics">
+        <div class="section-head"><h2>Pneumatics &amp; thrusters</h2></div>
+        <h3>Dual-pressure supply and in-situ thrust calibration</h3>
+        <div class="prose">
+          <p>A 40 ft³ cylinder at about 2015 psi is regulated to about 80 psi, filtered, and split at a wye. A bearing leg is regulated to about 60 psi and a thruster leg to about 40 psi, with independent shutoffs so the two systems can be tested separately. Zero-grade air protects the porous-carbon bearing surfaces from moisture and oil. I designed a load-cell fixture and characterized each thruster in place on the vehicle, so line losses and regulator behavior were included. Steady-state thrust ranged from 0.428 to 0.484 N (mean 0.451 N), with up to 13.2% spread between thrusters. Those measured values are supplied to the controller rather than trimmed out in hardware.</p>
+        </div>
+        <div class="fig-grid cols-2">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled CAD of the pneumatic supply module">
+                <img src="assets/cad_supply.jpg" width="2200" height="1309" alt="Labeled CAD of the pneumatic supply module" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Pneumatic supply module: 40 ft³ cylinder, first- and second-stage regulators, filter, wye, and shutoffs on a 3D-printed bracket.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled CAD of the Level 1 pneumatic manifold">
+                <img src="assets/cad_level1.jpg" width="2200" height="910" alt="Labeled CAD of the Level 1 pneumatic manifold" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Level 1: 1-to-8 manifold, inline needle valves, and polyurethane tubing on a 3 mm 3D-printed PLA deck with heat-set inserts.</figcaption>
+          </figure>
+        </div>
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Pneumatic system flowchart from the thesis, cylinder through dual legs to bearings and solenoids">
+                <img src="assets/diagram_pneumatic.jpg" width="1950" height="640" alt="Pneumatic system flowchart from the thesis, cylinder through dual legs to bearings and solenoids" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Pneumatic architecture (thesis Fig. 9): ~2015 psi cylinder → 80 psi → filter → wye → bearing leg (~60 psi) and thruster leg (~40 psi).</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled CAD of the load-cell thrust-calibration fixture on the chassis">
+                <img src="assets/cad_loadcell.jpg" width="2200" height="970" alt="Labeled CAD of the load-cell thrust-calibration fixture on the chassis" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Load-cell fixture I designed for in-situ calibration. Thrust 0.428–0.484 N, mean 0.451 N; up to 13.2% spread is fed into the controller.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="electronics">
+        <div class="section-head"><h2>Electronics &amp; integration</h2></div>
+        <h3>Onboard power, command path, and motion capture</h3>
+        <div class="prose">
+          <p>The electronics are hand-built: a point-to-point soldered and wired prototype board serves as the power and signal hub. Two Milwaukee M12 packs separate the actuation bus (12 V to the solenoids and indicator LEDs) from the electronics bus (5 V and 3.9 V rails), so valve current spikes do not disturb the controllers.</p>
+          <p>Two XIAO ESP32-S3 microcontrollers sit on the platform — one drives eight relays that fire the solenoids; the other monitors auxiliary sensors. An ESP-NOW link carries 8-bit thruster commands from a ground-station gateway. Pose comes from seven OptiTrack Prime 13 cameras at 240 Hz around a 6 × 6 m epoxy floor. Mixed-integer MPC is solved on the ground station at 16.7 Hz; only on/off commands go to the vehicle.</p>
+        </div>
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Labeled CAD of the Level 2 electronics and thruster deck">
+                <img src="assets/cad_level2.jpg" width="2200" height="963" alt="Labeled CAD of the Level 2 electronics and thruster deck" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Level 2: prototype board (labeled PCB Board in the model), ESP32-S3, relays, buck converters, solenoids, and side-panel sensors.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Electrical and communication diagram">
+                <img src="assets/diagram_electrical.jpg" width="1780" height="1176" alt="Electrical and communication diagram" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Electrical and communication diagram: split 12 V buses, DC-DC converters, onboard ESP32-S3 nodes, eight relays and solenoids, ESP-NOW gateway, and seven OptiTrack cameras.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="iterations">
+        <div class="section-head"><h2>Design iterations</h2></div>
+        <h3>January 2025 concept versus the final build</h3>
+        <div class="prose">
+          <p>A January 2025 design proposal captured an earlier concept. Before cutting hardware I also evaluated triangular, square, and hexagonal bearing layouts, alternative thruster placements, and different air-supply configurations in CAD. The square, eight-thruster layout was selected for redundancy without making the discrete control problem too large to solve in 60 ms. After assembly I adjusted the bearings along the machined grooves until support loads were within ±1.8% of equal, to reduce steady-state torque bias.</p>
+        </div>
+        <div class="compare-wrap">
+          <table class="compare">
+            <caption class="sr-only">January 2025 concept versus the final build</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Topic</span></th>
+                <th scope="col">January 2025 concept</th>
+                <th scope="col">Final build</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Supply tank</th>
+                <td data-label="January 2025 concept">20 ft³ at 2000 psi; first stage to 100 psi</td>
+                <td data-label="Final build">40 ft³ at ~2015 psi; first stage to ~80 psi</td>
+              </tr>
+              <tr>
+                <th scope="row">Filter placement</th>
+                <td data-label="January 2025 concept">After the wye, on the bearing line only</td>
+                <td data-label="Final build">Before the split, protecting both legs</td>
+              </tr>
+              <tr>
+                <th scope="row">Power</th>
+                <td data-label="January 2025 concept">Single 12 V battery</td>
+                <td data-label="Final build">Two Milwaukee M12 packs (actuation and electronics buses)</td>
+              </tr>
+              <tr>
+                <th scope="row">Solenoid drivers</th>
+                <td data-label="January 2025 concept">MOSFETs; PWM pulse width</td>
+                <td data-label="Final build">Relays; binary on/off at 60 ms</td>
+              </tr>
+              <tr>
+                <th scope="row">Thrust matching</th>
+                <td data-label="January 2025 concept">Needle valves used to equalize thrust</td>
+                <td data-label="Final build">Valves left fixed; measured spread is compensated in the controller</td>
+              </tr>
+              <tr>
+                <th scope="row">Nozzles</th>
+                <td data-label="January 2025 concept">3D-printed, customizable orifice</td>
+                <td data-label="Final build">Commercial solenoids with an integrated ~2.5 mm orifice</td>
+              </tr>
+              <tr>
+                <th scope="row">Chassis</th>
+                <td data-label="January 2025 concept">Yellow acrylic side panels; single internal bay</td>
+                <td data-label="Final build">Black 3 mm 3D-printed PLA; two stacked decks</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Comparison from the January 2025 proposal versus the as-built design.</p>
+      </section>
+
+      <section id="testing">
+        <div class="section-head"><h2>Testing &amp; results</h2></div>
+        <h3>Hardware on the epoxy floor, compared with the digital twin</h3>
+        <div class="prose">
+          <p>Closed-loop tests were run on the 6 × 6 m epoxy floor under OptiTrack. In the profile-following hardware test, mean tracking error was 0.179 m, with a final position error of 0.024 m and a final heading error of 0.51°. The mixed-integer MPC ran at 16.7 Hz (60 ms period). Mean solve time was 4.61 ms, and every cycle met the 60 ms deadline. Total thruster-on time agreed with the simulation to within 1.5%.</p>
+        </div>
+        <dl class="spec-grid">
+          <div>
+            <dt>Mean tracking error</dt>
+            <dd>0.179 m</dd>
+          </div>
+          <div>
+            <dt>Final position error</dt>
+            <dd>0.024 m</dd>
+          </div>
+          <div>
+            <dt>Final heading error</dt>
+            <dd>0.51°</dd>
+          </div>
+          <div>
+            <dt>MPC rate (60 ms)</dt>
+            <dd>16.7 Hz</dd>
+          </div>
+          <div>
+            <dt>Mean MPC solve time</dt>
+            <dd>4.61 ms</dd>
+          </div>
+          <div>
+            <dt>On-time vs. simulation</dt>
+            <dd>1.5%</dd>
+          </div>
+        </dl>
+
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame video-frame">
+              <video
+                controls
+                playsinline
+                preload="metadata"
+                poster="assets/still_0054_wide.jpg"
+                width="1280"
+                height="720"
+                aria-label="Sped-up overhead video of the planar CubeSat testbed flying on the epoxy floor"
+              >
+                <source src="media/testbed-flight.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption>Overhead video of the testbed on the 6 × 6 m epoxy floor, shown at 3× speed.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Wide overhead still of the testbed on the 6 × 6 m epoxy floor">
+                <img src="assets/still_0054_wide.jpg" width="1150" height="750" alt="Wide overhead still of the testbed on the 6 × 6 m epoxy floor" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Wide overhead still from the same test on the 6 × 6 m epoxy floor.</figcaption>
+          </figure>
+        </div>
+
+        <div class="fig-grid cols-3 stills">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Testbed on the epoxy floor, overhead still at 0:38">
+                <img src="assets/still_0038.jpg" width="400" height="380" alt="Testbed on the epoxy floor, overhead still at 0:38" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Overhead still, mid-run on the epoxy floor.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Testbed on the epoxy floor, overhead still at 0:43">
+                <img src="assets/still_0043.jpg" width="350" height="350" alt="Testbed on the epoxy floor, overhead still at 0:43" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Same run, a few seconds later.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Testbed on the epoxy floor, overhead still at 0:54">
+                <img src="assets/still_0054.jpg" width="440" height="400" alt="Testbed on the epoxy floor, overhead still at 0:54" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Later in the same test.</figcaption>
+          </figure>
+        </div>
+
+        <div class="fig-grid">
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Hardware versus simulation trajectory overlay">
+                <img src="assets/plot_trajectory.jpg" width="1143" height="643" alt="Hardware versus simulation trajectory overlay" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Trajectory comparison, hardware (blue) versus simulation (red dashed), profile-following mission.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="frame">
+              <button type="button" class="zoom" aria-label="Enlarge image: Side-by-side hardware and simulation comparison visualizer">
+                <img src="assets/plot_comparison.jpg" width="2000" height="900" alt="Side-by-side hardware and simulation comparison visualizer" loading="lazy" decoding="async" />
+              </button>
+            </div>
+            <figcaption>Hardware vs. simulation comparison visualizer, mid-run overlay.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer-name" translate="no">Aevar Oefjoerd</p>
+      <p>Mechanical design portfolio · Planar CubeSat air-bearing testbed</p>
+      <p>
+        <a href="../">Resume</a>
+        · <a href="https://uknowledge.uky.edu/me_etds/250/">Thesis</a>
+        · <a href="../files/Aevar_Ofjord_Portfolio.pdf" download>Download portfolio (PDF)</a>
+      </p>
+      <p><a href="tel:+18122046919">(812) 204-6919</a> · <a href="mailto:ofjord99@gmail.com">ofjord99@gmail.com</a></p>
+      <p>Plainfield, IL · U.S. Permanent Resident (Green Card) – no sponsorship needed</p>
+    </footer>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+    <form method="dialog" class="lightbox-bar">
+      <button type="submit" class="lightbox-close">Close</button>
+    </form>
+    <img id="lightbox-img" alt="" hidden />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </dialog>
+
+  <script>
+    (function () {
+      var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+      if ("IntersectionObserver" in window && links.length) {
+        var byId = {};
+        links.forEach(function (link) {
+          var href = link.getAttribute("href") || "";
+          if (href.charAt(0) !== "#") return;
+          var id = href.slice(1);
+          if (id) byId[id] = link;
+        });
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            links.forEach(function (link) { link.removeAttribute("aria-current"); });
+            var current = byId[entry.target.id];
+            if (current) current.setAttribute("aria-current", "true");
+          });
+        }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+        Object.keys(byId).forEach(function (id) {
+          var section = document.getElementById(id);
+          if (section) observer.observe(section);
+        });
+      }
+
+      var dialog = document.getElementById("lightbox");
+      var big = document.getElementById("lightbox-img");
+      var caption = document.getElementById("lightbox-caption");
+      if (!dialog || !big || typeof dialog.showModal !== "function") return;
+
+      document.querySelectorAll(".zoom").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var img = button.querySelector("img");
+          if (!img) return;
+          var figure = button.closest("figure");
+          var figcaption = figure ? figure.querySelector("figcaption") : null;
+          big.hidden = false;
+          big.src = img.currentSrc || img.src;
+          big.alt = img.alt || "";
+          caption.textContent = figcaption ? figcaption.textContent.trim() : "";
+          dialog.showModal();
+        });
+      });
+
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog.addEventListener("close", function () {
+        big.hidden = true;
+        big.removeAttribute("src");
+        big.alt = "";
+        caption.textContent = "";
+      });
+    })();
+  </script>
+</body>
+</html>

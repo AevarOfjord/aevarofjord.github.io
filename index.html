@@ -21,6 +21,7 @@
   <a class="skip" href="#experience">Skip to experience</a>
   <div class="page">
     <nav class="nav" aria-label="Sections">
+      <a class="nav-portfolio" href="portfolio/">Portfolio</a>
       <a href="#experience" aria-current="true">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -214,6 +215,7 @@
             <p class="dates">Jan 2025 – Nov 2025</p>
             <h3>2D MPC-Controlled Inspection Satellite (M.Sc. Thesis)</h3>
             <p class="links">
+              <a href="portfolio/" aria-label="Mechanical design portfolio for the planar CubeSat testbed">Portfolio</a>
               <a href="https://github.com/AevarOfjord/mpc-air-bearing-satellite" aria-label="2D MPC inspection satellite on GitHub">GitHub</a>
               <a href="https://doi.org/10.13023/etd.2025.583" aria-label="M.Sc. thesis, DOI 10.13023/etd.2025.583">Thesis</a>
             </p>
@@ -309,7 +311,9 @@
       if (!("IntersectionObserver" in window) || !links.length) return;
       var byId = {};
       links.forEach(function (link) {
-        var id = (link.getAttribute("href") || "").slice(1);
+        var href = link.getAttribute("href") || "";
+        if (href.charAt(0) !== "#") return;
+        var id = href.slice(1);
         if (id) byId[id] = link;
       });
       var observer = new IntersectionObserver(function (entries) {
