@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two arms. One board. No lifting. — Aevar Oefjoerd</title>
+  <meta name="description" content="A dual-arm chess robot that slides pieces across a board, combining inverse kinematics, collision-aware path planning, and a live digital twin.">
+  <meta name="theme-color" content="#f6f6f4">
+  <link rel="canonical" href="https://aevarofjord.github.io/projects/chess-robot.html">
+  <meta property="og:title" content="Two arms. One board. No lifting. — Aevar Oefjoerd">
+  <meta property="og:description" content="A dual-arm chess robot that slides pieces across a board, combining inverse kinematics, collision-aware path planning, and a live digital twin.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aevarofjord.github.io/projects/chess-robot.html">
+  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/chess-cad.png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="../index.html" aria-label="Aevar Oefjoerd, home"><span class="monogram" aria-hidden="true">Æ / Ö</span><span translate="no">Aevar Oefjoerd</span></a>
+    <nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="button button-outline" href="../Aevar-Oefjoerd-Resume.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <div class="case-intro">
+      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <p class="eyebrow">03 / Robotics · In development</p>
+      <h1>Two arms. One board. No lifting.</h1>
+      <p class="case-lede">A dual-arm chess robot that slides pieces across a board, combining inverse kinematics, collision-aware path planning, and a live digital twin.</p>
+      <dl class="case-meta"><div><dt>Scope</dt><dd>Mechanical design, motion planning &amp; firmware</dd></div><div><dt>Status</dt><dd>Digital twin built · Hardware in progress</dd></div><div><dt>Tools</dt><dd>Python · 3R kinematics · ESP32 · ESP-NOW</dd></div></dl>
+      <div class="project-actions"><a class="text-link" href="https://github.com/AevarOfjord/Automatic-Chess">View on GitHub <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <figure><div class="case-hero"><img src="../assets/projects/chess-cad.png" width="1520" height="722" alt="CAD render of two planar three-joint arms surrounding a chessboard" fetchpriority="high"></div><figcaption>CAD design: opposing planar arms, a chessboard, and captured-piece racks.</figcaption></figure>
+    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>The robot’s magnets stay at a fixed height. Pieces must slide through free space rather than lift over other pieces. A legal chess move is therefore not always a physically executable move.</p><p>Every transfer needs a collision-free XY corridor, an achievable arm configuration, and a safe position for the opposite arm.</p></div></section>
+<section class="story-section"><h2>What I built</h2><div><p>The PC owns chess rules, the 32-piece inventory, trajectory planning, inverse kinematics, and fault recovery. An ESP32 gateway routes commands to the arm controllers, which execute motion.</p><ul><li>Two opposing three-joint planar arms and dedicated captured-piece racks.</li><li>A* planning through empty squares with an exterior rim for detours.</li><li>A live digital twin with planned paths and random legal-move playback.</li><li>Reachability checks, deterministic capture handling, and explicit fault recovery.</li></ul></div></section>
+<section class="story-section"><h2>Design decisions</h2><div><p>Only one arm moves at a time; the other is parked as a keep-out region. If a move has no collision-free corridor, the planner skips it and selects another legal move. It does not force the pieces through obstacles.</p><p>The public repository includes the simulator, CAD renders, firmware, and build documentation. The hardware build is in progress; the visuals here show the design and simulation.</p></div></section>
+<section class="story-section"><h2>Explore the work</h2><div><p><a class="text-link" href="https://github.com/AevarOfjord/Automatic-Chess">Source code, simulator, and build documentation ↗</a></p><p>The default simulator can run with random legal moves without Stockfish or physical hardware.</p></div></section><figure class="case-gallery"><img src="../assets/projects/chess-simulator.png" width="627" height="511" alt="Chess robot digital twin with planned arm paths and board state" loading="lazy"><figcaption>The digital twin shows both arms, piece inventories, and planned transfer paths.</figcaption></figure></div>
+    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Finding the limits of nonlinear control.</h2></div><a class="text-link" href="inverted-pendulum.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Finding the limits of nonlinear control.</span></a></nav>
+  </main>
+  <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
+</body>
+</html>

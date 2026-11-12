@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Satellite control, from model to hardware. — Aevar Oefjoerd</title>
+  <meta name="description" content="An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.">
+  <meta name="theme-color" content="#f6f6f4">
+  <link rel="canonical" href="https://aevarofjord.github.io/projects/satellite-testbed.html">
+  <meta property="og:title" content="Satellite control, from model to hardware. — Aevar Oefjoerd">
+  <meta property="og:description" content="An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aevarofjord.github.io/projects/satellite-testbed.html">
+  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/satellite.jpg">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="../index.html" aria-label="Aevar Oefjoerd, home"><span class="monogram" aria-hidden="true">Æ / Ö</span><span translate="no">Aevar Oefjoerd</span></a>
+    <nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="button button-outline" href="../Aevar-Oefjoerd-Resume.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <div class="case-intro">
+      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <p class="eyebrow">01 / Controls · Hardware · M.Sc. thesis</p>
+      <h1>Satellite control, from model to hardware.</h1>
+      <p class="case-lede">An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.</p>
+      <dl class="case-meta"><div><dt>Scope</dt><dd>Mechanical design, controls &amp; embedded systems</dd></div><div><dt>Status</dt><dd>Hardware validated</dd></div><div><dt>Tools</dt><dd>Python · C++ · Gurobi · ESP32 · OptiTrack</dd></div></dl>
+      <div class="project-actions"><a class="text-link" href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">View on GitHub <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <figure><div class="case-hero"><img src="../assets/projects/satellite.jpg" width="720" height="405" alt="CAD render of the satellite structure and compressed gas system" fetchpriority="high"></div><figcaption>The mechanical design of the air-bearing satellite platform.</figcaption></figure>
+    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>Control a floating platform with eight binary cold-gas thrusters. Each actuator is either on or off, and the controller must choose a feasible combination quickly enough to track a path on physical hardware.</p><p>The project became my mechanical engineering master’s thesis at the University of Kentucky. It combines mechanical and pneumatic design, embedded control, motion capture, optimization, and experimental validation.</p></div></section>
+<section class="story-section"><h2>What I built</h2><div><p>I designed and built the platform end to end: the structure, air bearings, cold-gas system, and ESP32 control interface. A Python simulation and hardware stack share the controller and matched physical parameters.</p><ul><li>Mixed-integer model predictive control using Gurobi to handle binary thruster commands.</li><li>OptiTrack state feedback, experiment logging, and mission visualization.</li><li>Individual thruster characterization and a digital twin for simulation-to-hardware comparisons.</li><li>Waypoint navigation and shape-following missions, including custom DXF paths.</li></ul></div></section>
+<section class="story-section"><h2>Validation</h2><div><p>The reported hardware results achieved a final position error of <strong>0.024 m</strong> and attitude error of <strong>0.51°</strong> at a <strong>16.7 Hz</strong> control rate. The recorded comparison reports a <strong>1.47% difference in total thruster usage</strong>: 188.04 seconds on hardware and 190.80 seconds in simulation.</p><p>These are results from the documented testbed experiments, rather than guarantees for other hardware or missions. The thesis contains the controller design, methodology, and validation context.</p></div></section>
+<section class="story-section"><h2>Explore the work</h2><div><p><a class="text-link" href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">Source code and documentation ↗</a></p><p><a class="text-link" href="https://doi.org/10.13023/etd.2025.583">Read the published master’s thesis ↗</a></p></div></section><figure class="case-gallery"><img src="../assets/projects/satellite-trajectory.png" width="3200" height="2973" alt="Experimental trajectory in solid blue and simulated trajectory in dashed red, shown in meters around the same inspection path" loading="lazy"><figcaption>Recorded hardware and simulation trajectories for the comparison experiment. Blue: hardware. Red dashed: simulation.</figcaption></figure></div>
+    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Taking satellite inspection into 3D.</h2></div><a class="text-link" href="inspection-satellite.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Taking satellite inspection into 3D.</span></a></nav>
+  </main>
+  <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
+</body>
+</html>
