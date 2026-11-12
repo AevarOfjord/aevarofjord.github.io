@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gufuhellir Fontana — Aevar Oefjoerd</title>
+  <meta name="description" content="A geometry and simulation study of the Gufuhellir Fontana steam bath, exploring how ventilation arrangements influence the internal thermal environment.">
+  <meta name="theme-color" content="#f6f6f4">
+  <link rel="canonical" href="https://aevarofjord.github.io/projects/fontana.html">
+  <meta property="og:title" content="Gufuhellir Fontana — Aevar Oefjoerd">
+  <meta property="og:description" content="A geometry and simulation study of the Gufuhellir Fontana steam bath, exploring how ventilation arrangements influence the internal thermal environment.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aevarofjord.github.io/projects/fontana.html">
+  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/fontana-cutaway.png">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="../index.html" aria-label="Aevar Oefjoerd, home"><span class="monogram" aria-hidden="true">Æ / Ö</span><span translate="no">Aevar Oefjoerd</span></a>
+    <nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="button button-outline" href="../Aevar-Oefjoerd-Resume.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <div class="case-intro">
+      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <p class="eyebrow">06 / Mechanical · Thermal simulation</p>
+      <h1>Understanding the flow inside a steam bath.</h1>
+      <p class="case-lede">A geometry and simulation study of the Gufuhellir Fontana steam bath, exploring how ventilation arrangements influence the internal thermal environment.</p>
+      <dl class="case-meta"><div><dt>Scope</dt><dd>CAD, ventilation &amp; thermal modeling</dd></div><div><dt>Status</dt><dd>Engineering simulation study</dd></div><div><dt>Tools</dt><dd>STEP geometry · Python · OpenFOAM</dd></div></dl>
+    </div>
+    <figure><div class="case-hero"><img src="../assets/projects/fontana-cutaway.png" width="2210" height="1190" alt="Cutaway CAD model and center section of the steam-bath shell, with inlet and outlet locations marked" fetchpriority="high"></div><figcaption>Geometry study of the steam-bath shell. The arrows identify openings; they are not simulated flow vectors.</figcaption></figure>
+    <div class="case-body">
+      <section class="story-section"><h2>The engineering question</h2><div><p>Compare ventilation arrangements within the constraints of the existing steam-bath geometry. The work considers openings, riser configurations, ambient conditions, and temperature distribution through the occupied space.</p></div></section>
+      <section class="story-section"><h2>From CAD to comparison</h2><div><p>A STEP model provides the geometric foundation. Python scripts prepare fluid domains and simulation cases, coordinate solver runs, and turn results into temperature profiles and comparison figures.</p><ul><li>Inspect the shell geometry and prepare candidate ventilation designs.</li><li>Compare scenarios with different vent arrangements and operating conditions.</li><li>Compile the geometry, assumptions, figures, and findings into engineering reports.</li></ul></div></section>
+      <section class="story-section"><h2>Interpreting the results</h2><div><p>The outputs are design comparisons from a numerical model. Geometry checks, mesh checks, and scenario definitions make the assumptions inspectable; simulated temperatures should be interpreted in that context.</p></div></section>
+    </div>
+    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Robotic Arm</h2></div><a class="text-link" href="robotic-arm.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Robotic Arm</span></a></nav>
+  </main>
+  <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
+</body>
+</html>

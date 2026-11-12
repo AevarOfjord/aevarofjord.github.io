@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Taking satellite inspection into 3D. — Aevar Oefjoerd</title>
-  <meta name="description" content="A mission design and simulation environment for exploring autonomous inspection around stationary space objects.">
+  <meta name="description" content="A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.">
   <meta name="theme-color" content="#f6f6f4">
   <link rel="canonical" href="https://aevarofjord.github.io/projects/inspection-satellite.html">
   <meta property="og:title" content="Taking satellite inspection into 3D. — Aevar Oefjoerd">
-  <meta property="og:description" content="A mission design and simulation environment for exploring autonomous inspection around stationary space objects.">
+  <meta property="og:description" content="A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aevarofjord.github.io/projects/inspection-satellite.html">
   <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/mission-viewer.png">
@@ -26,12 +26,12 @@
       <a class="back-link" href="../index.html#projects">← All projects</a>
       <p class="eyebrow">02 / Controls · Simulation</p>
       <h1>Taking satellite inspection into 3D.</h1>
-      <p class="case-lede">A mission design and simulation environment for exploring autonomous inspection around stationary space objects.</p>
+      <p class="case-lede">A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.</p>
       <dl class="case-meta"><div><dt>Scope</dt><dd>Mission design, dynamics &amp; controller benchmarking</dd></div><div><dt>Status</dt><dd>Simulation research</dd></div><div><dt>Tools</dt><dd>Python · C++ · MPC · Browser-based UI</dd></div></dl>
       <div class="project-actions"><a class="text-link" href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite">View on GitHub <span aria-hidden="true">↗</span></a></div>
     </div>
     <figure><div class="case-hero"><img src="../assets/projects/mission-viewer.png" width="2940" height="1620" alt="3D mission playback around a satellite with trajectory and telemetry overlays" fetchpriority="high"></div><figcaption>The Viewer workspace: mission playback, trajectory inspection, and telemetry.</figcaption></figure>
-    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>Extend the inspection idea from a planar air-bearing testbed into six-degree-of-freedom motion. In 3D, mission geometry, position control, and attitude control must work together.</p><p>The public showcase uses a Starlink model as an inspection target. The project focuses on stationary target scenarios and local simulation.</p></div></section>
+    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>Extend the inspection idea from a planar air-bearing testbed into six-degree-of-freedom motion, with thruster and reaction-wheel control studies. In 3D, mission geometry, position control, and attitude control must work together.</p><p>The public showcase uses a Starlink model as an inspection target. The project focuses on stationary target scenarios and local simulation.</p></div></section>
 <section class="story-section"><h2>What I built</h2><div><p>A browser-based Mission Studio lets me place an inspector, create spiral paths, connect segments, add holds, and validate routes before running them through the dynamics and controller stack.</p><ul><li>Simulation playback with trajectory, solve-time, and actuator telemetry.</li><li>Six MPC controller profiles covering hybrid, linearized, and nonlinear approaches.</li><li>A 10 × 10 sweep over control interval and prediction horizon to compare and tune controllers.</li><li>A shared workflow from mission authoring to simulation artifacts and playback.</li></ul></div></section>
 <section class="story-section"><h2>What it demonstrates</h2><div><p>The project connects controller research with tools for designing and inspecting missions. It makes it possible to compare controller behavior on the same mission and inspect the trade-offs in the resulting telemetry.</p><p>This is a research and demonstration environment. It is not flight software, and the stationary-target showcase does not establish performance for rendezvous with moving spacecraft.</p></div></section>
 <section class="story-section"><h2>Explore the work</h2><div><p><a class="text-link" href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite">Source code, screenshots, and local setup ↗</a></p><p>The repository includes architecture notes, controller mathematics, sample missions, and benchmarking workflows.</p></div></section><figure class="case-gallery"><img src="../assets/projects/mission-studio.png" width="2940" height="1620" alt="Mission Studio interface for designing inspection paths around an orbital target" loading="lazy"><figcaption>Mission Studio: authoring and validating target-relative inspection routes.</figcaption></figure></div>

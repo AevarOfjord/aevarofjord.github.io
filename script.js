@@ -17,7 +17,7 @@ if (filterBar) {
     grid.hidden = ![...grid.children].some(project => !project.hidden);
     list.hidden = ![...list.children].some(project => !project.hidden);
     list.style.marginTop = grid.hidden ? '0' : '';
-    count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'}`;
+    count.textContent = `${visible} additional ${visible === 1 ? 'project' : 'projects'}`;
   }
   filterBar.hidden = false;
   for (const button of buttons) button.addEventListener('click', () => applyFilter(button.dataset.filter));
