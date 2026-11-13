@@ -218,9 +218,12 @@ em{
   .chapter h1{
     font-size:46px
   }
-  .ledger>li,.entry{
+  .ledger>li,.ledger>li.prose-row,.entry,.entry.stack{
     grid-template-columns:1fr;
     gap:12px
+  }
+  .ledger h2{
+    overflow-wrap:anywhere
   }
   .ledger img,.thumb{
     width:100%;
