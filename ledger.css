@@ -1,0 +1,242 @@
+:root{
+  --mono:ui-monospace,"Cascadia Mono","SFMono-Regular",Menlo,Consolas,monospace
+}
+body{
+  background:#fff
+}
+.shell{
+  display:grid;
+  grid-template-columns:248px minmax(0,1fr);
+  min-height:100vh;
+  align-items:start
+}
+.spine{
+  position:sticky;
+  top:0;
+  min-height:100vh;
+  padding:36px 28px 40px;
+  border-right:1px solid var(--rule);
+  background:#fff
+}
+.name{
+  display:block;
+  font-family:var(--serif);
+  font-size:30px;
+  line-height:1.05;
+  letter-spacing:-.02em
+}
+.where,.spine nav a,.spine-foot,.kicker,.count,.margin,.metric,.role-note{
+  font-family:var(--mono);
+  font-size:12px;
+  line-height:1.45
+}
+.where{
+  margin:14px 0 0;
+  color:var(--muted)
+}
+.spine nav{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:36px
+}
+.spine nav a{
+  color:var(--ink)
+}
+.spine nav a[aria-current="page"]{
+  color:var(--blue)
+}
+.spine-foot{
+  margin:28px 0 0;
+  padding-top:18px;
+  border-top:1px solid var(--rule)
+}
+.spine-foot a{
+  color:var(--blue)
+}
+.sheet{
+  min-width:0;
+  padding:36px 56px 64px 48px
+}
+.sheet>.wrap,.sheet>main.wrap,.sheet>.site-footer{
+  width:auto;
+  max-width:none;
+  margin-left:0;
+  margin-right:0
+}
+.case-body p+p{
+  margin-top:16px
+}
+.ledger h2 a[href^="mailto"],
+.ledger h2 a[href^="http"],
+.ledger h2 a[href$=".pdf"]{
+  color:var(--blue)
+}
+.chapter{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  column-gap:24px;
+  align-items:end
+}
+.kicker{
+  margin:0;
+  color:var(--muted);
+  letter-spacing:.04em;
+  grid-column:1;
+  grid-row:1
+}
+.chapter h1{
+  grid-column:1;
+  grid-row:2;
+  margin:4px 0 0;
+  font-size:64px;
+  letter-spacing:-.03em;
+  line-height:.95
+}
+.count{
+  grid-column:2;
+  grid-row:2;
+  margin:0 0 10px;
+  color:var(--muted)
+}
+.ledger{
+  list-style:none;
+  margin:28px 0 0;
+  padding:0
+}
+.ledger>li,.entry{
+  display:grid;
+  grid-template-columns:210px minmax(0,1fr) 128px;
+  gap:28px;
+  align-items:center;
+  padding:22px 0;
+  border-top:1px solid var(--rule)
+}
+.ledger>li:last-child,.entry:last-child{
+  border-bottom:1px solid var(--rule)
+}
+.ledger>li.prose-row,.entry.stack{
+  grid-template-columns:210px minmax(0,1fr);
+  align-items:start
+}
+.margin{
+  margin:0;
+  color:var(--muted)
+}
+.margin span{
+  display:block;
+  margin-bottom:6px;
+  color:var(--ink);
+  font-size:13px
+}
+.developing .margin,.developing .margin span{
+  color:var(--blue)
+}
+.ledger h2,.entry h2{
+  margin:0 0 6px;
+  font-size:32px;
+  letter-spacing:-.02em;
+  line-height:1.05
+}
+.ledger p,.entry p{
+  margin:0
+}
+.metric{
+  margin-top:8px;
+  color:var(--ink)
+}
+.ledger img,.thumb{
+  width:128px;
+  height:84px;
+  object-fit:contain;
+  background:#f5f7fb;
+  border:1px solid var(--rule);
+  padding:6px
+}
+.entry ul,.prose-row ul{
+  margin:12px 0 0;
+  padding-left:18px
+}
+.entry li+li,.prose-row li+li{
+  margin-top:8px
+}
+.group-note{
+  max-width:68ch;
+  margin:22px 0 0;
+  color:var(--muted)
+}
+.org-line{
+  margin-top:18px;
+  font-family:var(--serif);
+  font-size:28px
+}
+.sheet-footer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px 28px;
+  margin-top:36px;
+  padding-top:22px;
+  border-top:1px solid var(--rule);
+  font-size:14px
+}
+.sheet-footer a{
+  color:var(--blue);
+  font-weight:500;
+  border-bottom:1px solid var(--blue)
+}
+.back-link{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.02em
+}
+.case-intro h1{
+  font-size:clamp(46px,5vw,68px)
+}
+em{
+  color:var(--blue)
+}
+@media(max-width:860px){
+  .shell{
+    display:block
+  }
+  .spine{
+    position:static;
+    min-height:0;
+    border-right:0;
+    border-bottom:1px solid var(--rule);
+    padding:20px 20px 16px
+  }
+  .spine nav{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:10px 16px;
+    margin-top:16px
+  }
+  .sheet{
+    padding:28px 20px 48px
+  }
+  .chapter h1{
+    font-size:46px
+  }
+  .ledger>li,.ledger>li.prose-row,.entry,.entry.stack{
+    grid-template-columns:1fr;
+    gap:12px
+  }
+  .ledger h2{
+    overflow-wrap:anywhere
+  }
+  .ledger img,.thumb{
+    width:100%;
+    height:160px
+  }
+}
+@media print{
+  .spine{
+    position:static;
+    min-height:0;
+    border:0
+  }
+  .shell{
+    display:block
+  }
+}

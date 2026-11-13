@@ -23,11 +23,12 @@
   font-display:swap
 }
 :root{
-  --paper:#f6f6f4;
-  --ink:#191d1b;
-  --green:#245b46;
-  --muted:#5d635f;
-  --rule:#c1c5bf;
+  --paper:#ffffff;
+  --ink:#16181d;
+  --blue:#1f5eff;
+  --green:#194cce;
+  --muted:#5c6570;
+  --rule:#e4e7ee;
   --sans:Geist,'Helvetica Neue',sans-serif;
   --serif:'Instrument Serif',Georgia,serif;
   color-scheme:light
@@ -49,7 +50,7 @@ body{
   -webkit-font-smoothing:antialiased
 }
 ::selection{
-  background:#cbded2;
+  background:#d9e4ff;
   color:var(--ink)
 }
 a{
