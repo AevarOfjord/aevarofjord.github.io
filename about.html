@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aevar Oefjoerd — About</title>
-  <meta name="description" content="Aevar Oefjoerd is a mechanical engineer in Plainfield, Illinois, with an M.Sc. from the University of Kentucky and project engineering work at Blue Lagoon Iceland.">
+  <meta name="description" content="Aevar Oefjoerd is a mechanical engineer in Plainfield, Illinois, who designs and builds complete mechanical, fluid, control, and software systems from concept through validation.">
   <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://aevarofjord.github.io/about.html">
   <meta property="og:title" content="Aevar Oefjoerd — About">
-  <meta property="og:description" content="Mechanical engineer in the western Chicago suburbs: hardware, controls, and software, from design through validation.">
+  <meta property="og:description" content="Mechanical engineer who designs and builds complete systems from concept through validated hardware and software.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aevarofjord.github.io/about.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -39,38 +39,71 @@
           <h1>About</h1>
         </header>
         <div class="case-body" style="margin-top:28px">
-          <p>I’m a mechanical engineer in Plainfield, Illinois, in the western Chicago suburbs. My work runs from mechanical design and analysis through hardware, controls, and software.</p>
-          <p>I earned an M.Sc. in Mechanical Engineering from the University of Kentucky in December 2025 and a B.Sc. from the University of Southern Indiana in 2024. The Kentucky thesis, funded by NASA KY EPSCoR, was a simulation-to-hardware validation of model predictive control for a binary-thruster 2D CubeSat testbed on air bearings. I designed and built the entire system: the structure, pneumatics and cold-gas thrusters, hand-soldered ESP32 electronics, control software, and the simulation and digital twin. Faculty advisors provided guidance only. The undergraduate capstone, also a solo project, was Design of a Lava Rock Crushing System.</p>
-          <p>Since April 2026 I have been a Project Engineer and Project Manager (contractor) at Blue Lagoon Iceland, working on piping, CFD, hydraulic calculations, pump selection, wastewater and cold-water systems, and construction and renovation. I started there as a maintenance technician in 2017 and was a project manager from 2022 to 2025. I also served as interim head of maintenance, cutting the work-order backlog from 200 to 125. Separately, I built Grain from scratch: a facility-management platform with a built-in AI manager that operates under human oversight. At Southern Indiana I played NCAA Division I soccer.</p>
-          <p>If a number is on this site, it comes from a test, a thesis, or a saved simulation. Software checks are labeled as software checks. Hardware that is still on the bench is labeled that way.</p>
+          <p>I’m a mechanical engineer in Plainfield, Illinois. I design and build complete systems from concept through validated hardware and software: machines, fluid and thermal plants, controls, and the software that runs them.</p>
+          <p>I earned an M.Sc. in Mechanical Engineering from the University of Kentucky in December 2025 and a B.Sc. from the University of Southern Indiana in 2024. Since April 2026 I have been a Project Engineer and Project Manager (contractor) at Blue Lagoon Iceland.</p>
         </div>
+        <h2 class="org-line">Systems I’ve designed</h2>
         <ol class="ledger">
           <li class="prose-row">
-            <p class="margin"><span>Controls</span></p>
+            <p class="margin"><span>M.Sc. thesis</span>2025</p>
             <div>
-              <h2>Controls and robotics</h2>
-              <p>MPC and nonlinear MPC, mixed-integer programming, Gurobi, acados, CasADi, trajectory planning, digital twins, OptiTrack, hardware-in-the-loop.</p>
+              <h2>Planar CubeSat testbed</h2>
+              <p>I was the sole designer and builder of this NASA-sponsored air-bearing testbed: eight binary cold-gas thrusters (2000 psi tanks regulated to 40 psi), hand-built ESP32 electronics, and a real-time mixed-integer (MIQP) MPC controller running at 16.7 Hz. A digital twin with shared controller code stayed within 2% of hardware thruster usage over full missions. The documented hardware run finished at 0.024 m position error and 0.51° attitude error.</p>
             </div>
           </li>
+          <li class="prose-row">
+            <p class="margin"><span>Blue Lagoon</span>Fluid and thermal systems</p>
+            <div>
+              <h2>Geothermal spa systems</h2>
+              <p>I redesigned the seawater intake and heating system for the entire spa, isolating the supply from the adjacent geothermal plant and routing it through high-temperature flash heaters. That improved water-level, temperature, and silica control and reduced operating cost. I designed 1 km of wastewater piping — routing, backup routes, and pump selection — and a 550 m cold-water network with flow simulation, valve sizing, and pump specifications, and used CFD to correct poor water renewal in a recirculating cave pool.</p>
+            </div>
+          </li>
+          <li class="prose-row">
+            <p class="margin"><span>Software</span>2026 – Present</p>
+            <div>
+              <h2>Grain</h2>
+              <p>I designed and built this facility-management platform solo, from architecture through deployment: isolated data per organization, server-enforced permissions, an audit trail, and an AI Manager that operates under human oversight. It has been running in production since November 2026.</p>
+            </div>
+          </li>
+          <li class="prose-row">
+            <p class="margin"><span>Projects</span>Controls and machines</p>
+            <div>
+              <h2>Controls and machine design</h2>
+              <p>I extended the satellite work to six-degree-of-freedom simulation, with thrusters for translation and reaction wheels for attitude. One nonlinear MPC framework swings up and balances one- to eight-link cart pendulums, real-time for one to five links. I designed a dual-arm chess robot — inverse kinematics, collision-aware trajectories, ESP32 firmware, and a link-length optimizer; the hardware build is still to follow. The undergraduate capstone was a lava-rock processing system, validated with SolidWorks force analysis and a 3D-printed scaled prototype.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="case-body" style="margin-top:28px">
+          <p>I am also designing an AI project manager for Blue Lagoon maintenance that connects MaintainX with a Microsoft Copilot Studio workflow of specialized agents. That work is in progress.</p>
+        </div>
+        <h2 class="org-line">Skills</h2>
+        <ol class="ledger">
           <li class="prose-row">
             <p class="margin"><span>Design</span></p>
             <div>
-              <h2>Design and simulation</h2>
-              <p>SolidWorks, Fusion 360, 3D printing, FEA, CFD in OpenFOAM, piping and thermal systems, pneumatics, wiring and soldering.</p>
+              <h2>Design and prototyping</h2>
+              <p>SolidWorks, Fusion 360, 3D printing, wiring and soldering, pneumatics.</p>
             </div>
           </li>
           <li class="prose-row">
-            <p class="margin"><span>Software</span></p>
+            <p class="margin"><span>Controls</span></p>
             <div>
-              <h2>Software and embedded</h2>
-              <p>Python, C++, MATLAB, SwiftUI, ESP32, Arduino, Raspberry Pi.</p>
+              <h2>Controls and embedded</h2>
+              <p>MPC/NMPC, ESP32, Arduino, Raspberry Pi, Python, C++, MATLAB, hardware-in-the-loop (HIL), OptiTrack.</p>
             </div>
           </li>
           <li class="prose-row">
-            <p class="margin"><span>Facilities</span></p>
+            <p class="margin"><span>Analysis</span></p>
             <div>
-              <h2>Project systems</h2>
-              <p>MaintainX, Connecteam, contractor coordination, Microsoft 365, Power Automate, Copilot Studio.</p>
+              <h2>Analysis</h2>
+              <p>Finite element analysis (FEA), CFD (OpenFOAM), piping and thermal systems.</p>
+            </div>
+          </li>
+          <li class="prose-row">
+            <p class="margin"><span>Tools</span></p>
+            <div>
+              <h2>Project and maintenance tools</h2>
+              <p>MaintainX, Connecteam, Microsoft 365 (Power Automate, Copilot Studio), contractor coordination.</p>
             </div>
           </li>
         </ol>
