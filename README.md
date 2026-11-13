@@ -1,4 +1,4 @@
-# Ævar Öfjörð
+# Aevar Oefjoerd
 
 Project portfolio for [aevarofjord.github.io](https://aevarofjord.github.io/). Static HTML and CSS with progressive JavaScript for figure viewers and simulation playback. No build step, package installation, or third-party frontend services.
 
