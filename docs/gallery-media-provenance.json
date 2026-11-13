@@ -1,0 +1,30 @@
+[
+  {
+    "asset": "pendulum-mechanism.png",
+    "source": "assets/projects/pendulum-three-link-time-series.csv",
+    "method": "Matplotlib mechanism diagram from the saved 1.20 s and 2.40 s poses; x_next=x+0.25*sin(theta), y_next=y+0.25*cos(theta).",
+    "source_sha256": "f812d07b442086c20c5ca5e417f40da7d6394184a3632bcbb6cbaf06525de8b5",
+    "asset_sha256": "efedf794846478d88fc3edf2396cfe286ad7d736b5eeac973f29c2095410a1a6"
+  },
+  {
+    "asset": "grain-equipment-preview.png",
+    "source": "Project Folders/Grain - CMMS/docs/design/proposals/ops-expansion/uniform/06-equipment.html",
+    "method": "Browser capture of first .dframe at viewport 1440x1000. Original example fixtures; no customer data.",
+    "source_sha256": "224c1fbd23c727c48a06e111463d81a11bfe97f0662a1545da2fbf4a71bf83d3",
+    "asset_sha256": "b9a0fb3ee6cddb664e416825c13e87a0a110d9f3c5f1859341dc8df6848d0dc9"
+  },
+  {
+    "asset": "pulse-monitor-preview.png",
+    "source": "Local projects/Pulse-apps/Pulse-Mac/build/previews/pulse-monitor-light.png",
+    "method": "Copied unchanged. Unified Pulse Monitor interface preview.",
+    "source_sha256": "65fd37971ce1619650f03076dae5350d6d44a2205b3ffea84eee579cf335db10",
+    "asset_sha256": "65fd37971ce1619650f03076dae5350d6d44a2205b3ffea84eee579cf335db10"
+  },
+  {
+    "asset": "photomerge-workspace.png",
+    "source": "Project Folders/Photomerge/validation/workspace/light.png",
+    "method": "Copied unchanged.",
+    "source_sha256": "db9b2589114501c84729dc24b520b81f981e01c0951176142e425e6b3e3cd96f",
+    "asset_sha256": "db9b2589114501c84729dc24b520b81f981e01c0951176142e425e6b3e3cd96f"
+  }
+]

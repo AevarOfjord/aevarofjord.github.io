@@ -376,7 +376,7 @@ figcaption{
 .project-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:26px
+  gap:56px 26px
 }
 .project-image{
   display:block;
@@ -389,11 +389,23 @@ figcaption{
   height:100%;
   object-fit:cover
 }
-.results-image{
-  background:#f1f4f9
+.project-image.model-image{
+  background:#e9eeea
 }
-.results-image img{
+.project-image.model-image img,.project-image.interface-image img{
   object-fit:contain
+}
+.project-image.interface-image{
+  background:#eef0f4
+}
+.project-image.ios-image{
+  background:#151819
+}
+.project-image.arm-image{
+  background:#b3b3b3
+}
+.project-image.steam-image{
+  background:#fff
 }
 .project-card{
   display:flex;
@@ -417,34 +429,6 @@ figcaption{
 .project-card>.text-link{
   margin-top:auto;
   font-size:15px
-}
-.project-list{
-  margin-top:48px
-}
-.project-row{
-  display:grid;
-  grid-template-columns:minmax(0,1.2fr) minmax(0,1.8fr) minmax(155px,.8fr);
-  gap:28px;
-  align-items:center;
-  border-top:1px solid var(--rule);
-  padding-block:23px
-}
-.project-row:last-child{
-  border-bottom:1px solid var(--rule)
-}
-.project-row h3{
-  font-size:27px;
-  text-wrap:initial
-}
-.project-row h3 span{
-  font-size:24px
-}
-.project-row p{
-  font-size:14px
-}
-.project-row .text-link{
-  justify-self:end;
-  font-size:14px
 }
 .about{
   display:grid;
@@ -712,9 +696,8 @@ figcaption{
   .project-card h3{
     font-size:29px
   }
-  .project-row{
-    gap:20px;
-    grid-template-columns:1.1fr 1.4fr .8fr
+  .project-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))
   }
   .contact-inner{
     gap:28px
@@ -845,23 +828,6 @@ figcaption{
   }
   .project-card>p:not(.eyebrow){
     margin-bottom:15px
-  }
-  .project-list{
-    margin-top:40px
-  }
-  .project-row{
-    grid-template-columns:1fr;
-    gap:12px;
-    padding-block:22px
-  }
-  .project-row .text-link{
-    justify-self:start
-  }
-  .project-row h3{
-    font-size:29px
-  }
-  .project-row p{
-    font-size:15px
   }
   .about{
     grid-template-columns:1fr;
@@ -1008,9 +974,6 @@ figcaption{
   }
   .project-card h3{
     font-size:20pt
-  }
-  .project-row{
-    padding-block:15px
   }
   .about{
     margin-top:30px;

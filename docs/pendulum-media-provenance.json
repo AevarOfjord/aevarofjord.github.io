@@ -1,0 +1,207 @@
+{
+  "project": "N-Link Inverted Pendulum",
+  "repository": "https://github.com/AevarOfjord/Inverted-Pendulum",
+  "commit": "94d56d5a0d37b1501359c6d902cf8af4a386448c",
+  "review_date": "2026-11-12",
+  "numeric_sources": [
+    {
+      "path": "data/1 Pendulum/Results/Feasible/run_metrics.json",
+      "git_blob_sha": "70f837fbd027c631b69bdf501f58aa30be58a99b"
+    },
+    {
+      "path": "data/2 Pendulums/Results/Feasible/run_metrics.json",
+      "git_blob_sha": "fc5bd48f945bbc2de62018b897f692c1506afa31"
+    },
+    {
+      "path": "data/3 Pendulums/Results/Feasible/run_metrics.json",
+      "git_blob_sha": "007319f2dce6cb7582c8c72bd178976f07ae2ab1"
+    },
+    {
+      "path": "data/4 Pendulums/Results/Feasible/run_metrics.json",
+      "git_blob_sha": "0e4ae153376b7fa98e7b7e7b5d76293180e257fe"
+    },
+    {
+      "path": "data/5 Pendulums/Results/Feasible/run_metrics.json",
+      "git_blob_sha": "073ebc79c97c40803c5d248e5a9733051222c7b6"
+    },
+    {
+      "path": "data/6 Pendulums/Results/Nonfeasible/run_metrics.json",
+      "git_blob_sha": "cddbcf99d33f28a884f09a31ad662030ee9509cd"
+    },
+    {
+      "path": "data/7 Pendulums/Results/Nonfeasible/run_metrics.json",
+      "git_blob_sha": "7cd3d5d4c6b66915af9a7bc56fb711399e00af6f"
+    },
+    {
+      "path": "data/8 Pendulums/Results/Nonfeasible/run_metrics.json",
+      "git_blob_sha": "640e6eae4a5b3bb17d944686c0246c16d3e7a8cc"
+    }
+  ],
+  "basis": "Use canonical Results metrics and media from the pinned commit, rather than README timing rows which summarize separate sweep runs. Local selected collection differs and was not used. No new controller run or hardware validation was performed. Model descriptions follow the current source implementation rather than older docs where they differ.",
+  "time_series_check": {
+    "avg_ms": 0.3845445188916865,
+    "p95_ms": 0.5866669999999408,
+    "max_ms": 0.7386249999999928,
+    "missed_deadlines": 0,
+    "convergence_s": 1.92,
+    "cart_max_m": 1.0343143939197605,
+    "force_max_N": 80.0,
+    "balance_exits": 0
+  },
+  "media": [
+    {
+      "asset": "assets/projects/pendulum-cross-system.png",
+      "source": "data/cross_system_comparison.png",
+      "git_blob_sha": "91a016258293336b7cdfa4eac6d400ceb171a11f",
+      "sha256": "1715de095ce6ed66be1e8891815d3cf2eda59f191d80f8d9d069ced7a37e96b8",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-scaling.png",
+      "source": "data/scaling_analysis.png",
+      "git_blob_sha": "daa74b8cb654043d4b0e12009e3d8870956482d1",
+      "sha256": "b01ca83c983814444d1980ff59be68a622e6bf67fab661f95c61fea775e9daff",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-three-link-summary.png",
+      "source": "data/3 Pendulums/Results/Feasible/summary_plots.png",
+      "git_blob_sha": "0459b270b0c07bd6c88fa562898e45b9b3fc7efe",
+      "sha256": "2c6cefe4a67860696d7f391104110ce506a5fe2749d09b7acc8c9b49f4d8f436",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-three-link-energy.png",
+      "source": "data/3 Pendulums/Results/Feasible/energy_landscape.png",
+      "git_blob_sha": "7d961bde672c271d38a7c5322abf2d1f90cdce77",
+      "sha256": "2f14a696e09a61311adca3f245e32cc42687f4645642795f714ec4a1d17fe98c",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-three-link-phase.png",
+      "source": "data/3 Pendulums/Results/Feasible/phase_portrait.png",
+      "git_blob_sha": "2223682a1accf53337dedd2e24f8c790b1d3e15e",
+      "sha256": "97ef877bb143bb9c6a39e02d27de5ecb606d96aff74dc5feb9370550050ca212",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-three-link-timing.png",
+      "source": "data/3 Pendulums/Results/Feasible/solver_timing.png",
+      "git_blob_sha": "9f17afe38bd203414eba54e8be8599093f692c6a",
+      "sha256": "ca08a0b16399d5cdb1a857e2db4a77bf3a794d90a8cb03da65ce0a4bbc8315d0",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-timing-sweep.png",
+      "source": "data/3 Pendulums/Tuning/Sweep/Feasible/control_interval_sweep_landscape.png",
+      "git_blob_sha": "61c8c2e58f5a597c6e0c09f0111a7e79d101de47",
+      "sha256": "6d46c757fa73c07742c40b4a5a9472fa223cc258bac1f8d95bc1dd12eb894437",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-1-link.gif",
+      "source": "data/1 Pendulum/Results/Feasible/single_inverted_pendulum.gif",
+      "git_blob_sha": "61c76a81bc4dbe1d7184f4f86e9ac5fa239af095",
+      "sha256": "cfc34694040a76ca36962191f5999a4bd986dffe7902597f0916eafe9c72194e",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-1-link-poster.png",
+      "source": "data/1 Pendulum/Results/Feasible/single_inverted_pendulum.gif",
+      "source_git_blob_sha": "61c76a81bc4dbe1d7184f4f86e9ac5fa239af095",
+      "sha256": "bc5e3547c49bcf19e8d7b1ddfb579c4f3955e5c6d4b04c8d61fc5ec3506dd67c",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-2-link.gif",
+      "source": "data/2 Pendulums/Results/Feasible/double_inverted_pendulum.gif",
+      "git_blob_sha": "e1df8fe525b8e0b0b441491f9890223f6c8c9900",
+      "sha256": "772764487b93ab974d75110e8ed332e896dbdf27facc26b0a540718885ee7b30",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-2-link-poster.png",
+      "source": "data/2 Pendulums/Results/Feasible/double_inverted_pendulum.gif",
+      "source_git_blob_sha": "e1df8fe525b8e0b0b441491f9890223f6c8c9900",
+      "sha256": "66458e785b12633abb1ac3e36ff6f3a2428d843d03740001ba2e47daa5bd2ab0",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-3-link.gif",
+      "source": "data/3 Pendulums/Results/Feasible/triple_inverted_pendulum.gif",
+      "git_blob_sha": "ebc95ba0eea7231bca0148a1309f34c67ea01d8a",
+      "sha256": "9d3006c40b64eb6abf7fd1bcc4b06fca0a728f5a7b0d07b3f55f7337ba93b7d8",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-3-link-poster.png",
+      "source": "data/3 Pendulums/Results/Feasible/triple_inverted_pendulum.gif",
+      "source_git_blob_sha": "ebc95ba0eea7231bca0148a1309f34c67ea01d8a",
+      "sha256": "254c35331967291f26c85189463c8ff4320d194e6cb20d515bd35aa3de97baac",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-4-link.gif",
+      "source": "data/4 Pendulums/Results/Feasible/quadruple_inverted_pendulum.gif",
+      "git_blob_sha": "22452119813590a59a60c6895f5a82d3b1ad8ebf",
+      "sha256": "cf9c9f436483e8665e51670abfeaf4f775c6fc25b1aaf0507b7dff4c59a7cb3f",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-4-link-poster.png",
+      "source": "data/4 Pendulums/Results/Feasible/quadruple_inverted_pendulum.gif",
+      "source_git_blob_sha": "22452119813590a59a60c6895f5a82d3b1ad8ebf",
+      "sha256": "b92aebd4aac7ac11790b35788ea82c65b961457ca43cbfa0b7bd6f2f48dc772d",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-5-link.gif",
+      "source": "data/5 Pendulums/Results/Feasible/quintuple_inverted_pendulum.gif",
+      "git_blob_sha": "b93e7f9e7f1fb7dc0eb6114006e5171cff92bf34",
+      "sha256": "b5f671f23ad855d2cba29d8860f148738b205af782043a61561fdd38a1a860bf",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-5-link-poster.png",
+      "source": "data/5 Pendulums/Results/Feasible/quintuple_inverted_pendulum.gif",
+      "source_git_blob_sha": "b93e7f9e7f1fb7dc0eb6114006e5171cff92bf34",
+      "sha256": "3d4efcf3f807a1c3a144b6108a59b2be3d04317fdf2e59d71b51586f5a422bd4",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-6-link.gif",
+      "source": "data/6 Pendulums/Results/Nonfeasible/sextuple_inverted_pendulum.gif",
+      "git_blob_sha": "6b3c75aee632226c8d0f78960f0d1faa23ef8ac9",
+      "sha256": "675a81e8345b81f062f9188e22a58f6a2d8ccd520952fbccb81821ba93e11dad",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-6-link-poster.png",
+      "source": "data/6 Pendulums/Results/Nonfeasible/sextuple_inverted_pendulum.gif",
+      "source_git_blob_sha": "6b3c75aee632226c8d0f78960f0d1faa23ef8ac9",
+      "sha256": "cd238315a5ccb2f3d811984ab5573793b654311401ff77eb8b52541a215b144b",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-7-link.gif",
+      "source": "data/7 Pendulums/Results/Nonfeasible/septuple_inverted_pendulum.gif",
+      "git_blob_sha": "8284036c05cf9978b3c4b4271e889376dc49fbf9",
+      "sha256": "77658b2322ca93c666fe8fb44126ea4aee251c6015e126405d24c0cd3ba3e13b",
+      "transformation": "None; original repository file"
+    },
+    {
+      "asset": "assets/projects/pendulum-7-link-poster.png",
+      "source": "data/7 Pendulums/Results/Nonfeasible/septuple_inverted_pendulum.gif",
+      "source_git_blob_sha": "8284036c05cf9978b3c4b4271e889376dc49fbf9",
+      "sha256": "f0c20c0e8b130af814c95d0687641c562a2ed42f5aff74a55be041063f1199ec",
+      "transformation": "First frame exported as PNG, without resizing or content changes."
+    },
+    {
+      "asset": "assets/projects/pendulum-three-link-time-series.csv",
+      "source": "data/3 Pendulums/Results/Feasible/time_series.csv",
+      "git_blob_sha": "62259397b24b160777e88fea653aab8daf61a27b",
+      "sha256": "f812d07b442086c20c5ca5e417f40da7d6394184a3632bcbb6cbaf06525de8b5",
+      "transformation": "None; original repository file"
+    }
+  ]
+}

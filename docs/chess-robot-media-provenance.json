@@ -1,0 +1,164 @@
+{
+  "project": "Planar Robotic Arm",
+  "repository": "https://github.com/AevarOfjord/Automatic-Chess",
+  "commit": "93c5f2231b4a18c835b61091bb2c995bb33f6e18",
+  "review_date": "2026-11-12",
+  "ci": {
+    "url": "https://github.com/AevarOfjord/Automatic-Chess/actions/runs/33641338274",
+    "date": "2026-09-02",
+    "jobs": {
+      "Python 3.11": 100284886703,
+      "Python 3.12": 100284886394
+    },
+    "each_job": {
+      "tests_passed": 66,
+      "tests_skipped": 1,
+      "skipped_test": "test_headless_record_writes_gif (Pillow required)",
+      "reachability": "164/164",
+      "headless_mock_simulation": "passed",
+      "ruff": "passed"
+    }
+  },
+  "recomputed_model_results": {
+    "WHITE": {
+      "reachable": 82,
+      "targets": 82,
+      "minimum_singularity_margin": 0.20680740190237995
+    },
+    "BLACK": {
+      "reachable": 82,
+      "targets": 82,
+      "minimum_singularity_margin": 0.20680740190238045
+    },
+    "blocker_test": {
+      "path_mm": [
+        [
+          125,
+          175
+        ],
+        [
+          295.0,
+          125.0
+        ],
+        [
+          475,
+          175
+        ]
+      ],
+      "all_segments_clear": true,
+      "source_test": "test_planner_routes_around_blocker"
+    }
+  },
+  "media": [
+    {
+      "asset": "assets/projects/robotic-arm-chess-system.png",
+      "source_path": "Images/Assembly_2026-Jul-12_05-00-58PM-000_CustomizedView16749543023.png",
+      "git_blob_sha": "436d183cb838cf7912f422591152e33353a7df6d",
+      "sha256": "6e5bf97e9b3c413e717f1bfa13afc5883c1413d6e469b53cdbe8e6a8558bd07b",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/robotic-arm-chess-arm.png",
+      "source_path": "Images/Assembly_2026-Jul-12_05-17-52PM-000_CustomizedView10161832106.png",
+      "git_blob_sha": "302acdc73da847b0ae5048f7416ae3615d85dfdc",
+      "sha256": "8547b835f87cb9d51cb5bdbdae92b8785fedc8ce53de6c8b7673b71e3c1670db",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/robotic-arm-chess-top-view.png",
+      "source_path": "Images/Assembly_2026-Jul-12_04-55-13PM-000_CustomizedView40385052125.png",
+      "git_blob_sha": "c8e8a121f0d4190c5dd657433262dbb01d40f264",
+      "sha256": "1a115c7cd6e2498bf7b1edc26a6d5153e23fb82c8ee15e372df320fa0ac22912",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/chess-board-active.png",
+      "source_path": "Images/Assembly_2026-Jul-12_04-54-58PM-000_CustomizedView24825820673.png",
+      "git_blob_sha": "86046e8b54e38259ab5e4bcfdbcd4616ed44e02e",
+      "sha256": "ca7a8e3cea227a94233d6882ee59d5f1046c9c5ae163b12328e5fe2f56a2078a",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/chess-arm-side.png",
+      "source_path": "Images/Assembly_2026-Jul-12_05-18-05PM-000_CustomizedView8716539026.png",
+      "git_blob_sha": "5c5da34838584a5714f9e52ffdff9c4975bfa986",
+      "sha256": "7856ffad218a7dcb67e2b42538b791ba3ed08da6d74d64c71bad224e55f744ea",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/chess-tool-height.png",
+      "source_path": "Images/Assembly_2026-Jul-12_05-01-43PM-000_CustomizedView30499498261.png",
+      "git_blob_sha": "0a5699a4b5bc270bfc7fbe6efd978a201e03a303",
+      "sha256": "4463dc5e379b7c47d6b920746de526f4d212137c28b21c427e5f5712541c0dd8",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/chess-simulator.gif",
+      "source_path": "Images/simulator.gif",
+      "git_blob_sha": "8a6dceff6455bf3909814e195a23274d742fc37a",
+      "sha256": "77831cb2c5474026dbeab5e42cd742ec5568c9a88ec95935bd3a0726e5858968",
+      "transformation": "None; original file"
+    },
+    {
+      "asset": "assets/projects/chess-simulator-poster.png",
+      "source_path": "Images/simulator.gif",
+      "source_git_blob_sha": "8a6dceff6455bf3909814e195a23274d742fc37a",
+      "sha256": "38ae19ab354bdc2f3fbd5a699b4f8cd17e13ea48ae6afc531e1e5b46a44f3735",
+      "transformation": "First GIF frame exported as PNG; no resizing or compositional changes."
+    },
+    {
+      "asset": "assets/projects/chess-reachability.png",
+      "sha256": "841381297a91aaead3d15baeec58f0f0a9aa91c77b565794d22929d8f5f7cae8",
+      "transformation": "Matplotlib figure from the unmodified pinned geometry and path-planner calculations. Plot styling is new; numerical results are computed from repository functions.",
+      "source_files": [
+        {
+          "path": "chess_robot/config.py",
+          "git_blob_sha": "55065f0ac13365a42c4958893669be10f48eab48"
+        },
+        {
+          "path": "chess_robot/geometry.py",
+          "git_blob_sha": "df6821eebfc05c0735296534c00fdcfb5d8d4061"
+        },
+        {
+          "path": "chess_robot/inventory.py",
+          "git_blob_sha": "5f827cf4317b2ee660a02c388237ef27dfe89c51"
+        },
+        {
+          "path": "chess_robot/trajectory.py",
+          "git_blob_sha": "f973f2b5bb14b903e634a9e0c07a9070438e42a7"
+        },
+        {
+          "path": "tests/test_puck_trajectory.py",
+          "git_blob_sha": "ae1c4bd3f141e855a3a098d22c402e7cd6fe0e8d"
+        }
+      ]
+    },
+    {
+      "asset": "assets/projects/chess-path-planning.png",
+      "sha256": "4fcddc022a4813697061823e71f0d5dd21e0699548278ed154ab04f9a5af77f9",
+      "transformation": "Matplotlib figure from the unmodified pinned geometry and path-planner calculations. Plot styling is new; numerical results are computed from repository functions.",
+      "source_files": [
+        {
+          "path": "chess_robot/config.py",
+          "git_blob_sha": "55065f0ac13365a42c4958893669be10f48eab48"
+        },
+        {
+          "path": "chess_robot/geometry.py",
+          "git_blob_sha": "df6821eebfc05c0735296534c00fdcfb5d8d4061"
+        },
+        {
+          "path": "chess_robot/inventory.py",
+          "git_blob_sha": "5f827cf4317b2ee660a02c388237ef27dfe89c51"
+        },
+        {
+          "path": "chess_robot/trajectory.py",
+          "git_blob_sha": "f973f2b5bb14b903e634a9e0c07a9070438e42a7"
+        },
+        {
+          "path": "tests/test_puck_trajectory.py",
+          "git_blob_sha": "ae1c4bd3f141e855a3a098d22c402e7cd6fe0e8d"
+        }
+      ]
+    }
+  ]
+}

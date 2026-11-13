@@ -1,0 +1,158 @@
+[
+  {
+    "asset": "steam-bath-thermal-134.jpg",
+    "source": "Hitamyndir/FLIR0134.jpg",
+    "source_sha256": "2fd82563cf35ce24072553a01a8d2b0ae0e561659df252ebfb2f66cf79914d8f",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-thermal-137.jpg",
+    "source": "Hitamyndir/FLIR0137.jpg",
+    "source_sha256": "f8e7ca517f4023c4f632127d0d7ae026ea5c3c1acdcaa81598256ededca5b54d",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-thermal-150.jpg",
+    "source": "Hitamyndir/FLIR0150.jpg",
+    "source_sha256": "89c86c194fa3322f1177d36f75b46da3b0e21766f4cfe8f2bae9c615f3fdb3eb",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-thermal-154.jpg",
+    "source": "Hitamyndir/FLIR0154.jpg",
+    "source_sha256": "21c5faf948f7375bf4e496849784be9417095c97a710f91ed6c84c86395ef4c8",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-case-1-cuts.png",
+    "source": "simulation/matched-five-minute-20261011/case1-current-riser/case/300/T",
+    "source_sha256": "705e4c8c948d591c1902c1d8b84e9d449db71a31669e93677d9531a23d1321bb",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-case-2-cuts.png",
+    "source": "simulation/ventilation-three-vents-200mm-fillet10-20261009/case/300.25/T",
+    "source_sha256": "87ffdf40af7664f46e174e9df235ad4902f17fda5ef5c0ce5e0d16570796800e",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-case-3-cuts.png",
+    "source": "simulation/matched-five-minute-20261011/case3-125mm-z080/case/300/T",
+    "source_sha256": "0ddd7f7b0c8cbae1faa89850a2de840df6a4e07f7a47b0601cea90aff0ad9b2e",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-case-4-cuts.png",
+    "source": "simulation/matched-five-minute-20261011/case4-200mm-z080-fan1000/case/300/T",
+    "source_sha256": "8f94b59095ec8e2c095c914ac6a8deacc9b8a1569dd1d566d82b02d854e65038",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-case-5-cuts.png",
+    "source": "simulation/matched-five-minute-20261011/case5-200mm-z150/case/300/T",
+    "source_sha256": "14dffc07cc96dc28a46967fd330ae4a68e14c321633794aae54944e5a91f24d1",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-case-6-cuts.png",
+    "source": "simulation/matched-five-minute-20261011/case6-riser-200mm-z080/case/300/T",
+    "source_sha256": "7dd4b1f7d0fe023413d014a1fb8df7890fc7af2b6479df965472e008a71c8fd3",
+    "method": "Re-rendered saved CFD field with English labels; identical five planes, sampling, cell-to-point interpolation, and 5–100°C scale; matches original validation for all five sections"
+  },
+  {
+    "asset": "steam-bath-fillet-details.png",
+    "source": "simulation/ventilation-three-vents-200mm-fillet10-20261009/design/filleted-concrete.step",
+    "source_sha256": "75472f218471a27bfc065bcffba4c64ff1623420fdf3af9fb568eac92c8fdb2d",
+    "method": "Exact CAD sections re-rendered with an English project-based title; geometry and dimensions unchanged"
+  },
+  {
+    "asset": "steam-bath-door-location.png",
+    "source": "simulation/door-opening-20261014/door-location.png",
+    "source_sha256": "a203705405a1b8300a11116f0e5e623abe725236a0e0710238633424d3d4ac15",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-cad-case-1.png",
+    "source": "simulation/matched-five-minute-20261011/case1-current-riser/design/filleted-concrete.step",
+    "source_sha256": "007e590d07eb65d4a393fd364c4f60e558f066ea9edc099843a1d4efd3915d6a",
+    "method": "Boolean half-cut and triangulation of final STEP solid; shaded CAD rendering, not a simulation result"
+  },
+  {
+    "asset": "steam-bath-cad-case-2.png",
+    "source": "simulation/ventilation-three-vents-200mm-fillet10-20261009/design/filleted-concrete.step",
+    "source_sha256": "75472f218471a27bfc065bcffba4c64ff1623420fdf3af9fb568eac92c8fdb2d",
+    "method": "Boolean half-cut and triangulation of final STEP solid; shaded CAD rendering, not a simulation result"
+  },
+  {
+    "asset": "steam-bath-cad-case-6.png",
+    "source": "simulation/matched-five-minute-20261011/case6-riser-200mm-z080/design/filleted-concrete.step",
+    "source_sha256": "ce1799b40bdfa23e54d86c6bd41ae2f06cdcdf99e695ae7ae60e05bc461b5e07",
+    "method": "Boolean half-cut and triangulation of final STEP solid; shaded CAD rendering, not a simulation result"
+  },
+  {
+    "asset": "steam-bath-closed-history.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-height-before.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-height-after.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-height-heatmap.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-door-history.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-door-outflow.png",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-thirty-minute-history.png",
+    "source": "reports/2026-10-14/working-selected30/verified-selected30.json",
+    "source_sha256": "45ad76b93da9970cae158853a1128fbe9f6f3e8c5f17c6059149d679d9a558ca",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-thirty-minute-profile.png",
+    "source": "reports/2026-10-14/working-selected30/verified-selected30.json",
+    "source_sha256": "45ad76b93da9970cae158853a1128fbe9f6f3e8c5f17c6059149d679d9a558ca",
+    "method": "English chart rendered from archived verified numerical data; no new CFD simulation"
+  },
+  {
+    "asset": "steam-bath-comparison.csv",
+    "source": "reports/2026-10-14/working-door/verified-results.json",
+    "source_sha256": "f18aebe27e6e8f1a0107283a451a84e78a07fac46b7a3c43112836738875c382",
+    "method": "Selected numerical results; excludes local paths and source manifests"
+  },
+  {
+    "asset": "steam-bath-height-profiles.csv",
+    "source": "reports/2026-10-14/working-door/height-profiles-010m.csv",
+    "source_sha256": "32813a0d1ec2547b96880c45cfa631908724ed55e69af9dd7edb96d747112d9b",
+    "method": "Copied unchanged"
+  },
+  {
+    "asset": "steam-bath-cutaway.png",
+    "source": "Base-shell STEP model from the local project collection",
+    "source_sha256": "3684eca06c58e23a374f2b735506ce0a9313b9db9444b80b9830c5a9fb79b1fe",
+    "method": "Base-shell CAD cutaway and centre section re-rendered with an English project-based title; source geometry unchanged"
+  }
+]

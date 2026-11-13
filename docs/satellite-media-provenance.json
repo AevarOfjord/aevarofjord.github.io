@@ -1,0 +1,164 @@
+{
+  "source_root": "Selected master's thesis and research collection (not published)",
+  "research_baseline": "Final 2025 thesis, chapters 3\u20136",
+  "assets": [
+    {
+      "asset": "assets/projects/satellite-frame.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 32,
+      "figure": 2,
+      "embedded_image": "Im0.jp2",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1195,
+        426
+      ],
+      "sha256": "ebc9f147a628ed9fb674aaa29ad0c64410d7bdbc3d1d4692451c396b7a2cae59"
+    },
+    {
+      "asset": "assets/projects/satellite-pneumatic-deck.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 34,
+      "figure": 3,
+      "embedded_image": "Im0.jp2",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1177,
+        456
+      ],
+      "sha256": "9d34f403007afda31266eb56b0a512e2df9d77b16beb36b66d5f5338840641c8"
+    },
+    {
+      "asset": "assets/projects/satellite-electronics-deck.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 35,
+      "figure": 4,
+      "embedded_image": "Im0.jp2",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1169,
+        489
+      ],
+      "sha256": "f8a07e90a1511af2ecfdb5683a00e17ee04d834347421f8190697d75910bf1e5"
+    },
+    {
+      "asset": "assets/projects/satellite-air-supply.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 37,
+      "figure": 6,
+      "embedded_image": "Im0.jp2",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1173,
+        660
+      ],
+      "sha256": "1c5ada27773a48395c0c7ec5679022423a6f550b3671ab70ecf1c23ac2d1476c"
+    },
+    {
+      "asset": "assets/projects/satellite-air-bearings.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 39,
+      "figure": 7,
+      "embedded_image": "Im0.jp2",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1146,
+        409
+      ],
+      "sha256": "89dbd636f659130a03cc328d60817a3e74e8fd5824426f9527735b5a72229729"
+    },
+    {
+      "asset": "assets/projects/satellite-pneumatic-diagram.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 43,
+      "figure": 9,
+      "embedded_image": "Im0.png",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1196,
+        411
+      ],
+      "sha256": "8806737c640f5ee5db8a0fbd74af9c429f27ac9becc2f51a571ae8ab7e4c069f"
+    },
+    {
+      "asset": "assets/projects/satellite-test-area.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 44,
+      "figure": 10,
+      "embedded_image": "Im0.png",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1140,
+        694
+      ],
+      "sha256": "04815366483aa2e5d0db40c91c5c2fa754f462d5b6544794907c27e1f70d3b7a"
+    },
+    {
+      "asset": "assets/projects/satellite-electrical-diagram.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 47,
+      "figure": 12,
+      "embedded_image": "Im0.png",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        1179,
+        790
+      ],
+      "sha256": "42a787593d8834cce4319154e5dda4e99c59c57cb0c2ecf7786cb928e04cd08e"
+    },
+    {
+      "asset": "assets/projects/satellite-mission-path.png",
+      "source": "Amundinusarson_Thesis.pdf",
+      "pdf_page": 86,
+      "figure": 16,
+      "embedded_image": "Im0.png",
+      "method": "Original embedded image extracted; PNG conversion only, transparency preserved",
+      "size": [
+        800,
+        800
+      ],
+      "sha256": "117d9c98ec71fbad1a75ae5ab47214a8ea7a83f49fe5d9c73096f05dc899eb90"
+    },
+    {
+      "asset": "assets/projects/satellite-position-error.png",
+      "source": "Presentation/Data/Comparison/Test/position_error.png",
+      "thesis_figure": 18,
+      "method": "Unchanged original comparison plot",
+      "sha256": "b1a003d4d680037d32629d44943712d1cd5d08c67652a92aa1585723fd2b0201"
+    },
+    {
+      "asset": "assets/projects/satellite-heading-error.png",
+      "source": "Presentation/Data/Comparison/Test/angular_error.png",
+      "thesis_figure": 19,
+      "method": "Unchanged original comparison plot",
+      "sha256": "0c6805f76b34e894f5b55053e9f528d95d6e9e24c0b831228c0824f890e77570"
+    },
+    {
+      "asset": "assets/projects/satellite-velocity.png",
+      "source": "Presentation/Data/Comparison/Test/velocity_magnitude.png",
+      "thesis_figure": 20,
+      "method": "Unchanged original comparison plot",
+      "sha256": "4b8368c3796511a940acc66abcab046cc6b709767d9fa427de70eca1481515ea"
+    },
+    {
+      "asset": "assets/projects/satellite-thruster-on-time.png",
+      "source": "Presentation/Data/Comparison/Test/thruster_usage_overlay.png",
+      "thesis_figure": 21,
+      "method": "Unchanged original comparison plot",
+      "sha256": "dc187f3178d473aa9cb8062e6490be8cbaac1587dabd8189b98d0caf7b2ee7a9"
+    },
+    {
+      "asset": "assets/projects/satellite-solver-timing.png",
+      "source": "Presentation/Data/Comparison/Test/mpc_performance.png",
+      "thesis_figure": 22,
+      "method": "Unchanged original comparison plot",
+      "sha256": "e6b3186f5a75e8fa6a66edc13eeb8959f0396139ff1b1ddd67d68bc24b3812cc"
+    },
+    {
+      "asset": "assets/projects/satellite-comparison.csv",
+      "source": "Presentation/Data/Comparison/Test/statistics.csv",
+      "method": "Unchanged original comparison metrics",
+      "sha256": "59c42535d410d4a2e607751ea4dff3cbe9c6dfdde76c4e9d72276e8c1446d8df"
+    }
+  ]
+}

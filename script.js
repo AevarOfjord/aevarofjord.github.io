@@ -5,7 +5,6 @@ if (filterBar) {
   const projects = [...document.querySelectorAll('[data-categories]')];
   const count = document.querySelector('#project-count');
   const grid = document.querySelector('.project-grid');
-  const list = document.querySelector('.project-list');
   function applyFilter(filter) {
     let visible = 0;
     for (const project of projects) {
@@ -15,10 +14,9 @@ if (filterBar) {
     }
     for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.filter === filter));
     grid.hidden = ![...grid.children].some(project => !project.hidden);
-    list.hidden = ![...list.children].some(project => !project.hidden);
-    list.style.marginTop = grid.hidden ? '0' : '';
     count.textContent = `${visible} additional ${visible === 1 ? 'project' : 'projects'}`;
   }
   filterBar.hidden = false;
+  applyFilter('all');
   for (const button of buttons) button.addEventListener('click', () => applyFilter(button.dataset.filter));
 }

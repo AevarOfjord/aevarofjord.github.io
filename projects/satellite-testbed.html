@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Satellite control, from model to hardware. — Aevar Oefjoerd</title>
-  <meta name="description" content="An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.">
+  <title>Planar CubeSat — Aevar Oefjoerd</title>
+  <meta name="description" content="Planar CubeSat: a master's satellite-control project combining a physical testbed, a digital twin, mixed-integer MPC, and a custom thrust bench for actuator characterization.">
   <meta name="theme-color" content="#f6f6f4">
   <link rel="canonical" href="https://aevarofjord.github.io/projects/satellite-testbed.html">
-  <meta property="og:title" content="Satellite control, from model to hardware. — Aevar Oefjoerd">
-  <meta property="og:description" content="An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.">
+  <meta property="og:title" content="Planar CubeSat — Aevar Oefjoerd">
+  <meta property="og:description" content="A planar satellite testbed and digital twin, with custom thrust measurement hardware to identify and resolve differences between simulation and the physical system.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aevarofjord.github.io/projects/satellite-testbed.html">
-  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/satellite.jpg">
+  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/satellite-assembly.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="satellite-testbed.css">
+  <script src="satellite-testbed.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -25,18 +27,307 @@
     <div class="case-intro">
       <a class="back-link" href="../index.html#projects">← All projects</a>
       <p class="eyebrow">01 / Controls · Hardware · M.Sc. thesis</p>
-      <h1>Satellite control, from model to hardware.</h1>
-      <p class="case-lede">An autonomous satellite testbed on a 6 × 6 meter air-bearing table, built to connect model predictive control research with physical experiments.</p>
-      <dl class="case-meta"><div><dt>Scope</dt><dd>Mechanical design, controls &amp; embedded systems</dd></div><div><dt>Status</dt><dd>Hardware validated</dd></div><div><dt>Tools</dt><dd>Python · C++ · Gurobi · ESP32 · OptiTrack</dd></div></dl>
-      <div class="project-actions"><a class="text-link" href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">View on GitHub <span aria-hidden="true">↗</span></a></div>
+      <h1>Planar CubeSat</h1>
+      <p class="case-lede">A planar satellite testbed and digital twin using model predictive control. I designed the platform, developed the control system, and built custom measurement hardware to resolve differences between simulation and physical behavior.</p>
+      <dl class="case-meta">
+        <div><dt>Project</dt><dd>M.Sc. Mechanical Engineering<br>University of Kentucky · 2025</dd></div>
+        <div><dt>My role</dt><dd>Mechanical design, controls,<br>embedded systems &amp; validation</dd></div>
+        <div><dt>Core tools</dt><dd>Fusion 360 · Python · Gurobi<br>ESP32 · OptiTrack</dd></div>
+      </dl>
+      <div class="project-actions">
+        <a class="text-link" href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">View source code <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="https://doi.org/10.13023/etd.2025.583">Read the thesis <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <figure><div class="case-hero"><img src="../assets/projects/satellite.jpg" width="720" height="405" alt="CAD render of the satellite structure and compressed gas system" fetchpriority="high"></div><figcaption>The mechanical design of the air-bearing satellite platform.</figcaption></figure>
-    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>Control a floating platform with eight binary cold-gas thrusters. Each actuator is either on or off, and the controller must choose a feasible combination quickly enough to track a path on physical hardware.</p><p>The project became my mechanical engineering master’s thesis at the University of Kentucky. It combines mechanical and pneumatic design, embedded control, motion capture, optimization, and experimental validation.</p></div></section>
-<section class="story-section"><h2>What I built</h2><div><p>I designed and built the platform end to end: the structure, air bearings, cold-gas system, and ESP32 control interface. A Python simulation and hardware stack share the controller and matched physical parameters.</p><ul><li>Mixed-integer model predictive control using Gurobi to handle binary thruster commands.</li><li>OptiTrack state feedback, experiment logging, and mission visualization.</li><li>Individual thruster characterization and a digital twin for simulation-to-hardware comparisons.</li><li>Waypoint navigation and shape-following missions, including custom DXF paths.</li></ul></div></section>
-<section class="story-section"><h2>Validation</h2><div><p>The reported hardware results achieved a final position error of <strong>0.024 m</strong> and attitude error of <strong>0.51°</strong> at a <strong>16.7 Hz</strong> control rate. The recorded comparison reports a <strong>1.47% difference in total thruster usage</strong>: 188.04 seconds on hardware and 190.80 seconds in simulation.</p><p>These are results from the documented testbed experiments, rather than guarantees for other hardware or missions. The thesis contains the controller design, methodology, and validation context.</p></div></section>
-<section class="story-section"><h2>Explore the work</h2><div><p><a class="text-link" href="https://github.com/AevarOfjord/mpc-air-bearing-satellite">Source code and documentation ↗</a></p><p><a class="text-link" href="https://doi.org/10.13023/etd.2025.583">Read the published master’s thesis ↗</a></p></div></section><figure class="case-gallery"><img src="../assets/projects/satellite-trajectory.png" width="3200" height="2973" alt="Experimental trajectory in solid blue and simulated trajectory in dashed red, shown in meters around the same inspection path" loading="lazy"><figcaption>Recorded hardware and simulation trajectories for the comparison experiment. Blue: hardware. Red dashed: simulation.</figcaption></figure></div>
-    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Taking satellite inspection into 3D.</h2></div><a class="text-link" href="inspection-satellite.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Taking satellite inspection into 3D.</span></a></nav>
+
+    <div class="satellite-media">
+      <figure>
+        <a class="satellite-assembly satellite-image" href="../assets/projects/satellite-assembly.png"><img src="../assets/projects/satellite-assembly.png" width="1138" height="630" alt="Three CAD views of the complete platform, with a compressed-air cylinder above the chassis and three air bearings underneath" fetchpriority="high"></a>
+        <figcaption>Complete CAD assembly showing the structure, pneumatic supply, electronics, and air bearings.</figcaption>
+      </figure>
+      <figure>
+        <a class="satellite-photo satellite-image" href="../assets/projects/satellite-prototype.jpg"><img src="../assets/projects/satellite-prototype.jpg" width="310" height="540" alt="The assembled physical prototype, with reflective motion-capture markers circled in red"></a>
+        <figcaption>Physical prototype with reflective markers for OptiTrack position and heading measurements.</figcaption>
+      </figure>
+    </div>
+
+    <div class="satellite-outcomes">
+      <p class="eyebrow">On physical hardware · documented profile-following experiment</p>
+      <dl class="satellite-metrics">
+        <div><dt>Final position error</dt><dd>2.4 <span>cm</span></dd></div>
+        <div><dt>Final heading error</dt><dd>0.51<span>°</span></dd></div>
+        <div><dt>Control update rate</dt><dd>16.7 <span>Hz</span></dd></div>
+      </dl>
+      <a class="text-link" href="#results">See the experiment and results <span aria-hidden="true">↓</span></a>
+    </div>
+
+    <nav class="case-contents" aria-label="On this page">
+      <span class="eyebrow">In this project</span>
+      <a href="#overview">Overview</a><a href="#challenge">Challenge</a><a href="#hardware">Mechanical design</a><a href="#calibration">Thrust testing</a><a href="#electronics">Electronics</a><a href="#digital-twin">Digital twin</a><a href="#controller">MPC</a><a href="#results">Results</a><a href="#resources">Documentation</a>
+    </nav>
+
+    <div class="satellite-story">
+      <section id="overview" class="story-section">
+        <h2>Project overview</h2>
+        <div>
+          <p>Small spacecraft have limited propellant and actuators that cannot always deliver a continuously adjustable force. This project investigates whether model predictive control (MPC) can make useful decisions in real time when every thruster is simply <strong>on or off</strong>—and whether a calibrated simulation can reproduce the physical system’s behavior.</p>
+          <p>The testbed moves across a 6 × 6 meter epoxy floor on three air bearings. It can translate in two directions and rotate about its vertical axis, giving a low-friction setting for studying planar satellite motion.</p>
+          <p>My work connected the full experiment: the mechanical platform and pneumatic system, actuator characterization, embedded command interface, controller, simulation, and comparison of recorded results.</p>
+        </div>
+      </section>
+
+      <section id="challenge" class="story-section">
+        <h2>Digital twin validation</h2>
+        <div>
+          <p>The most difficult part of the project was identifying the sources of mismatch between the digital twin and the physical hardware. I needed measurements of the actual system’s output to determine where the model was inaccurate.</p>
+          <p>I addressed this by designing and building <strong>custom measurement hardware, including a thrust test bench</strong> to characterize each thruster individually. These measurements provided the data needed to calibrate the digital twin against the physical platform.</p>
+        </div>
+      </section>
+
+      <section id="hardware" class="story-section">
+        <h2>Mechanical design</h2>
+        <div>
+          <p>I designed the platform around a <strong>290 × 290 × 150 mm frame</strong> built from 2020 aluminum extrusion. Corner brackets and T-nuts hold the structure together, while 3D-printed PLA decks, side panels, and mounting parts make the internal layout easy to revise.</p>
+          <p>The square layout puts two thrusters on each face. Their offset mounting positions let the controller combine translation and yaw: firing a pair primarily produces translation, while using one side of the pair also creates torque. Eight binary actuators give 256 possible firing combinations at each control step.</p>
+          <p>The complete moving testbed includes the air supply and bearing assembly. Its measured mass was <strong>23.090 kg</strong>; the smaller frame dimensions describe the central satellite platform.</p>
+        </div>
+      </section>
+      <figure class="satellite-figure">
+        <a class="satellite-image" href="../assets/projects/satellite-frame.png"><img src="../assets/projects/satellite-frame.png" width="1195" height="426" alt="CAD views of the square satellite chassis with side panels installed and removed, exposing the extrusion frame and two internal decks" loading="lazy"></a>
+        <figcaption><strong>Frame and enclosure.</strong> Removable panels give access to the internal assemblies. The extrusion frame carries the structure while printed parts locate the components. Thesis Figure 2.</figcaption>
+      </figure>
+      <div class="satellite-gallery">
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-pneumatic-deck.png"><img src="../assets/projects/satellite-pneumatic-deck.png" width="1177" height="456" alt="Top and angled CAD views of the lower deck with an eight-way manifold, tubing, and individual flow-control valves" loading="lazy"></a>
+          <figcaption><strong>Lower deck: pneumatic distribution.</strong> An eight-way manifold feeds individual lines through adjustable flow-control valves. Brass heat-set inserts secure the components to a 3 mm printed plate. Thesis Figure 3.</figcaption>
+        </figure>
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-electronics-deck.png"><img src="../assets/projects/satellite-electronics-deck.png" width="1169" height="489" alt="Top and angled CAD views of the upper deck with eight solenoid valves and relays surrounding the central electronics" loading="lazy"></a>
+          <figcaption><strong>Upper deck: actuation and electronics.</strong> Eight normally closed solenoid valves, relay modules, ESP32-S3 controllers, converters, and the wiring hub sit above the pneumatic routing. Thesis Figure 4.</figcaption>
+        </figure>
+      </div>
+
+      <section class="story-section">
+        <h2>Air supply and low-friction support</h2>
+        <div>
+          <p>An onboard compressed-air cylinder supplies both the thrusters and the bearings, allowing the platform to move without a supply hose tether. A printed bracket on an aluminum plate holds the cylinder, regulators, filter, and shutoff hardware.</p>
+          <p>The pneumatic system uses <strong>separate regulated branches</strong>: approximately 60 psi for bearing support and 40 psi for thrust. This lets me adjust actuation pressure independently of the pressure keeping the platform off the floor. Each branch can also be isolated during testing.</p>
+          <p>Underneath, a triangular 4 mm aluminum plate carries three 40 mm air bearings. Radial adjustment grooves at 120° intervals allow the support points to be repositioned. After load balancing, the three measured support loads were 7.614, 7.752, and 7.724 kg—close to an even three-way distribution.</p>
+        </div>
+      </section>
+      <div class="satellite-gallery">
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-air-supply.png"><img src="../assets/projects/satellite-air-supply.png" width="1173" height="660" alt="Three CAD views of the compressed-air cylinder, printed support bracket, regulators, filter, tubing, and mounting plate" loading="lazy"></a>
+          <figcaption><strong>Onboard air supply.</strong> The complete pneumatic module mounts above the satellite chassis. Its mass and position are included in the testbed model. Thesis Figure 6.</figcaption>
+        </figure>
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-air-bearings.png"><img src="../assets/projects/satellite-air-bearings.png" width="1146" height="409" alt="Two CAD views of the triangular air-bearing support plate with three adjustable bearing mounts and a central distribution manifold" loading="lazy"></a>
+          <figcaption><strong>Air-bearing assembly.</strong> Three adjustable support points carry the moving platform on a thin air film. The central manifold distributes supply air to each bearing. Thesis Figure 7.</figcaption>
+        </figure>
+      </div>
+      <figure class="satellite-figure">
+        <a class="satellite-image" href="../assets/projects/satellite-pneumatic-diagram.png"><img src="../assets/projects/satellite-pneumatic-diagram.png" width="1196" height="411" alt="Pneumatic flow diagram from the compressed-air cylinder through regulation and filtration, then separate branches to the air bearings and thrusters" loading="lazy"></a>
+        <figcaption><strong>Two pressure branches, one onboard supply.</strong> A first regulation stage and filter feed independent bearing and thruster circuits. Thesis Figure 9. Select any figure to inspect it at full size.</figcaption>
+      </figure>
+
+      <section id="calibration" class="story-section">
+        <h2>Custom thrust bench and testing</h2>
+        <div>
+          <p>The custom thrust bench measured each thruster in its installed configuration, retaining the actual tubing and regulator. A load cell, HX711 amplifier, and ESP32-S3 recorded repeated firings, capturing the output of the complete pneumatic system.</p>
+          <p>I temporarily routed each valve’s output through a free-hanging silicone tube to an equivalent nozzle on the load cell. The loose loop reduced mechanical preload on the sensor. Before testing, I tared the load cell, calibrated it with a known mass, and checked it with additional reference masses.</p>
+          <p>Each valve was fired for <strong>five seconds per activation, in two sets of 25 activations</strong>. Force data was recorded wirelessly to CSV so I could compare average thrust and repeatability across the eight valves.</p>
+          <p>Measured forces ranged from <strong>0.428 to 0.484 N</strong>. Treating the thrusters as identical would give the controller an inaccurate picture of the forces and torques available. I incorporated the individual measurements into both the controller and the simulation, alongside the platform’s mass, inertia, and center-of-mass offset.</p>
+        </div>
+      </section>
+      <figure class="satellite-calibration">
+        <a class="satellite-image" href="../assets/projects/satellite-calibration.png"><img src="../assets/projects/satellite-calibration.png" width="1099" height="502" alt="CAD views of the custom thrust test bench, showing a load cell mounted to the chassis, a printed bracket, and flexible tubing" loading="lazy"></a>
+        <figcaption>Custom thrust test bench for measuring individual thruster output in the installed pneumatic system. CAD illustration from the thesis, Figure 8.</figcaption>
+      </figure>
+      <div class="satellite-table results-comparison">
+        <table>
+          <caption>Individual thruster measurements</caption>
+          <thead><tr><th scope="col">Thruster</th><th scope="col">Mean force <span>(N)</span></th><th scope="col">Repeatability CV <span>(%)</span></th></tr></thead>
+          <tbody>
+            <tr><th scope="row">T1</th><td>0.441</td><td>0.43</td></tr>
+            <tr><th scope="row">T2</th><td>0.431</td><td>0.32</td></tr>
+            <tr><th scope="row">T3</th><td>0.428</td><td>0.73</td></tr>
+            <tr><th scope="row">T4</th><td>0.438</td><td>0.31</td></tr>
+            <tr><th scope="row">T5</th><td>0.469</td><td>0.40</td></tr>
+            <tr><th scope="row">T6</th><td>0.447</td><td>0.21</td></tr>
+            <tr><th scope="row">T7</th><td>0.467</td><td>0.43</td></tr>
+            <tr><th scope="row">T8</th><td>0.484</td><td>0.30</td></tr>
+          </tbody>
+        </table>
+        <p class="result-source">Thesis Table 1. CV is the coefficient of variation: a measure of variation relative to the mean. Each thruster’s repeatability CV was below 1%, even though the strongest valve produced about 13% more thrust than the weakest.</p>
+      </div>
+
+      <section id="electronics" class="story-section">
+        <h2>Electronics, sensing, and communication</h2>
+        <div>
+          <p>The platform separates valve power from the electronics supply using two 12 V battery packs. One supplies actuation; the other feeds the converters for the controllers, relays, and auxiliary sensors. This separation reduces interference from valve switching on the electronics supply.</p>
+          <p>Seven OptiTrack Prime 13 cameras surround the 6 × 6 m test area. They track an asymmetric pattern of reflective markers so the platform can be identified through changes in heading. Motive reconstructs the pose and streams it over Ethernet using NatNet.</p>
+          <p>The ground station extracts x–y position, yaw, and the corresponding velocities for feedback. Side-panel cameras and ultrasonic sensors were integrated for further development; <strong>the thesis experiment used motion capture for closed-loop control</strong>.</p>
+        </div>
+      </section>
+      <div class="satellite-gallery satellite-gallery-diagrams">
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-test-area.png"><img src="../assets/projects/satellite-test-area.png" width="1140" height="694" alt="Plan view of the test floor with seven motion-capture cameras distributed around its perimeter and a ground station beside it" loading="lazy"></a>
+          <figcaption><strong>Experimental environment.</strong> Overlapping camera views support tracking while the platform translates and rotates across the floor. Thesis Figure 10.</figcaption>
+        </figure>
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-electrical-diagram.png"><img src="../assets/projects/satellite-electrical-diagram.png" width="1179" height="790" alt="Electrical and communication schematic connecting batteries, converters, ESP32 controllers, eight relays and valves, auxiliary sensors, and the OptiTrack ground station" loading="lazy"></a>
+          <figcaption><strong>Power and command architecture.</strong> A ground-station gateway sends commands over ESP-NOW; the onboard controller switches the eight valve relays. The diagram also shows the auxiliary sensing hardware. Thesis Figure 12.</figcaption>
+        </figure>
+      </div>
+
+      <section id="digital-twin" class="story-section">
+        <h2>Building the digital twin</h2>
+        <div>
+          <p>The simulation represents six planar states: x and y position, two translational velocities, heading, and angular velocity. It sums the forces from active thrusters, rotates those forces from the body frame into the world frame, and computes yaw torque using each thruster’s lever arm about the center of mass.</p>
+          <p>The measured model uses a mass of 23.090 kg, a planar moment of inertia of <strong>0.324 kg·m²</strong>, and a center-of-mass offset of <strong>(5.56, 0.78) mm</strong> from the geometric center. Including that offset matters because the same firing combination can produce both translation and rotation.</p>
+          <p>A central configuration layer supplies physical parameters and controller settings to both environments. Mission generation, MPC, data logging, and plotting follow the same workflow, with the feedback source changing between the simulated dynamics and motion capture.</p>
+        </div>
+      </section>
+      <div class="satellite-detail-grid">
+        <div><h3>Idealized physics</h3><p>Instantaneous thrust, perfect sensing, and no drag or external disturbances provide a baseline for checking the controller, thruster mapping, and coordinate transforms.</p></div>
+        <div><h3>Realistic physics</h3><p>Linear and rotational drag, measurement noise, valve response, command delay, and small disturbances represent effects encountered on the physical testbed.</p></div>
+      </div>
+
+      <section id="controller" class="story-section">
+        <h2>Model predictive control</h2>
+        <div>
+          <p>MPC predicts how the platform will move, chooses a sequence of thruster commands, applies the first command, and plans again from the next measurement. The optimization balances tracking error and actuation effort while respecting binary thruster decisions and motion constraints.</p>
+          <p>Gurobi solves the mixed-integer problem on a ground-station computer, and the onboard ESP32 executes the selected commands. The prediction horizon covers <strong>0.9 seconds</strong>, or 15 control steps.</p>
+          <p>A separate 12-step control horizon defines the sequence of binary firing decisions. The objective weighs position, heading, velocity, and actuation effort; state bounds constrain the predicted motion to the test area and configured motion limits. Heading targets are wrapped into the appropriate neighborhood of the current angle to avoid unnecessary full rotations.</p>
+        </div>
+      </section>
+      <div class="control-diagram" aria-labelledby="control-loop-title">
+        <h3 id="control-loop-title">The hardware feedback loop</h3>
+        <ol class="control-steps">
+          <li><span class="step-number">01</span><h4>Measure</h4><p>OptiTrack streams pose data at 240 Hz. The ground station extracts planar position, heading, and velocities.</p></li>
+          <li><span class="step-number">02</span><h4>Predict &amp; choose</h4><p>The MPC uses the latest state and reference path to select an eight-bit thruster command.</p></li>
+          <li><span class="step-number">03</span><h4>Transmit &amp; fire</h4><p>An ESP-NOW link delivers the command to the onboard ESP32, which switches the valve relays.</p></li>
+          <li><span class="step-number">04</span><h4>Measure again</h4><p>The platform moves, motion capture supplies the next state, and the controller replans.</p></li>
+        </ol>
+        <p class="control-diagram-note">In simulation, the dynamics model supplies the state feedback. The same controller, mission logic, horizons, and tuning are used in both environments.</p>
+      </div>
+      <div class="satellite-detail-grid">
+        <div><h3>Reusing the optimization model</h3><p>The solver model is created once. Each cycle updates the measured state, local dynamics, reference, and weights. Shifting the previous solution forward supplies a warm start for the next optimization.</p></div>
+        <div><h3>Working within a control period</h3><p>A 50 ms solver budget leaves room inside the 60 ms update period. The configuration prioritizes feasible solutions and uses a 1% optimality gap. A proportional fallback is available if no feasible solution is found; the thesis reports no fallback activation during hardware testing.</p></div>
+      </div>
+
+      <section id="results" class="story-section">
+        <h2>Experimental validation</h2>
+        <div>
+          <p>The validation mission follows a path generated from a DXF outline. It combines straight segments, curved arcs, and sharp corners, with a <strong>0.50 m standoff</strong> and a commanded speed of <strong>0.07 m/s</strong>. The physical run lasted 196.16 seconds.</p>
+          <p>The 12.4 m path tests several behaviors in one mission: approaching the profile, maintaining motion through curves, reorienting at corners, and braking into a final position and heading. At each control cycle I recorded pose, velocity, thruster commands, and solver timing.</p>
+          <p>After collecting hardware data, I adjusted the simulation’s environmental parameters, such as drag and disturbances, to better reproduce the measured behavior. The controller settings and measured physical parameters stayed fixed. The comparison therefore evaluates a <strong>calibrated digital twin</strong> of this experiment.</p>
+        </div>
+      </section>
+      <figure class="satellite-figure satellite-figure-square">
+        <a class="satellite-image" href="../assets/projects/satellite-mission-path.png"><img src="../assets/projects/satellite-mission-path.png" width="800" height="800" alt="DXF profile in green and its orange dashed tracking path offset outward by half a meter, combining straight edges, corners, and arcs" loading="lazy"></a>
+        <figcaption><strong>From CAD outline to inspection path.</strong> The green outline is imported geometry; the dashed orange line is the generated reference at a 0.50 m standoff. Thesis Figure 16.</figcaption>
+      </figure>
+      <div class="satellite-results">
+        <figure class="satellite-trajectory">
+          <a class="satellite-image" href="../assets/projects/satellite-trajectory.png" aria-label="Open the full-size hardware and simulation trajectory plot"><img src="../assets/projects/satellite-trajectory.png" width="3200" height="2973" alt="Overlaid XY trajectories: the physical run in solid blue and the simulation in dashed red follow the same inspection profile" loading="lazy"></a>
+          <figcaption>Recorded trajectory comparison. Blue: hardware. Red dashed: simulation. <a href="../assets/projects/satellite-trajectory.png">Open full-size plot ↗</a></figcaption>
+        </figure>
+        <div class="results-comparison">
+          <table>
+            <caption>Measured performance</caption>
+            <thead><tr><th scope="col">Metric</th><th scope="col">Hardware</th><th scope="col">Simulation</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Mean position error <span>(m)</span></th><td>0.1791</td><td>0.2167</td></tr>
+              <tr><th scope="row">Final position error <span>(m)</span></th><td>0.0241</td><td>0.0013</td></tr>
+              <tr><th scope="row">Final heading error <span>(°)</span></th><td>0.51</td><td>0.18</td></tr>
+              <tr><th scope="row">Total thruster-on time <span>(s)</span></th><td>188.04</td><td>190.80</td></tr>
+              <tr><th scope="row">Mean solver time <span>(ms)</span></th><td>4.61</td><td>5.64</td></tr>
+              <tr><th scope="row">Maximum solver time <span>(ms)</span></th><td>32.10</td><td>24.25</td></tr>
+            </tbody>
+          </table>
+          <p class="result-source">Source: thesis Table 4 and the recorded comparison dataset. The headline 2.4 cm value is the rounded final position error. <a href="../assets/projects/satellite-comparison.csv" download>Download the comparison metrics (CSV)</a>.</p>
+        </div>
+      </div>
+
+      <section class="story-section">
+        <h2>Tracking and final settling</h2>
+        <div>
+          <p>The trajectory overlay shows where the platform traveled; the time histories show how it behaved along the way. Position error rises and falls as the reference progresses through the profile, then decreases as the vehicle settles at the final target.</p>
+          <p>The hardware’s mean position error was 0.1791 m, compared with 0.2167 m in simulation. The model reproduced the broad response but did not match every transient. Its final position error was also smaller than the hardware’s, which is why the final 2.4 cm result and the full-run tracking error are reported separately.</p>
+        </div>
+      </section>
+      <figure class="satellite-figure satellite-plot">
+        <a class="satellite-image" href="../assets/projects/satellite-position-error.png"><img src="../assets/projects/satellite-position-error.png" width="4170" height="1774" alt="Position error over about 200 seconds, showing hardware in blue and simulation in red dashed lines, with both settling below the five-centimeter final target threshold" loading="lazy"></a>
+        <figcaption><strong>Position tracking.</strong> The dashed 5 cm line marks the final target threshold; it is not a bound met throughout the moving mission. Original comparison plot corresponding to thesis Figure 18.</figcaption>
+      </figure>
+      <figure class="satellite-figure satellite-plot">
+        <a class="satellite-image" href="../assets/projects/satellite-heading-error.png"><img src="../assets/projects/satellite-heading-error.png" width="4170" height="1774" alt="Heading error time histories for hardware and simulation, with transient peaks during motion and sub-degree final alignment" loading="lazy"></a>
+        <figcaption><strong>Heading response.</strong> Reorientation produces substantial transient errors. Mean heading error was 12.72° on hardware and 13.42° in simulation; final errors were 0.51° and 0.18°. Original comparison plot corresponding to thesis Figure 19.</figcaption>
+      </figure>
+
+      <section class="story-section">
+        <h2>Velocity and actuation effort</h2>
+        <div>
+          <p>The platform accelerates to join the path, tracks near the commanded speed, and slows at the end. Mean speed was <strong>0.0630 m/s on hardware and 0.0642 m/s in simulation</strong>. The physical speed trace is noisier because velocity is derived from measured positions, while the simulator provides velocity directly from its state.</p>
+          <p>The two runs use the individual thrusters differently. For example, T6 accumulated 17.22 s on hardware and 53.64 s in simulation. Different binary firing combinations can create similar net forces and torques, so small differences in state and optimization can change which valves are selected.</p>
+          <p>Summing all eight valves gives 188.04 s of hardware firing time and 190.80 s in simulation—a <strong>1.47% difference in total on-time</strong>. This is an actuation-effort comparison and a proxy for air consumption, rather than a direct measurement of propellant mass.</p>
+        </div>
+      </section>
+      <figure class="satellite-figure satellite-plot">
+        <a class="satellite-image" href="../assets/projects/satellite-velocity.png"><img src="../assets/projects/satellite-velocity.png" width="4170" height="1774" alt="Hardware and simulation velocity magnitudes over the mission, showing initial acceleration, sustained tracking, and deceleration at the end" loading="lazy"></a>
+        <figcaption><strong>Speed through the mission.</strong> Recorded maximum speeds were 0.1267 m/s on hardware and 0.1214 m/s in simulation; final speeds were 0.0051 and 0.0006 m/s. Original comparison plot corresponding to thesis Figure 20.</figcaption>
+      </figure>
+      <figure class="satellite-figure satellite-plot">
+        <a class="satellite-image" href="../assets/projects/satellite-thruster-on-time.png"><img src="../assets/projects/satellite-thruster-on-time.png" width="4170" height="2374" alt="Grouped bar chart of cumulative firing time for all eight thrusters, comparing hardware and simulation and showing a larger simulation allocation to thruster six" loading="lazy"></a>
+        <figcaption><strong>Which valves did the work?</strong> Individual firing times vary between the two runs, while their summed on-times remain close. Original comparison plot corresponding to thesis Figure 21.</figcaption>
+      </figure>
+
+      <section class="story-section">
+        <h2>Measured solver performance</h2>
+        <div>
+          <p>Real-time feasibility was checked over the recorded mission, including the final approach where solves became more demanding. The hardware run averaged <strong>4.61 ms per solve</strong> and reached a maximum of 32.10 ms. The simulation averaged 5.64 ms with a 24.25 ms maximum.</p>
+          <p>Every recorded solve in both runs stayed below the 60 ms control period. These measurements describe optimization time on the ground station; sensing, communication, and valve response are separate parts of the feedback loop.</p>
+        </div>
+      </section>
+      <figure class="satellite-figure satellite-plot">
+        <a class="satellite-image" href="../assets/projects/satellite-solver-timing.png"><img src="../assets/projects/satellite-solver-timing.png" width="4170" height="1774" alt="MPC solver time across the mission for hardware and simulation, with all samples below the dashed 60 millisecond control-period line" loading="lazy"></a>
+        <figcaption><strong>Timing across the complete experiment.</strong> Spikes near final settling stay below the control-period reference. Original comparison plot corresponding to thesis Figure 22.</figcaption>
+      </figure>
+      <div class="results-reading">
+        <div><h3>Real-time control</h3><p>The longest recorded hardware solve was 32.10 ms, within the 60 ms control period. The mean was 4.61 ms over this mission.</p></div>
+        <div><h3>Comparable total effort</h3><p>Total thruster-on time differed by 1.47%. Individual thruster usage differed more; on-time serves as a proxy for propellant use.</p></div>
+        <div><h3>Settling vs. tracking</h3><p>The platform finished 2.4 cm from its target. Its mean position error during the run was 17.9 cm, which gives a separate measure of tracking performance.</p></div>
+      </div>
+
+      <section class="story-section satellite-takeaway">
+        <h2>Engineering outcomes</h2>
+        <div>
+          <p>A central contribution was the custom measurement hardware used to diagnose and resolve differences between the digital twin and the physical system. Characterizing the individual thrusters gave both the controller and simulation a measured basis for their actuator models.</p>
+          <p>The completed platform also demonstrated real-time mixed-integer MPC with binary thrusters on a ground station, and a calibrated simulation that reproduced key features of the hardware experiment.</p>
+          <p>The validation covers planar motion and the documented mission. Extending the system to free-space, six-degree-of-freedom motion introduces additional dynamics and constraints—work I explore in my <a href="inspection-satellite.html">3D satellite-control project</a>.</p>
+        </div>
+      </section>
+
+      <section id="resources" class="story-section">
+        <h2>Documentation</h2>
+        <div>
+          <p>This page focuses on the 2025 thesis and its hardware experiment. The codebase continues to develop beyond that research baseline.</p>
+          <div class="satellite-resources">
+            <a href="https://doi.org/10.13023/etd.2025.583"><span class="eyebrow">Published research</span><strong>Read the master’s thesis <span aria-hidden="true">↗</span></strong><span>Simulation-to-Hardware Validation of MPC for Binary Thruster 2D CubeSat Control</span></a>
+            <a href="https://github.com/AevarOfjord/mpc-air-bearing-satellite"><span class="eyebrow">Source &amp; documentation</span><strong>Explore the repository <span aria-hidden="true">↗</span></strong><span>Controller, simulation, hardware interface, and experiment workflow.</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>3D Satellite Control</h2></div><a class="text-link" href="inspection-satellite.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> 3D Satellite Control</span></a></nav>
   </main>
+  <dialog class="figure-viewer" aria-labelledby="figure-viewer-title" aria-describedby="figure-viewer-caption" data-size="fit">
+    <div class="figure-viewer-toolbar"><h2 id="figure-viewer-title">Project figure</h2><div><button type="button" data-figure-size aria-pressed="false">Actual size</button><button type="button" data-figure-close>Close <span aria-hidden="true">×</span></button></div></div>
+    <div class="figure-viewer-stage" tabindex="0" aria-label="Figure image; scroll to inspect at actual size"><img alt=""></div>
+    <p id="figure-viewer-caption"></p>
+  </dialog>
   <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
 </body>
 </html>

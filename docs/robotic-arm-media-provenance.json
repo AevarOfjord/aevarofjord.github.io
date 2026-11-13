@@ -1,0 +1,157 @@
+{
+  "assets": [
+    {
+      "asset": "robotic-arm-radial-base-articulated-rear.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/radial-base-articulated-rear.png",
+      "sha256": "2d190e45504362657caa5f9c18d5cd302d196366b1143ce5b1636c5aca87f7a1",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-chess-arm.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/chess-arm.png",
+      "sha256": "8547b835f87cb9d51cb5bdbdae92b8785fedc8ce53de6c8b7673b71e3c1670db",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-enclosed-base-extended-rear.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/enclosed-base-extended-rear.png",
+      "sha256": "7104a8a4735cb5315fd78a07d8d56cb0231edfba6551cc45398e009423afc97b",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-chess-system.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/chess-system.png",
+      "sha256": "6e5bf97e9b3c413e717f1bfa13afc5883c1413d6e469b53cdbe8e6a8558bd07b",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-radial-base-articulated-front.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/radial-base-articulated-front.png",
+      "sha256": "335e68e4bbfecf7977ae4879636532151d68bce4ab726714a193c2b6c98346ee",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-enclosed-base-extended-front.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/enclosed-base-extended-front.png",
+      "sha256": "c2ec2b167539a6ae6ba8257f7d347dfad781a27fcd3dff520e94784cd1f8b67f",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-radial-base-upright.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/radial-base-upright.png",
+      "sha256": "892c0142cab0abaf631da4a5efa49acac1fe04b1d30e889b5c5bf0203db8fb0a",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-chess-top-view.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/chess-top-view.png",
+      "sha256": "1a115c7cd6e2498bf7b1edc26a6d5153e23fb82c8ee15e372df320fa0ac22912",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-enclosed-base-folded-front.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/enclosed-base-folded-front.png",
+      "sha256": "92eecb309ce446bffc2141c7c16b5cd22b2885e12ceee82f53d6d187d67ea39c",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-enclosed-base-folded-rear.png",
+      "source": "Project Folders/Robotic Arm/Selected Portfolio Images/enclosed-base-folded-rear.png",
+      "sha256": "94abffdd4cb66d34bee96e36e155c83972c69e647b952236ebeba15f1d9c6c21",
+      "kind": "Original CAD render; copied unchanged"
+    },
+    {
+      "asset": "robotic-arm-capsule-components.png",
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/*.step",
+      "sha256": "9e64840cdcb119f93e0e6aa0818fc6250f35d7e35e199ee57bb196337eef49e4",
+      "kind": "New rendering of archived STEP solids; components shown individually, independently scaled"
+    },
+    {
+      "asset": "robotic-arm-gearbox-components.png",
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/*.step",
+      "sha256": "d143a79e728e27dad6ce176d1ac0e23151365b41e7da6221add21451960b2669",
+      "kind": "New rendering of archived STEP solids; components shown individually, independently scaled"
+    }
+  ],
+  "component_geometry_sources": [
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/nema17_model.step",
+      "sha256": "cda0e89148451fcab97d30c6ae21f262d1cdc58f278bfc321c3625cf03625155",
+      "valid": true,
+      "triangles": 31428,
+      "extent_mm": [
+        42.0,
+        48.0,
+        47.0
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Outer_Shell.step",
+      "sha256": "22310d5afaabe87b9d6407a3603e2faac7407ab3b4c97eead6a2cec9cef896a1",
+      "valid": true,
+      "triangles": 10242,
+      "extent_mm": [
+        54.9999999999997,
+        55.0,
+        31.500000000000103
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Top_Cap.step",
+      "sha256": "eb598450e34d1a7a982ac4c49f86958cae9646376936a1edffce0a48ecf953a7",
+      "valid": true,
+      "triangles": 6818,
+      "extent_mm": [
+        54.9999999999997,
+        55.0,
+        9.500000000000007
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Sun_Gear.step",
+      "sha256": "d6b6694fe95ea09d362df6a758336017ec3016c1f6d0815d48cecb84f5d22cc7",
+      "valid": true,
+      "triangles": 8956,
+      "extent_mm": [
+        13.171571752640517,
+        13.21354218033282,
+        15.95000000000001
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Planet_Gear.step",
+      "sha256": "e220fd690cb63683333cd4c46b2dacbd1a04f99e5691448dc0a693a0eabe4094",
+      "valid": true,
+      "triangles": 4564,
+      "extent_mm": [
+        13.17013801370301,
+        13.155300256863097,
+        13.94999999999989
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Planet_Carrier.step",
+      "sha256": "d2df225a13083606b4a770b0d9e595a4ce071cbb637cda08f249e191ec094757",
+      "valid": true,
+      "triangles": 4074,
+      "extent_mm": [
+        32.04687022829854,
+        30.87095563668553,
+        12.850000000000108
+      ]
+    },
+    {
+      "source": "Original/Solidworks Files/VOL 4/Motor Housing/Ring_Gear_Output.step",
+      "sha256": "4540a2c80e218cbfc775368934a6ab2699c94a2b6cbfa54235e3e600f4ad5fdd",
+      "valid": true,
+      "triangles": 8106,
+      "extent_mm": [
+        41.9999999999999,
+        42.0,
+        31.500227036985603
+      ]
+    }
+  ],
+  "rendering": "Open Cascade STEP triangulation; face winding corrected; shaded Matplotlib views; independently scaled components",
+  "selection": "Exactly three arm designs: Modular Robotic Arm; Foldable Desktop Robotic Arm; Planar Robotic Arm. Motor-capsule component views belong to the Modular Robotic Arm."
+}

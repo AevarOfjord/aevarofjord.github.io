@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Taking satellite inspection into 3D. — Aevar Oefjoerd</title>
-  <meta name="description" content="A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.">
+  <title>3D Satellite Control — Aevar Oefjoerd</title>
+  <meta name="description" content="Six-degree-of-freedom satellite simulation with thruster and reaction-wheel control, model predictive control, and inspection-mission planning.">
   <meta name="theme-color" content="#f6f6f4">
   <link rel="canonical" href="https://aevarofjord.github.io/projects/inspection-satellite.html">
-  <meta property="og:title" content="Taking satellite inspection into 3D. — Aevar Oefjoerd">
-  <meta property="og:description" content="A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.">
+  <meta property="og:title" content="3D Satellite Control — Aevar Oefjoerd">
+  <meta property="og:description" content="Coordinating spacecraft translation and attitude with thrusters, reaction wheels, and model predictive control.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aevarofjord.github.io/projects/inspection-satellite.html">
   <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/mission-viewer.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="inspection-satellite.css">
+  <script src="inspection-satellite.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -24,18 +26,151 @@
   <main id="main" class="wrap">
     <div class="case-intro">
       <a class="back-link" href="../index.html#projects">← All projects</a>
-      <p class="eyebrow">02 / Controls · Simulation</p>
-      <h1>Taking satellite inspection into 3D.</h1>
-      <p class="case-lede">A satellite-control research project spanning thruster-driven translation, reaction-wheel attitude control, and 3D inspection mission design.</p>
-      <dl class="case-meta"><div><dt>Scope</dt><dd>Mission design, dynamics &amp; controller benchmarking</dd></div><div><dt>Status</dt><dd>Simulation research</dd></div><div><dt>Tools</dt><dd>Python · C++ · MPC · Browser-based UI</dd></div></dl>
-      <div class="project-actions"><a class="text-link" href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite">View on GitHub <span aria-hidden="true">↗</span></a></div>
+      <p class="eyebrow">02 / Controls · Dynamics · Simulation</p>
+      <h1>3D Satellite Control</h1>
+      <p class="case-lede">A spacecraft simulation and control environment combining thrusters for translation with reaction wheels for attitude control. I extended my planar satellite research into 3D motion, then developed tools to design, simulate, and inspect autonomous inspection missions.</p>
+      <dl class="case-meta">
+        <div><dt>My work</dt><dd>Dynamics modeling, control systems,<br>mission planning &amp; simulation software</dd></div>
+        <div><dt>Status</dt><dd>Simulation research<br>Stationary-target inspection showcase</dd></div>
+        <div><dt>Core tools</dt><dd>Python · C++ · OSQP<br>MuJoCo · Browser-based visualization</dd></div>
+      </dl>
+      <div class="project-actions">
+        <a class="text-link" href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite">View source code <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="#actuation">Explore the control architecture <span aria-hidden="true">↓</span></a>
+      </div>
     </div>
-    <figure><div class="case-hero"><img src="../assets/projects/mission-viewer.png" width="2940" height="1620" alt="3D mission playback around a satellite with trajectory and telemetry overlays" fetchpriority="high"></div><figcaption>The Viewer workspace: mission playback, trajectory inspection, and telemetry.</figcaption></figure>
-    <div class="case-body"><section class="story-section"><h2>The challenge</h2><div><p>Extend the inspection idea from a planar air-bearing testbed into six-degree-of-freedom motion, with thruster and reaction-wheel control studies. In 3D, mission geometry, position control, and attitude control must work together.</p><p>The public showcase uses a Starlink model as an inspection target. The project focuses on stationary target scenarios and local simulation.</p></div></section>
-<section class="story-section"><h2>What I built</h2><div><p>A browser-based Mission Studio lets me place an inspector, create spiral paths, connect segments, add holds, and validate routes before running them through the dynamics and controller stack.</p><ul><li>Simulation playback with trajectory, solve-time, and actuator telemetry.</li><li>Six MPC controller profiles covering hybrid, linearized, and nonlinear approaches.</li><li>A 10 × 10 sweep over control interval and prediction horizon to compare and tune controllers.</li><li>A shared workflow from mission authoring to simulation artifacts and playback.</li></ul></div></section>
-<section class="story-section"><h2>What it demonstrates</h2><div><p>The project connects controller research with tools for designing and inspecting missions. It makes it possible to compare controller behavior on the same mission and inspect the trade-offs in the resulting telemetry.</p><p>This is a research and demonstration environment. It is not flight software, and the stationary-target showcase does not establish performance for rendezvous with moving spacecraft.</p></div></section>
-<section class="story-section"><h2>Explore the work</h2><div><p><a class="text-link" href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite">Source code, screenshots, and local setup ↗</a></p><p>The repository includes architecture notes, controller mathematics, sample missions, and benchmarking workflows.</p></div></section><figure class="case-gallery"><img src="../assets/projects/mission-studio.png" width="2940" height="1620" alt="Mission Studio interface for designing inspection paths around an orbital target" loading="lazy"><figcaption>Mission Studio: authoring and validating target-relative inspection routes.</figcaption></figure></div>
-    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Two arms. One board. No lifting.</h2></div><a class="text-link" href="chess-robot.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Two arms. One board. No lifting.</span></a></nav>
+
+    <figure class="inspection-hero">
+      <a class="case-hero" href="../assets/projects/mission-viewer.png" aria-label="Open the full-size 3D mission viewer screenshot"><img src="../assets/projects/mission-viewer.png" width="2940" height="1620" alt="The project's 3D mission viewer, displaying an inspection route around a satellite alongside playback controls and telemetry" fetchpriority="high"></a>
+      <figcaption>The inspection-mission Viewer: spacecraft motion, route geometry, playback, and telemetry in one workspace. Screenshot from the public project.</figcaption>
+    </figure>
+
+    <dl class="inspection-facts">
+      <div><dt>Degrees of freedom</dt><dd class="fact-value">6</dd><dd class="fact-detail">Three translation axes and three rotation axes</dd></div>
+      <div><dt>Reaction-wheel axes</dt><dd class="fact-value">3</dd><dd class="fact-detail">Body-axis torque and wheel-speed states</dd></div>
+      <div><dt>Physical state components</dt><dd class="fact-value">16</dd><dd class="fact-detail">Position, attitude, velocities, and wheel speeds</dd></div>
+    </dl>
+
+    <nav class="inspection-contents" aria-label="On this page">
+      <span class="eyebrow">In this project</span>
+      <a href="#overview">Overview</a><a href="#actuation">Actuation</a><a href="#dynamics">Dynamics &amp; control</a><a href="#missions">Missions</a><a href="#evaluation">Evaluation</a><a href="#resources">Documentation</a>
+    </nav>
+
+    <div class="inspection-story">
+      <section id="overview" class="story-section">
+        <h2>Project overview</h2>
+        <div>
+          <p>My <a href="satellite-testbed.html">Planar CubeSat</a> project studied translation and heading on an air-bearing testbed. This project extends that control problem to a spacecraft that can move and rotate in three dimensions.</p>
+          <p>The central engineering challenge is coordinating <strong>position, orientation, and actuator behavior</strong>. A thrust command acts along a direction fixed to the spacecraft, so its effect on the trajectory depends on the current attitude. Reaction-wheel commands change that attitude and the momentum stored in the wheels.</p>
+          <p>I developed the dynamics and control software alongside a mission workflow: define an inspection path, execute it through the simulator, and review the resulting motion and actuator telemetry.</p>
+        </div>
+      </section>
+
+      <section id="actuation" class="story-section">
+        <h2>Thrusters and reaction wheels</h2>
+        <div>
+          <p><strong>Thrusters provide external force.</strong> Their configured directions and locations determine the resulting translation and torque about the center of mass. The actuator model supports continuous output and pulse-width modulation (PWM), where duty commands are converted into timed valve pulses.</p>
+          <p><strong>Reaction wheels provide attitude-control torque.</strong> Accelerating a wheel produces an opposing torque on the spacecraft body. The three-axis model tracks wheel speed as well as body rotation, allowing the controller to consider the actuator state alongside the spacecraft state.</p>
+          <p>The two actuator types have different roles, but their effects meet in the same dynamics model. That coupling is why orientation, path tracking, and control effort need to be considered together.</p>
+        </div>
+      </section>
+
+      <div class="actuation-explorer" data-actuation-explorer data-mode="combined" aria-labelledby="actuation-title">
+        <div class="actuation-heading"><div><p class="eyebrow">Control architecture · schematic</p><h3 id="actuation-title">Actuator roles</h3></div>
+          <div class="actuation-controls" role="group" aria-label="Highlight an actuator path" hidden>
+            <button type="button" data-actuation-mode="thrusters" aria-pressed="false" aria-controls="actuation-explanation">Thrusters</button>
+            <button type="button" data-actuation-mode="wheels" aria-pressed="false" aria-controls="actuation-explanation">Reaction wheels</button>
+            <button type="button" data-actuation-mode="combined" aria-pressed="true" aria-controls="actuation-explanation">Combined control</button>
+          </div>
+        </div>
+        <div class="actuation-flow">
+          <div class="flow-end"><span class="eyebrow">Controller</span><strong>Model predictive control</strong><span>Reference path + current state</span></div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="actuation-branches">
+            <div class="actuator-branch" data-actuator="thrusters"><span class="eyebrow">Thruster commands</span><strong>Force &amp; moment</strong><p>Output level, direction, and lever arm determine the applied force and torque.</p></div>
+            <div class="actuator-branch" data-actuator="wheels"><span class="eyebrow">Wheel motor commands</span><strong>Body torque &amp; wheel speed</strong><p>Motor torque changes wheel speed and applies a reaction torque to the body.</p></div>
+          </div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-end"><span class="eyebrow">Simulation</span><strong>6-DOF spacecraft motion</strong><span>Position · attitude · velocities · wheel speeds</span></div>
+        </div>
+        <p class="flow-feedback">State feedback returns to the controller for the next prediction and command update.</p>
+        <div id="actuation-explanation" class="actuation-explanation" aria-live="polite" aria-atomic="true">
+          <p data-actuation-note="thrusters" hidden><strong>Thruster contribution.</strong> The simulator adds the body-frame forces, rotates the result into the world frame, and calculates torque from each thruster’s offset from the center of mass. PWM timing can make actual output differ from the commanded duty cycle.</p>
+          <p data-actuation-note="wheels" hidden><strong>Reaction-wheel contribution.</strong> The modeled wheels act on the spacecraft’s orientation. Wheel torque and wheel speed matter together: changing wheel momentum produces body torque, while available speed and torque limit the control authority.</p>
+          <p data-actuation-note="combined"><strong>Combined control.</strong> The controller coordinates translation and orientation along the reference path. Thruster forces depend on spacecraft attitude, while reaction-wheel commands change that attitude. Both command paths feed the same simulated spacecraft.</p>
+        </div>
+      </div>
+
+      <section id="dynamics" class="story-section">
+        <h2>Dynamics and predictive control</h2>
+        <div>
+          <p>The physical state includes position, a quaternion describing attitude, linear and angular velocity, and three reaction-wheel speeds. Quaternions let the model represent 3D orientation without relying on a single heading angle.</p>
+          <p>The earlier control studies used MuJoCo. The later inspection environment uses a C++ simulation engine with fourth-order Runge–Kutta integration. It calculates thrust from configured actuator geometry, rotates forces between coordinate frames, and propagates the spacecraft and wheel states.</p>
+          <p>MPC predicts motion over a finite horizon and selects commands that balance path tracking, attitude tracking, and actuation effort. The inspection controller also includes a path-progress variable, allowing forward motion along the route to be optimized with the physical trajectory.</p>
+        </div>
+      </section>
+
+      <div class="state-model">
+        <h3>Physical state model</h3>
+        <dl>
+          <div><dt>Position</dt><dd><strong>3</strong><span>x, y, z</span></dd></div>
+          <div><dt>Attitude</dt><dd><strong>4</strong><span>Quaternion components</span></dd></div>
+          <div><dt>Linear velocity</dt><dd><strong>3</strong><span>Velocity along each axis</span></dd></div>
+          <div><dt>Angular velocity</dt><dd><strong>3</strong><span>Body rotation rates</span></dd></div>
+          <div><dt>Wheel speeds</dt><dd><strong>3</strong><span>Reaction-wheel states</span></dd></div>
+        </dl>
+        <p>The 16-component physical state describes six degrees of freedom plus wheel dynamics. The inspection controller adds a separate path-progress state.</p>
+      </div>
+
+      <section id="missions" class="story-section">
+        <h2>Inspection mission workflow</h2>
+        <div>
+          <p>Mission Studio connects the control model to a usable mission-design workflow. I can place the inspector relative to a target, create spiral inspection paths, join route segments, add holds, and validate the route before running a simulation.</p>
+          <p>The Viewer then loads the recorded run for playback and inspection. Trajectory geometry, spacecraft attitude, solver timing, and actuator telemetry make it possible to examine what happened throughout the mission.</p>
+          <p>The public showcase uses a Starlink satellite model as a stationary inspection target. The mission-design tools are the later development of the thruster and reaction-wheel control studies.</p>
+        </div>
+      </section>
+      <figure class="inspection-studio">
+        <a href="../assets/projects/mission-studio.png" aria-label="Open the full-size Mission Studio screenshot"><img src="../assets/projects/mission-studio.png" width="2940" height="1620" alt="Mission Studio showing 3D inspection-path authoring around a satellite, with route-editing and mission settings" loading="lazy"></a>
+        <figcaption>Mission Studio: creating and validating target-relative inspection routes. <a href="../assets/projects/mission-studio.png">Open full-size screenshot ↗</a></figcaption>
+      </figure>
+
+      <section id="evaluation" class="story-section">
+        <h2>Controller evaluation</h2>
+        <div>
+          <p>The project supports six MPC profiles across OSQP, IPOPT, and acados/HPIPM solver families. Shared mission inputs and baseline physical parameters support comparisons of tracking behavior, actuator usage, and computational cost.</p>
+          <p>A 10 × 10 sweep over control interval and prediction horizon records simulation results and saves eligible controller configurations. Each run records its active profile and effective settings, making the comparison traceable.</p>
+          <p>The implementations use different approximations, cost formulations, and solve policies. Their results are comparisons of control approaches under documented settings.</p>
+        </div>
+      </section>
+
+      <div class="evaluation-grid">
+        <div><span class="eyebrow">Trajectory</span><h3>Position &amp; attitude</h3><p>Inspect path tracking, orientation, velocity, and endpoint behavior across the mission.</p></div>
+        <div><span class="eyebrow">Actuators</span><h3>Thrust &amp; wheel response</h3><p>Review thruster commands and reaction-wheel behavior alongside the motion they produce.</p></div>
+        <div><span class="eyebrow">Computation</span><h3>Solver performance</h3><p>Compare solve time and control settings against the interval available for each update.</p></div>
+      </div>
+
+      <section class="story-section">
+        <h2>Engineering outcomes</h2>
+        <div>
+          <p>The project combines spacecraft dynamics, actuator modeling, predictive control, and mission software in one simulation workflow. It provides a way to study how changes in the controller or actuator configuration affect a complete inspection mission.</p>
+          <p>The demonstrated scope is simulation and inspection of stationary targets. Extending the mission to catch up with and inspect moving spacecraft in Earth orbit is future work.</p>
+        </div>
+      </section>
+
+      <section id="resources" class="story-section">
+        <h2>Documentation</h2>
+        <div>
+          <p>The repository contains the mission tools, controller implementations, physics model, and comparison methodology.</p>
+          <div class="inspection-resources">
+            <a href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite"><strong>Project repository <span aria-hidden="true">↗</span></strong><span>Source code, screenshots, and local setup.</span></a>
+            <a href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite/blob/main/PHYSICS-ENGINE.md"><strong>Physics model <span aria-hidden="true">↗</span></strong><span>State definition, thruster output, wheel dynamics, and integration.</span></a>
+            <a href="https://github.com/AevarOfjord/3D-MPC-Inspection-Satellite/blob/main/MATH/README.md"><strong>Controller mathematics <span aria-hidden="true">↗</span></strong><span>Objectives, controller profiles, and comparison assumptions.</span></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Planar Robotic Arm</h2></div><a class="text-link" href="chess-robot.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Planar Robotic Arm</span></a></nav>
   </main>
   <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
 </body>

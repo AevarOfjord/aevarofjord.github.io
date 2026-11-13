@@ -1,0 +1,89 @@
+.chess-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:1080px;margin:0 auto 40px;align-items:start}
+.chess-gallery figure{min-width:0}
+.chess-gallery.single{grid-template-columns:minmax(0,1fr)}
+.chess-gallery.chess-hero{max-width:none;margin-bottom:44px}
+.chess-image{display:block;background:#b3b3b3;border:1px solid var(--rule);cursor:zoom-in}
+.chess-image img{width:100%;height:auto;object-fit:contain}
+.chess-gallery figcaption,.simulator-recording figcaption{font-size:13px;line-height:1.6}
+.chess-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding-block:32px;margin-bottom:40px;border-block:1px solid var(--rule)}
+.chess-facts dt{font-size:13px;color:var(--muted);margin-bottom:12px}
+.chess-facts dd{font-family:var(--serif);font-size:42px;line-height:1.2}
+.chess-facts dd span{font-size:22px}
+.chess-facts .fact-detail{font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--muted);margin-top:12px;max-width:32ch}
+.chess-contents{display:flex;flex-wrap:wrap;gap:4px 24px;align-items:center;padding-block:20px 12px;border-block:1px solid var(--rule);font-size:14px}
+.chess-contents>span{width:100%;color:var(--muted);margin-bottom:4px}
+.chess-contents a{color:var(--green);padding-block:10px}
+.chess-contents a:hover{text-decoration:underline}
+.chess-image-hint{font-size:13px;color:var(--muted);margin-top:16px}
+.chess-story{margin-block:24px 64px}
+.chess-story .story-section{max-width:1000px;margin-inline:auto;grid-template-columns:230px minmax(0,1fr);padding-block:44px;scroll-margin-top:24px}
+.chess-story .story-section:first-child{border-top:0}
+.story-heading .eyebrow{font-family:var(--sans);color:var(--green);font-size:10px;margin-bottom:14px}
+.chess-table-wrap{max-width:1080px;margin:0 auto 32px;overflow-x:auto}
+.chess-table-wrap:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+.chess-table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+.chess-table caption{text-align:left;font-family:var(--serif);font-size:30px;padding-bottom:20px}
+.chess-table th,.chess-table td{text-align:left;vertical-align:top;padding:18px 20px;border-bottom:1px solid var(--rule)}
+.chess-table thead th{font-size:12px;font-weight:500;color:var(--muted);border-top:1px solid var(--rule)}
+.chess-table tbody th{width:26%;font-weight:500}
+.results-table .chess-table tbody th{width:38%}
+.control-flow{max-width:860px;margin:0 auto 40px}
+.control-node{border:1px solid #b5c4b8;background:#e9eee9;padding:24px;text-align:center}
+.control-node .eyebrow{color:var(--green);font-size:10px;margin-bottom:10px}
+.control-node h3{font-size:28px;margin-bottom:8px}
+.control-node p:last-child{font-size:14px;line-height:1.7}
+.flow-connection{text-align:center;font-size:13px;color:var(--muted);padding:12px}
+.flow-connection span{display:block;font-size:23px;line-height:1.2}
+.control-arms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.transfer-sequence{max-width:1080px;margin:0 auto 44px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;list-style:none;counter-reset:transfer}
+.transfer-sequence li{border-top:1px solid var(--rule);padding-top:18px;counter-increment:transfer;min-width:0}
+.transfer-sequence li::before{content:counter(transfer,decimal-leading-zero);display:block;font-size:12px;color:var(--green);margin-bottom:10px}
+.transfer-sequence strong{display:block;font-size:16px;font-weight:500;margin-bottom:8px}
+.transfer-sequence span{font-size:14px;line-height:1.7;color:var(--muted)}
+.simulator-recording{max-width:960px;margin:0 auto 44px}
+.recording-stage{background:#dce1e8;border:1px solid var(--rule)}
+.recording-stage img{width:100%;height:auto;aspect-ratio:720/450;object-fit:contain}
+.recording-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-block:16px}
+.recording-controls [hidden]{display:none}
+.recording-controls button{min-height:44px;cursor:pointer}
+.recording-status{font-size:13px;color:var(--muted)}
+.chess-source-note{max-width:1080px;margin:0 auto 40px;font-size:13px;color:var(--muted)}
+.chess-outcome{max-width:1080px;margin:44px auto;padding:36px;background:#e9eee9;border:1px solid #b5c4b8}
+.chess-outcome>.eyebrow{color:var(--green);margin-bottom:14px}
+.chess-outcome h2{font-size:36px;margin-bottom:20px}
+.chess-outcome p+p{margin-top:18px}
+.chess-reading{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px}
+.chess-reading>.eyebrow{width:100%;color:var(--muted);margin-bottom:8px}
+@media(max-width:1000px){.chess-facts dd{font-size:34px}.transfer-sequence{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .chess-story .story-section{grid-template-columns:1fr;gap:20px;padding-block:32px}
+ .chess-gallery{grid-template-columns:1fr;gap:28px;margin-bottom:32px}
+ .chess-facts{grid-template-columns:1fr;gap:24px}
+ .chess-facts dd{font-size:40px}
+ .chess-facts .fact-detail{max-width:none}
+ .chess-contents{gap:0 22px}
+ .chess-outcome{padding:26px 20px}
+ .chess-outcome h2{font-size:30px}
+ .control-arms,.transfer-sequence{grid-template-columns:1fr}
+ .control-node{padding:22px 16px}
+ .chess-reading a{padding-block:7px}
+}
+
+
+.figure-viewer{width:min(1400px,calc(100vw - 48px));height:calc(100dvh - 48px);max-width:none;max-height:none;padding:0;border:1px solid var(--rule);background:var(--paper);color:var(--ink)}
+.figure-viewer[open]{display:flex;flex-direction:column}
+.figure-viewer::backdrop{background:rgba(14,23,18,.78)}
+.figure-viewer-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 22px;border-bottom:1px solid var(--rule)}
+.figure-viewer-toolbar h2{font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.4}
+.figure-viewer-toolbar>div{display:flex;gap:10px}
+.figure-viewer button{border:1px solid var(--rule);padding:10px 14px;background:#fff;min-height:44px;color:var(--ink);font-size:14px;cursor:pointer}
+.figure-viewer button:hover{border-color:var(--green)}
+.figure-viewer button[aria-pressed="true"]{background:var(--green);color:#fff}
+.figure-viewer-stage{min-height:0;flex:1;overflow:auto;background:#fff;overscroll-behavior:contain;padding:24px}
+.figure-viewer-stage:focus-visible{outline:3px solid var(--green);outline-offset:-4px}
+.figure-viewer-stage img{width:100%;height:100%;max-width:100%;object-fit:contain;margin:auto}
+.figure-viewer[data-size="actual"] .figure-viewer-stage img{width:auto;height:auto;max-width:none;max-height:none}
+#figure-viewer-caption{padding:16px 22px;font-size:14px;border-top:1px solid var(--rule);max-height:25dvh;overflow:auto}
+html.figure-viewer-open{overflow:hidden}
+
+@media(max-width:760px){.figure-viewer{width:calc(100vw - 20px);height:calc(100dvh - 20px)}.figure-viewer-toolbar{padding:12px}.figure-viewer-stage{padding:10px}#figure-viewer-caption{padding:12px;font-size:13px}}

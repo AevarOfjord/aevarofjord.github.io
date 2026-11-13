@@ -1,0 +1,402 @@
+/* The thesis case study uses the portfolio's shared type and color system. */
+.satellite-media{
+  display:grid;
+  grid-template-columns:minmax(0,2.15fr) minmax(0,1fr);
+  gap:24px
+}
+.satellite-assembly,.satellite-photo{
+  height:480px;
+  background:#fff;
+  border:1px solid var(--rule);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px
+}
+.satellite-assembly img,.satellite-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain
+}
+.satellite-outcomes{
+  padding-block:44px 36px
+}
+.satellite-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-block:20px 24px;
+  border-block:1px solid var(--rule)
+}
+.satellite-metrics>div{
+  display:flex;
+  flex-direction:column-reverse;
+  padding:20px 28px
+}
+.satellite-metrics>div:first-child{
+  padding-left:0
+}
+.satellite-metrics>div+div{
+  border-left:1px solid var(--rule)
+}
+.satellite-metrics dt{
+  color:var(--muted);
+  font-size:14px
+}
+.satellite-metrics dd{
+  font-family:var(--serif);
+  font-size:64px;
+  line-height:1.15;
+  letter-spacing:-.025em
+}
+.satellite-metrics dd span{
+  font-size:.6em
+}
+.case-contents{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 28px;
+  border-block:1px solid var(--rule);
+  padding-block:12px;
+  font-size:14px
+}
+.case-contents>span{
+  margin-right:auto;
+  color:var(--muted)
+}
+.case-contents a{
+  padding-block:10px;
+  color:var(--green)
+}
+.case-contents a:hover{
+  text-decoration:underline
+}
+.satellite-story{
+  margin-block:32px 64px
+}
+.satellite-story .story-section{
+  max-width:960px;
+  margin-inline:auto;
+  grid-template-columns:230px minmax(0,1fr);
+  padding-block:44px
+}
+.satellite-story .story-section:first-child{
+  border-top:0
+}
+.satellite-calibration{
+  max-width:960px;
+  margin:0 auto 48px
+}
+.satellite-calibration img{
+  width:100%;
+  background:#fff;
+  padding:24px;
+  border:1px solid var(--rule)
+}
+.control-diagram{
+  background:#e9eee9;
+  padding:32px;
+  margin-bottom:48px
+}
+.control-diagram h3{
+  font-size:30px
+}
+.control-steps{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+  margin:30px 0 24px;
+  padding:0;
+  list-style:none
+}
+.control-steps li{
+  border-top:1px solid #9cae9f;
+  padding-top:14px;
+  position:relative
+}
+.control-steps li:not(:last-child)::after{
+  content:'→';
+  position:absolute;
+  top:12px;
+  right:0;
+  color:var(--green)
+}
+.step-number{
+  font-size:12px;
+  color:var(--green)
+}
+.control-steps h4{
+  margin:16px 0 8px;
+  font-size:17px;
+  font-weight:500
+}
+.control-steps p,.control-diagram-note{
+  font-size:14px;
+  line-height:1.6
+}
+.control-diagram-note{
+  padding-top:20px;
+  border-top:1px solid #9cae9f;
+  max-width:800px
+}
+.satellite-results{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+  gap:36px;
+  align-items:start
+}
+.satellite-trajectory img{
+  width:100%;
+  border:1px solid var(--rule)
+}
+.satellite-trajectory figcaption a{
+  color:var(--green);
+  text-decoration:underline
+}
+.results-comparison table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+  font-variant-numeric:tabular-nums
+}
+.results-comparison caption{
+  text-align:left;
+  font-family:var(--serif);
+  font-size:30px;
+  line-height:1.2;
+  padding-bottom:18px
+}
+.results-comparison th,.results-comparison td{
+  border-bottom:1px solid var(--rule);
+  padding:14px 8px;
+  text-align:right;
+  vertical-align:top
+}
+.results-comparison th:first-child{
+  text-align:left;
+  padding-left:0
+}
+.results-comparison th{
+  font-weight:500
+}
+.results-comparison tbody th span{
+  color:var(--muted);
+  white-space:nowrap
+}
+.results-comparison thead th{
+  font-size:12px;
+  color:var(--muted)
+}
+.result-source{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:16px
+}
+.results-reading{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:36px;
+  margin-block:40px 52px
+}
+.results-reading>div{
+  border-top:1px solid var(--rule);
+  padding-top:22px
+}
+.results-reading h3{
+  font-size:27px;
+  margin-bottom:14px
+}
+.results-reading p{
+  font-size:15px
+}
+.satellite-takeaway{
+  border-top-color:var(--ink)
+}
+.satellite-resources{
+  display:grid;
+  gap:16px;
+  margin-top:24px
+}
+.satellite-story .satellite-resources a{
+  display:grid;
+  gap:8px;
+  border:1px solid var(--rule);
+  padding:24px;
+  color:var(--ink);
+  text-decoration:none
+}
+.satellite-resources a:hover{
+  background:#e9eee9;
+  border-color:var(--green)
+}
+.satellite-resources .eyebrow{
+  color:var(--muted)
+}
+.satellite-resources strong{
+  color:var(--green);
+  font-size:18px;
+  font-weight:500
+}
+.satellite-resources a>span:last-child{
+  font-size:14px
+}
+@media(max-width:1100px){
+  .satellite-assembly,.satellite-photo{
+    height:380px;
+    padding:16px
+  }
+  .control-steps{
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .control-steps li:nth-child(2)::after{
+    content:'↓'
+  }
+  .satellite-results{
+    grid-template-columns:1fr
+  }
+  .satellite-trajectory{
+    max-width:720px;
+    margin-inline:auto
+  }
+}
+@media(max-width:760px){
+  .satellite-media{
+    grid-template-columns:1fr;
+    gap:28px
+  }
+  .satellite-assembly{
+    height:auto;
+    aspect-ratio:1138/630;
+    padding:12px
+  }
+  .satellite-photo{
+    height:360px
+  }
+  .satellite-outcomes{
+    padding-block:32px
+  }
+  .satellite-metrics>div{
+    padding:18px 12px
+  }
+  .satellite-metrics dd{
+    font-size:44px
+  }
+  .satellite-metrics dt{
+    font-size:12px
+  }
+  .case-contents{
+    gap:0 20px
+  }
+  .case-contents>span{
+    flex-basis:100%;
+    margin-block:8px
+  }
+  .satellite-story{
+    margin-top:16px
+  }
+  .satellite-story .story-section{
+    grid-template-columns:1fr;
+    padding-block:30px
+  }
+  .satellite-story h2 br{
+    display:none
+  }
+  .satellite-calibration{
+    margin-bottom:32px
+  }
+  .satellite-calibration img{
+    padding:8px
+  }
+  .control-diagram{
+    padding:24px;
+    margin-bottom:32px
+  }
+  .control-steps{
+    grid-template-columns:1fr;
+    gap:24px
+  }
+  .control-steps li:not(:last-child)::after{
+    content:'↓'
+  }
+  .control-steps h4{
+    margin-top:8px
+  }
+  .satellite-results{
+    gap:32px
+  }
+  .results-comparison table{
+    font-size:13px
+  }
+  .results-comparison th,.results-comparison td{
+    padding:12px 5px
+  }
+  .results-reading{
+    grid-template-columns:1fr;
+    gap:24px;
+    margin-block:32px
+  }
+}
+@media(max-width:370px){
+  .satellite-metrics dd{
+    font-size:38px
+  }
+  .satellite-metrics>div{
+    padding-inline:8px
+  }
+}
+@media print{
+  .case-contents{
+    display:none
+  }
+  .satellite-media,.satellite-metrics,.control-diagram,.results-comparison{
+    break-inside:avoid
+  }
+}
+
+/* Original CAD assemblies and measurements remain legible at their full aspect ratio. */
+.satellite-image{display:block;cursor:zoom-in}
+.satellite-image:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+.satellite-media .satellite-image{display:flex}
+.satellite-figure,.satellite-table,.satellite-detail-grid{max-width:960px;margin:0 auto 48px}
+.satellite-figure img,.satellite-gallery img{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--rule);padding:16px}
+.satellite-figure-square{max-width:680px}
+.satellite-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin:0 0 48px}
+.satellite-gallery .satellite-image{background:#fff;border:1px solid var(--rule);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center}
+.satellite-gallery img{height:100%;object-fit:contain;border:0}
+.satellite-gallery-diagrams .satellite-image{aspect-ratio:4/3}
+.satellite-plot img{padding:8px}
+.satellite-story figcaption strong{display:block;color:var(--ink);font-weight:500;margin-bottom:6px}
+.satellite-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;padding:28px;background:#e9eee9}
+.satellite-detail-grid h3{font-size:28px;margin-bottom:12px}
+.satellite-detail-grid p{font-size:15px}
+.result-source a{color:var(--green);text-decoration:underline}
+@media(max-width:760px){
+  .satellite-gallery,.satellite-detail-grid{grid-template-columns:1fr;gap:28px}
+  .satellite-figure,.satellite-table,.satellite-detail-grid,.satellite-gallery{margin-bottom:32px}
+  .satellite-figure img,.satellite-gallery img{padding:8px}
+  .satellite-detail-grid{padding:24px}
+}
+@media print{
+  .figure-viewer{display:none!important}
+  .satellite-gallery{grid-template-columns:1fr}
+  .satellite-figure,.satellite-gallery figure,.satellite-detail-grid{break-inside:avoid}
+}
+
+/* Accessible full-size figure viewer, shared interaction with the other case studies. */
+.figure-viewer{width:min(1400px,calc(100vw - 48px));height:calc(100dvh - 48px);max-width:none;max-height:none;padding:0;border:1px solid var(--rule);background:var(--paper);color:var(--ink)}
+.figure-viewer[open]{display:flex;flex-direction:column}
+.figure-viewer::backdrop{background:rgba(14,23,18,.78)}
+.figure-viewer-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 22px;border-bottom:1px solid var(--rule)}
+.figure-viewer-toolbar h2{font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.4}
+.figure-viewer-toolbar>div{display:flex;gap:10px}
+.figure-viewer button{border:1px solid var(--rule);padding:10px 14px;background:#fff;min-height:44px;color:var(--ink);font-size:14px;cursor:pointer}
+.figure-viewer button:hover{border-color:var(--green)}
+.figure-viewer button[aria-pressed="true"]{background:var(--green);color:#fff}
+.figure-viewer-stage{min-height:0;flex:1;overflow:auto;background:#fff;overscroll-behavior:contain;padding:24px}
+.figure-viewer-stage:focus-visible{outline:3px solid var(--green);outline-offset:-4px}
+.figure-viewer-stage img{width:100%;height:100%;max-width:100%;object-fit:contain;margin:auto}
+.figure-viewer[data-size="actual"] .figure-viewer-stage img{width:auto;height:auto;max-width:none;max-height:none}
+#figure-viewer-caption{padding:16px 22px;font-size:14px;border-top:1px solid var(--rule);max-height:25dvh;overflow:auto}
+html.figure-viewer-open{overflow:hidden}
+
+@media(max-width:760px){.figure-viewer{width:calc(100vw - 20px);height:calc(100dvh - 20px)}.figure-viewer-toolbar{padding:12px}.figure-viewer-stage{padding:10px}#figure-viewer-caption{padding:12px;font-size:13px}}
