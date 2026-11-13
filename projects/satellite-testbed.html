@@ -46,8 +46,8 @@
         <figcaption>Complete CAD assembly showing the structure, pneumatic supply, electronics, and air bearings.</figcaption>
       </figure>
       <figure>
-        <a class="satellite-photo satellite-image" href="../assets/projects/satellite-prototype.jpg"><img src="../assets/projects/satellite-prototype.jpg" width="310" height="540" alt="The assembled physical prototype, with reflective motion-capture markers circled in red"></a>
-        <figcaption>Physical prototype with reflective markers for OptiTrack position and heading measurements.</figcaption>
+        <a class="satellite-photo satellite-image" href="../assets/projects/satellite-hardware-assembled.jpg"><img src="../assets/projects/satellite-hardware-assembled.jpg" width="360" height="480" alt="The completed physical testbed beside the test floor, with the compressed-air cylinder and regulators above the satellite chassis"></a>
+        <figcaption>The assembled hardware beside the test floor: onboard air supply, satellite chassis, and air-bearing support structure.</figcaption>
       </figure>
     </div>
 
@@ -63,7 +63,7 @@
 
     <nav class="case-contents" aria-label="On this page">
       <span class="eyebrow">In this project</span>
-      <a href="#overview">Overview</a><a href="#challenge">Challenge</a><a href="#hardware">Mechanical design</a><a href="#calibration">Thrust testing</a><a href="#electronics">Electronics</a><a href="#digital-twin">Digital twin</a><a href="#controller">MPC</a><a href="#results">Results</a><a href="#resources">Documentation</a>
+      <a href="#overview">Overview</a><a href="#challenge">Challenge</a><a href="#build">Physical build</a><a href="#hardware">Mechanical design</a><a href="#calibration">Thrust testing</a><a href="#electronics">Electronics</a><a href="#digital-twin">Digital twin</a><a href="#controller">MPC</a><a href="#results">Results</a><a href="#resources">Documentation</a>
     </nav>
 
     <div class="satellite-story">
@@ -83,6 +83,24 @@
           <p>I addressed this by designing and building <strong>custom measurement hardware, including a thrust test bench</strong> to characterize each thruster individually. These measurements provided the data needed to calibrate the digital twin against the physical platform.</p>
         </div>
       </section>
+
+      <section id="build" class="story-section">
+        <h2>From CAD to physical hardware</h2>
+        <div>
+          <p>The physical build brings the CAD assemblies together: an aluminum chassis with printed panels, onboard electronics and batteries, pneumatic tubing, and an adjustable air-bearing base. The bench photographs show the cylinder holder without the air cylinder installed, making the supporting structure and component arrangement easier to see.</p>
+          <p>With the cylinder and regulators fitted, the platform carries its own air supply beside the test floor. These photographs show the hardware used to connect the mechanical design, actuator measurements, and control experiments described below.</p>
+        </div>
+      </section>
+      <div class="satellite-gallery satellite-build-gallery">
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-hardware-bench.jpg"><img src="../assets/projects/satellite-hardware-bench.jpg" width="360" height="480" alt="Satellite assembly on a workbench, showing the empty black cylinder holder, red battery packs, enclosure panels, and lower bearing support" loading="lazy"></a>
+          <figcaption><strong>Bench assembly.</strong> The printed cylinder holder sits above the chassis. Battery packs, reflective markers, and the lower support structure are visible around it.</figcaption>
+        </figure>
+        <figure>
+          <a class="satellite-image" href="../assets/projects/satellite-hardware-detail.jpg"><img src="../assets/projects/satellite-hardware-detail.jpg" width="314" height="548" alt="Close view of the platform's tubing, batteries, black side panels, aluminum frame, and triangular air-bearing plate" loading="lazy"></a>
+          <figcaption><strong>Construction details.</strong> Tubing connects the upper pneumatic module to the chassis and bearing assembly. The open extrusion structure keeps mounts and connections accessible.</figcaption>
+        </figure>
+      </div>
 
       <section id="hardware" class="story-section">
         <h2>Mechanical design</h2>
@@ -128,6 +146,10 @@
       <figure class="satellite-figure">
         <a class="satellite-image" href="../assets/projects/satellite-pneumatic-diagram.png"><img src="../assets/projects/satellite-pneumatic-diagram.png" width="1196" height="411" alt="Pneumatic flow diagram from the compressed-air cylinder through regulation and filtration, then separate branches to the air bearings and thrusters" loading="lazy"></a>
         <figcaption><strong>Two pressure branches, one onboard supply.</strong> A first regulation stage and filter feed independent bearing and thruster circuits. Thesis Figure 9. Select any figure to inspect it at full size.</figcaption>
+      </figure>
+      <figure class="satellite-figure satellite-build-portrait">
+        <a class="satellite-image" href="../assets/projects/satellite-hardware-air-supply.jpg"><img src="../assets/projects/satellite-hardware-air-supply.jpg" width="360" height="480" alt="Side view of the assembled testbed with its air cylinder secured in the holder, pressure gauges, regulators, and blue pneumatic tubing" loading="lazy"></a>
+        <figcaption><strong>The pneumatic system on the hardware.</strong> The cylinder, gauges, regulation hardware, and tubing are mounted above the satellite frame, with the air-bearing assembly underneath.</figcaption>
       </figure>
 
       <section id="calibration" class="story-section">
@@ -179,6 +201,11 @@
           <figcaption><strong>Power and command architecture.</strong> A ground-station gateway sends commands over ESP-NOW; the onboard controller switches the eight valve relays. The diagram also shows the auxiliary sensing hardware. Thesis Figure 12.</figcaption>
         </figure>
       </div>
+
+      <figure class="satellite-figure satellite-lab-photo">
+        <a class="satellite-image" href="../assets/projects/satellite-laboratory-floor.jpg"><img src="../assets/projects/satellite-laboratory-floor.jpg" width="553" height="311" alt="Wide photograph of the laboratory's black low-friction test floor and surrounding camera supports, with the testbed near the far edge" loading="lazy"></a>
+        <figcaption><strong>The laboratory setting.</strong> The physical test floor provides room for planar translation and rotation. The camera supports around its perimeter correspond to the motion-capture arrangement shown above.</figcaption>
+      </figure>
 
       <section id="digital-twin" class="story-section">
         <h2>Building the digital twin</h2>

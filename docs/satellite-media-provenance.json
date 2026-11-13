@@ -159,6 +159,56 @@
       "source": "Presentation/Data/Comparison/Test/statistics.csv",
       "method": "Unchanged original comparison metrics",
       "sha256": "59c42535d410d4a2e607751ea4dff3cbe9c6dfdde76c4e9d72276e8c1446d8df"
+    },
+    {
+      "asset": "assets/projects/satellite-hardware-assembled.jpg",
+      "source": "Owner-supplied laboratory photograph",
+      "method": "Metadata removed from website copy; original dimensions and decoded pixels preserved. Original file unchanged.",
+      "size": [
+        360,
+        480
+      ],
+      "sha256": "25d4844c442ffa9edb6f2aac9662479ee104146b029ff0e6cb0494fd58b21d6b"
+    },
+    {
+      "asset": "assets/projects/satellite-hardware-air-supply.jpg",
+      "source": "Owner-supplied laboratory photograph",
+      "method": "Metadata removed from website copy; original dimensions and decoded pixels preserved. Original file unchanged.",
+      "size": [
+        360,
+        480
+      ],
+      "sha256": "62a9d808219d3addd5c0fa66756e209b8141d92beb24295c41a9788a88efbb7a"
+    },
+    {
+      "asset": "assets/projects/satellite-laboratory-floor.jpg",
+      "source": "Owner-supplied laboratory photograph",
+      "method": "Metadata removed from website copy; original dimensions and decoded pixels preserved. Original file unchanged.",
+      "size": [
+        553,
+        311
+      ],
+      "sha256": "d7d55f1f82bcbaf364d292db1fd5a42e19974cc3afb9831e7712b08c6f085007"
+    },
+    {
+      "asset": "assets/projects/satellite-hardware-bench.jpg",
+      "source": "Owner-supplied laboratory photograph",
+      "method": "Metadata removed from website copy; original dimensions and decoded pixels preserved. Original file unchanged.",
+      "size": [
+        360,
+        480
+      ],
+      "sha256": "bc712c0c449b83d9498a5306449f126b323b10d0913248cf7435fdc76a9d1461"
+    },
+    {
+      "asset": "assets/projects/satellite-hardware-detail.jpg",
+      "source": "Owner-supplied laboratory photograph",
+      "method": "Metadata removed from website copy; original dimensions and decoded pixels preserved. Original file unchanged.",
+      "size": [
+        314,
+        548
+      ],
+      "sha256": "ec2599468e8e37e5be689a15129ca9e2bb21fc9e453dc6354e0f7b2c95eb6a5e"
     }
   ]
 }

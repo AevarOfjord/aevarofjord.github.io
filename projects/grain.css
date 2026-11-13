@@ -1,0 +1,65 @@
+/* Grain case study: the shared portfolio type, colour, and figure interactions. */
+.grain-preview-note{max-width:1100px;margin:0 auto 20px;font-size:14px;color:var(--muted)}
+.grain-preview-note strong{font-weight:500;color:var(--ink)}
+.grain-figure{max-width:1040px;margin:0 auto 48px}
+.grain-hero{max-width:1100px}
+.grain-image{display:block;cursor:zoom-in;border:1px solid var(--rule);background:#f3f5f3}
+.grain-image:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+.grain-image img{display:block;width:100%;height:auto}
+.grain-story figcaption strong,.grain-hero figcaption strong{font-weight:500;color:var(--ink)}
+.grain-contents{display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;border-block:1px solid var(--rule);padding-block:12px;font-size:14px}
+.grain-contents>span{margin-right:auto;color:var(--muted)}
+.grain-contents a{padding-block:10px;color:var(--green)}
+.grain-contents a:hover{text-decoration:underline}
+.grain-story{margin-block:32px 64px}
+.grain-story .story-section{max-width:960px;margin-inline:auto;grid-template-columns:230px minmax(0,1fr);padding-block:44px}
+.grain-story .story-section:first-child{border-top:0}
+.grain-workflow{background:#e9eee9;padding:32px;margin:0 0 48px}
+.grain-workflow h3{font-size:30px}
+.grain-workflow ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;padding:0;margin:28px 0 0;list-style:none}
+.grain-workflow li{border-top:1px solid #9cae9f;padding-top:14px}
+.grain-workflow li>span{font-size:12px;color:var(--green)}
+.grain-workflow h4{font-size:17px;font-weight:500;margin:14px 0 8px}
+.grain-workflow p{font-size:14px;line-height:1.65}
+.grain-screen-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-bottom:48px}
+.grain-phone-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;max-width:828px;margin:0 auto 48px}
+.grain-phone-pair .grain-image{max-width:390px;margin-inline:auto;border:0;border-radius:54px;overflow:hidden}
+.grain-development-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-bottom:48px}
+.grain-development-grid>div{border-top:1px solid var(--rule);padding-top:24px}
+.grain-development-grid h3{font-size:28px;margin-bottom:12px}
+.grain-development-grid p{font-size:15px}
+@media(max-width:1100px){.grain-workflow ol{grid-template-columns:repeat(2,minmax(0,1fr))}.grain-screen-pair{grid-template-columns:1fr;max-width:1040px;margin-inline:auto}}
+@media(max-width:760px){
+  .grain-contents{gap:0 20px}
+  .grain-contents>span{flex-basis:100%;margin-block:8px}
+  .grain-story{margin-top:16px}
+  .grain-story .story-section{grid-template-columns:1fr;padding-block:30px}
+  .grain-workflow{padding:24px}
+  .grain-workflow ol,.grain-development-grid{grid-template-columns:1fr;gap:24px}
+  .grain-phone-pair{grid-template-columns:1fr;max-width:390px;gap:32px}
+  .grain-figure,.grain-workflow,.grain-screen-pair,.grain-phone-pair,.grain-development-grid{margin-bottom:32px}
+}
+@media print{
+  .grain-contents,.figure-viewer{display:none!important}
+  .grain-figure,.grain-screen-pair figure,.grain-phone-pair figure{break-inside:avoid}
+}
+
+/* Full-size screenshot viewer. */
+
+.figure-viewer{width:min(1400px,calc(100vw - 48px));height:calc(100dvh - 48px);max-width:none;max-height:none;padding:0;border:1px solid var(--rule);background:var(--paper);color:var(--ink)}
+.figure-viewer[open]{display:flex;flex-direction:column}
+.figure-viewer::backdrop{background:rgba(14,23,18,.78)}
+.figure-viewer-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 22px;border-bottom:1px solid var(--rule)}
+.figure-viewer-toolbar h2{font-family:var(--sans);font-size:16px;font-weight:500;line-height:1.4}
+.figure-viewer-toolbar>div{display:flex;gap:10px}
+.figure-viewer button{border:1px solid var(--rule);padding:10px 14px;background:#fff;min-height:44px;color:var(--ink);font-size:14px;cursor:pointer}
+.figure-viewer button:hover{border-color:var(--green)}
+.figure-viewer button[aria-pressed="true"]{background:var(--green);color:#fff}
+.figure-viewer-stage{min-height:0;flex:1;overflow:auto;background:#fff;overscroll-behavior:contain;padding:24px}
+.figure-viewer-stage:focus-visible{outline:3px solid var(--green);outline-offset:-4px}
+.figure-viewer-stage img{width:100%;height:100%;max-width:100%;object-fit:contain;margin:auto}
+.figure-viewer[data-size="actual"] .figure-viewer-stage img{width:auto;height:auto;max-width:none;max-height:none}
+#figure-viewer-caption{padding:16px 22px;font-size:14px;border-top:1px solid var(--rule);max-height:25dvh;overflow:auto}
+html.figure-viewer-open{overflow:hidden}
+
+@media(max-width:760px){.figure-viewer{width:calc(100vw - 20px);height:calc(100dvh - 20px)}.figure-viewer-toolbar{padding:12px}.figure-viewer-stage{padding:10px}#figure-viewer-caption{padding:12px;font-size:13px}}

@@ -1,0 +1,47 @@
+{
+  "media_type": "Interface previews, not production captures or measured outcomes",
+  "assets": [
+    {
+      "asset": "assets/projects/grain-work-order-desktop.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "e30ee00acf5eb8e7bdd7ad0361d6410e0ece0661d197558eaceccb2637a9956d"
+    },
+    {
+      "asset": "assets/projects/grain-work-order-phone.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "d280faa359a4e65007ddc0fa82a98e6036ea36cc7bfb671be76e951d933e3c4f"
+    },
+    {
+      "asset": "assets/projects/grain-assets.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "4e98b9a7219e7dc64a4e1ff8c61918a524a52571f33387d3dc592d5798f3511c"
+    },
+    {
+      "asset": "assets/projects/grain-plans.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "512b79f222cf0f4c9efc1ac3b0cf0e4233c6a633797110431f6957e6307f2ca3"
+    },
+    {
+      "asset": "assets/projects/grain-calendar.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "08da6118b855a2bda9ccd7610f32506144c9e3e3691c38f53c89a0b3b817a491"
+    },
+    {
+      "asset": "assets/projects/grain-inventory.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "9030efc55c47c8a8c393e83c9bb91e23e1905ef14dc68a7e37d91a7986bfb89c"
+    },
+    {
+      "asset": "assets/projects/grain-requests-phone.png",
+      "source": "Owner-approved Grain interface prototype with fictional demonstration records",
+      "method": "Browser capture of selected desktop or phone view. Prototype navigation controls hidden; fictional supplier label and currency rendered in English; illustrative due-date label normalized. No customer records or application source exported.",
+      "sha256": "996dec5ca222bebda0fd1c685180222bed3490957fd5fcd5a3c5565c13f13dab"
+    }
+  ]
+}

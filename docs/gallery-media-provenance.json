@@ -8,7 +8,7 @@
   },
   {
     "asset": "grain-equipment-preview.png",
-    "source": "Project Folders/Grain - CMMS/docs/design/proposals/ops-expansion/uniform/06-equipment.html",
+    "source": "Owner-approved Grain equipment interface prototype with fictional records",
     "method": "Browser capture of first .dframe at viewport 1440x1000. Original example fixtures; no customer data.",
     "source_sha256": "224c1fbd23c727c48a06e111463d81a11bfe97f0662a1545da2fbf4a71bf83d3",
     "asset_sha256": "b9a0fb3ee6cddb664e416825c13e87a0a110d9f3c5f1859341dc8df6848d0dc9"
@@ -26,5 +26,10 @@
     "method": "Copied unchanged.",
     "source_sha256": "db9b2589114501c84729dc24b520b81f981e01c0951176142e425e6b3e3cd96f",
     "asset_sha256": "db9b2589114501c84729dc24b520b81f981e01c0951176142e425e6b3e3cd96f"
+  },
+  {
+    "asset": "grain-work-order-desktop.png",
+    "source": "Owner-approved Grain maintenance interface prototype with fictional records",
+    "method": "Browser capture; see grain-media-provenance.json. Used for the homepage project card."
   }
 ]

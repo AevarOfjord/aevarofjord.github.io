@@ -4,16 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Grain / CMMS — Aevar Oefjoerd</title>
-  <meta name="description" content="Grain brings maintenance, cleaning, security, IT, and construction workflows into a shared facility-management application.">
+  <meta name="description" content="Grain: facility-management software connecting maintenance requests, work orders, assets, recurring plans, and inventory. Explore the product design through desktop and phone interface previews.">
   <meta name="theme-color" content="#f6f6f4">
   <link rel="canonical" href="https://aevarofjord.github.io/projects/grain.html">
   <meta property="og:title" content="Grain / CMMS — Aevar Oefjoerd">
-  <meta property="og:description" content="Grain brings maintenance, cleaning, security, IT, and construction workflows into a shared facility-management application.">
+  <meta property="og:description" content="From a reported fault to a completed job: facility-management workflows, product design, and desktop and phone interface previews.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aevarofjord.github.io/projects/grain.html">
-  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/grain-equipment-preview.png">
+  <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/grain-work-order-desktop.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="grain.css">
+  <script src="grain.js" defer></script>
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
@@ -26,16 +28,148 @@
       <a class="back-link" href="../index.html#projects">← All projects</a>
       <p class="eyebrow">08 / Software · Facilities</p>
       <h1>Grain / CMMS</h1>
-      <p class="case-lede">Grain brings maintenance, cleaning, security, IT, and construction workflows into a shared facility-management application.</p>
-      <dl class="case-meta"><div><dt>Scope</dt><dd>Product, web application &amp; backend</dd></div><div><dt>Status</dt><dd>Active software project</dd></div><div><dt>Tools</dt><dd>React · TypeScript · .NET · PostgreSQL</dd></div></dl>
+      <p class="case-lede">Facility-management software that connects a reported problem to the work, equipment, and people needed to resolve it. Grain brings maintenance records and daily operations into a shared workspace, on a computer or a phone.</p>
+      <dl class="case-meta">
+        <div><dt>My role</dt><dd>Product direction, workflow design<br>&amp; development oversight</dd></div>
+        <div><dt>Focus</dt><dd>Maintenance operations<br>&amp; usable software</dd></div>
+        <div><dt>Status</dt><dd>Active product development</dd></div>
+        <div><dt>Tools</dt><dd>React · TypeScript<br>.NET · PostgreSQL</dd></div>
+      </dl>
     </div>
-    <div class="case-body">
-      <section class="story-section"><h2>The product</h2><div><p>Buildings and equipment generate work across multiple teams. Grain connects that work to shared assets and locations, while allowing each company to define its departments and access rules.</p></div></section>
-      <section class="story-section"><h2>Application design</h2><div><p>A React web application is backed by a .NET API and PostgreSQL. The system separates domain rules from infrastructure and enforces permissions on the server.</p><ul><li>Work-order and asset-centered facility workflows.</li><li>Company-defined departments and role-based access.</li><li>Backend, frontend, and browser-journey test workflows.</li><li>Development and deployment tooling alongside the application.</li></ul></div></section>
-      <section class="story-section"><h2>Engineering focus</h2><div><p>The project connects practical facility operations with software architecture: organizing work consistently, preserving company data boundaries, and making complex workflows usable by different teams.</p></div></section>
+
+    <p class="grain-preview-note"><strong>Interface previews · Fictional example data.</strong> Screenshots show selected design prototypes. Names, facilities, dates, quantities, and history are illustrative.</p>
+    <figure class="grain-figure grain-hero">
+      <a class="grain-image" href="../assets/projects/grain-work-order-desktop.png"><img src="../assets/projects/grain-work-order-desktop.png" width="1440" height="1000" alt="Grain desktop work-order preview with a job list, a leaking-valve repair, its checklist, assigned person, linked asset, parts, and time entries" fetchpriority="high"></a>
+      <figcaption><strong>The maintenance workspace.</strong> A work list remains visible beside the selected job. The repair description, checklist, asset, assignment, and parts share one view. Select any screenshot to inspect it at full size.</figcaption>
+    </figure>
+
+    <nav class="grain-contents" aria-label="On this page">
+      <span class="eyebrow">In this project</span>
+      <a href="#overview">Overview</a><a href="#work-orders">Work orders</a><a href="#assets">Assets</a><a href="#planning">Planning</a><a href="#inventory">Inventory</a><a href="#mobile">Phone workflow</a><a href="#development">Development</a>
+    </nav>
+
+    <div class="grain-story">
+      <section id="overview" class="story-section">
+        <h2>The problem behind the product</h2>
+        <div>
+          <p>Looking after a building means managing both unexpected faults and work that must happen regularly. A report needs a location, someone needs to take responsibility, and the person doing the job needs the right equipment information. When those details live in separate messages and lists, a simple repair can involve a lot of searching.</p>
+          <p>Grain is a computerized maintenance management system (CMMS) built around those connections. Requests, work orders, assets, plans, and stock records refer to the same facility context. A technician can move from a job to its equipment record; a manager can see what needs attention and who is handling it.</p>
+          <p>The wider product supports teams working across maintenance, cleaning, security, IT, and construction. This case study follows the maintenance workflow, from a reported fault through to the record left behind after the work is finished.</p>
+        </div>
+      </section>
+
+      <div class="grain-workflow" aria-labelledby="workflow-title">
+        <h3 id="workflow-title">From report to maintenance record</h3>
+        <ol>
+          <li><span>01</span><h4>Report</h4><p>Describe the problem and identify the affected equipment or location.</p></li>
+          <li><span>02</span><h4>Review &amp; assign</h4><p>Turn an accepted request into a work order with a responsible person or team.</p></li>
+          <li><span>03</span><h4>Carry out the work</h4><p>Follow the checklist and record photos, time, and parts as the job progresses.</p></li>
+          <li><span>04</span><h4>Complete &amp; retain</h4><p>Finish the required steps and keep the work connected to its asset history.</p></li>
+        </ol>
+      </div>
+
+      <section id="work-orders" class="story-section">
+        <h2>A work order with the context to act</h2>
+        <div>
+          <p>The work-order view is the centre of the maintenance workflow. Each job brings together its description, urgency, status, due date, and assignment. People can focus on their own work or look across the team, with a selected record open alongside the list on a larger screen.</p>
+          <p>In the example above, a leaking valve is already in progress. The technician can see what was reported, which valve is affected, the remaining checklist steps, and the replacement part used. That puts the immediate task and its supporting information in the same place.</p>
+          <p>Completion also has a record: checklist answers, photos, time entries, and parts used. Required information is checked before a job can be marked done. This makes the finished work useful to the next person who needs to understand what happened to that equipment.</p>
+        </div>
+      </section>
+
+      <section id="assets" class="story-section">
+        <h2>Equipment in its physical context</h2>
+        <div>
+          <p>An asset record is more useful when it answers both “What is this?” and “Where is it?” Grain organizes sites, buildings, spaces, and equipment in a shared tree. A named piece of equipment has an asset tag and a place within that structure, so similar items in different rooms can be distinguished.</p>
+          <p>The asset view brings together equipment details and related maintenance information. Open work and recurring plans remain connected to the item they concern. QR labels provide a way to open the correct equipment context while standing beside it, including when reporting a problem.</p>
+          <p>The filter example below shows how the location tree, equipment details, readings, and related jobs can sit together. The design goal is continuity: moving between an asset and its work should preserve the context of the task.</p>
+        </div>
+      </section>
+      <figure class="grain-figure">
+        <a class="grain-image" href="../assets/projects/grain-assets.png"><img src="../assets/projects/grain-assets.png" width="1192" height="936" alt="Asset interface preview showing a location tree and pool-filter record, with equipment details, readings, QR label, open work, and recurring plans" loading="lazy"></a>
+        <figcaption><strong>One equipment record, several useful connections.</strong> The selected filter sits within the building tree, with related work and service plans alongside its identifying details.</figcaption>
+      </figure>
+
+      <section id="planning" class="story-section">
+        <h2>Making recurring work visible</h2>
+        <div>
+          <p>Preventive maintenance starts before a fault is reported. Grain’s plans connect a repeating task to the equipment it serves and the work instructions needed to carry it out. The plan view makes the schedule, assignment, and contents of the resulting job visible together.</p>
+          <p>That distinction matters: the plan describes the recurring requirement, while each work order records a particular instance of the work. A weekly check can remain consistent without losing the individual history of when it was performed.</p>
+          <p>The calendar gives the same work a time-based view. Switching between personal and team work helps people review upcoming due dates, while the list remains useful for inspecting individual jobs. The screenshots show example schedules and completion history used during interface development.</p>
+        </div>
+      </section>
+      <div class="grain-screen-pair">
+        <figure>
+          <a class="grain-image" href="../assets/projects/grain-plans.png"><img src="../assets/projects/grain-plans.png" width="1192" height="936" alt="Recurring-plan preview showing a weekly equipment check, its next due date, assignment, checklist, and related asset" loading="lazy"></a>
+          <figcaption><strong>The recurring requirement.</strong> A plan brings the schedule and job contents together. The displayed completion history is fictional example data.</figcaption>
+        </figure>
+        <figure>
+          <a class="grain-image" href="../assets/projects/grain-calendar.png"><img src="../assets/projects/grain-calendar.png" width="1192" height="936" alt="Monthly maintenance calendar preview with dated work orders and controls for personal or team work" loading="lazy"></a>
+          <figcaption><strong>The upcoming workload.</strong> The calendar places work orders on their due dates and provides a month or week view.</figcaption>
+        </figure>
+      </div>
+
+      <section id="inventory" class="story-section">
+        <h2>Connecting parts to the job</h2>
+        <div>
+          <p>A work order may be clear but still wait on a missing part. Grain’s inventory view makes stock visible by item and storage location. A technician can check availability, see low-stock items, and record material movements rather than relying on a quantity with no explanation behind it.</p>
+          <p>Receiving, moving, and counting stock are separate actions. Parts used on a work order connect the material record to the maintenance task. This supports both the immediate question—where is the part?—and the later question of which work consumed it.</p>
+          <p>The valve-seal example shows stock spread across stores, minimum levels, and related work orders. The movement history gives the quantity changes context, including who recorded them and why.</p>
+        </div>
+      </section>
+      <figure class="grain-figure">
+        <a class="grain-image" href="../assets/projects/grain-inventory.png"><img src="../assets/projects/grain-inventory.png" width="1192" height="936" alt="Inventory preview showing a valve seal with low stock, quantities in three stores, receive move and count actions, related work orders, and movement history" loading="lazy"></a>
+        <figcaption><strong>Stock with a maintenance connection.</strong> Parts are shown by storage location, with low-stock indicators and links to the jobs that use them.</figcaption>
+      </figure>
+
+      <section id="mobile" class="story-section">
+        <h2>Working away from the desk</h2>
+        <div>
+          <p>Maintenance work happens beside equipment, in corridors, and across a site. The phone layout therefore concentrates on the current record and the actions needed to move it forward. It uses the same browser-based product as the desktop view.</p>
+          <p>The request example shows a reported light failure that has been accepted into a work order. Keeping the original report connected to the resulting job makes it possible to follow what happened after the problem was raised.</p>
+          <p>The work-order example shows a technician’s view of the valve repair. The description and checklist remain prominent, with time recording and completion actions within reach. Designing both layouts together lets the desktop support reviewing several records while the phone supports carrying out one task at a time.</p>
+        </div>
+      </section>
+      <div class="grain-phone-pair">
+        <figure>
+          <a class="grain-image" href="../assets/projects/grain-requests-phone.png"><img src="../assets/projects/grain-requests-phone.png" width="390" height="844" alt="Phone interface preview of an accepted lighting-fault request, its asset and location, and a link to the resulting work order" loading="lazy"></a>
+          <figcaption><strong>Follow a reported problem.</strong> The request keeps the original description, equipment context, and connection to the work order.</figcaption>
+        </figure>
+        <figure>
+          <a class="grain-image" href="../assets/projects/grain-work-order-phone.png"><img src="../assets/projects/grain-work-order-phone.png" width="390" height="844" alt="Phone interface preview of an in-progress valve repair with description, checklist progress, timer, and add-time and mark-done actions" loading="lazy"></a>
+          <figcaption><strong>Carry out the work.</strong> A focused phone layout keeps the job details and completion actions together.</figcaption>
+        </figure>
+      </div>
+
+      <section id="development" class="story-section">
+        <h2>From operational needs to software</h2>
+        <div>
+          <p>My role in Grain centres on product direction, workflow design, and development oversight. I define how everyday facility tasks should work, review the interface, and guide implementation against those decisions. The project applies my engineering background to the practical details of organizing maintenance.</p>
+          <p>The design work uses connected desktop and phone prototypes to review complete journeys. A work order links to an asset, a plan produces a job, and a stock movement belongs to a particular part. Walking through those connections helps reveal confusing transitions that an isolated screen would miss.</p>
+          <p>The application combines a React and TypeScript interface with .NET and PostgreSQL. Its development includes automated checks at the interface, application, and browser-workflow levels, alongside review of the product’s behaviour.</p>
+        </div>
+      </section>
+      <div class="grain-development-grid">
+        <div><h3>Workflow consistency</h3><p>Review how a person moves from a list to a record and onward to related work. Keep names, statuses, and primary actions consistent across those transitions.</p></div>
+        <div><h3>Validation and feedback</h3><p>Tests cover cases such as invalid stock quantities, receiving and moving parts, and filtered lists. Clear feedback matters when an action cannot be completed.</p></div>
+        <div><h3>Desktop and phone review</h3><p>Browser checks cover navigation and scrolling through records on small screens. Layout review keeps content and essential actions accessible as the viewport changes.</p></div>
+      </div>
+      <section class="story-section">
+        <h2>What the project demonstrates</h2>
+        <div>
+          <p>Grain brings together product definition, interaction design, and software delivery around a practical engineering problem. The work involves deciding which information a person needs at each step and keeping the connections between jobs, equipment, and materials understandable.</p>
+          <p>The product remains under active development. These selected workflows show the direction of the work: a maintenance application that supports both planning at a desk and recording what happens out on site.</p>
+          <p><a class="text-link" href="mailto:ofjord99@gmail.com">Discuss this project <span aria-hidden="true">↗</span></a></p>
+        </div>
+      </section>
     </div>
     <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>iOS Organizer</h2></div><a class="text-link" href="ios-organizer.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> iOS Organizer</span></a></nav>
   </main>
+  <dialog class="figure-viewer" aria-labelledby="figure-viewer-title" aria-describedby="figure-viewer-caption" data-size="fit">
+    <div class="figure-viewer-toolbar"><h2 id="figure-viewer-title">Interface preview</h2><div><button type="button" data-figure-size aria-pressed="false">Actual size</button><button type="button" data-figure-close>Close <span aria-hidden="true">×</span></button></div></div>
+    <div class="figure-viewer-stage" tabindex="0" aria-label="Screenshot; scroll to inspect at actual size"><img alt=""></div>
+    <p id="figure-viewer-caption"></p>
+  </dialog>
   <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
 </body>
 </html>

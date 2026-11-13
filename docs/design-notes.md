@@ -59,4 +59,8 @@ The pendulum thumbnail now presents the cart and articulated links using two sav
 
 Robotic Hand was subsequently excluded at the owner's request. The gallery now contains eleven projects in total: one featured project and ten additional cards. Its old page is a noindex redirect to the gallery.
 
-Planar CubeSat now presents the complete hardware-to-results case study with 18 original figures, separate mechanical, calibration, electronics, digital-twin, control, and experimental sections, and a keyboard-accessible fit/actual-size figure viewer. Wide analysis plots retain their full aspect ratio. Source figures and captions remain available without JavaScript.
+Planar CubeSat now presents the complete hardware-to-results case study with 22 figures, including five owner-supplied hardware and laboratory photographs, separate mechanical, calibration, electronics, digital-twin, control, and experimental sections, and a keyboard-accessible fit/actual-size figure viewer. Wide analysis plots retain their full aspect ratio. Source figures and captions remain available without JavaScript.
+
+## Grain case study
+
+Expanded the page around selected maintenance workflows: work orders, assets, recurring plans, calendar, inventory, and phone use. Seven original interface-prototype captures use fictional records and are labelled as previews. Reuse the portfolio typography, responsive story sections, and accessible fit/actual-size figure viewer. Present product direction, workflow design, and development oversight, with user-facing capabilities and a high-level stack. No private implementation or application source is included. Browser-plugin tools were unavailable; local Playwright checks cover responsive layout, navigation, loaded media, and figure interactions.
