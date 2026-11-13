@@ -3,39 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Photomerge — Aevar Oefjoerd</title>
+  <title>Photomerge — Ævar Öfjörð</title>
   <meta name="description" content="Photomerge turns sequential overlapping photographs into a high-resolution panorama through a local desktop workflow.">
-  <meta name="theme-color" content="#f6f6f4">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://aevarofjord.github.io/projects/photomerge.html">
-  <meta property="og:title" content="Photomerge — Aevar Oefjoerd">
+  <meta property="og:title" content="Photomerge — Ævar Öfjörð">
   <meta property="og:description" content="Photomerge turns sequential overlapping photographs into a high-resolution panorama through a local desktop workflow.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://aevarofjord.github.io/projects/photomerge.html">
   <meta property="og:image" content="https://aevarofjord.github.io/assets/projects/photomerge-workspace.png">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../ledger.css">
 </head>
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="../index.html" aria-label="Aevar Oefjoerd, home"><span class="monogram" aria-hidden="true">Æ / Ö</span><span translate="no">Aevar Oefjoerd</span></a>
-    <nav aria-label="Main navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a><a class="button button-outline" href="../Aevar-Oefjoerd-Resume.pdf">Résumé <span aria-hidden="true">↗</span></a></nav>
-  </header>
-  <main id="main" class="wrap">
+<div class="shell">
+<aside class="spine">
+<a class="name" href="../index.html" translate="no">Ævar Öfjörð</a>
+<p class="where">Plainfield, Illinois</p>
+<nav aria-label="Chapters">
+<a href="../index.html" aria-current="page">Portfolio</a>
+<a href="../experience.html">Experience</a>
+<a href="../education.html">Education</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+</nav>
+<p class="spine-foot"><a href="../Aevar-Oefjoerd-Resume.pdf">Résumé ↗</a></p>
+</aside>
+<div class="sheet">
+<main id="main" class="wrap">
     <div class="case-intro">
-      <a class="back-link" href="../index.html#projects">← All projects</a>
+      <a class="back-link" href="../index.html">← Portfolio</a>
       <p class="eyebrow">11 / Software · Computer vision</p>
       <h1>Photomerge</h1>
-      <p class="case-lede">Photomerge turns sequential overlapping photographs into a high-resolution panorama through a local desktop workflow.</p>
+      <p class="case-lede">Photomerge stitches a run of overlapping photos on the desktop, then lets me check the control points before export. The Mac app is SwiftUI. The Windows side is Python and Qt. A separate screen edits a local copy of a DJI waypoint file. It does not connect to an aircraft.</p>
       <dl class="case-meta"><div><dt>Scope</dt><dd>Image processing &amp; desktop interfaces</dd></div><div><dt>Status</dt><dd>Desktop MVP</dd></div><div><dt>Tools</dt><dd>Python · OpenCV · SwiftUI · Qt</dd></div></dl>
     </div>
     <div class="case-body">
-      <section class="story-section"><h2>The workflow</h2><div><p>Import photos, create a panorama, review the result, and export. The application keeps the photo set, preview, and settings together, with progress and cancellation support for processing operations.</p></div></section>
-      <section class="story-section"><h2>Image review and editing</h2><div><p>The project combines a local stitching engine with control-point tools, overlays, and full-resolution export. The Mac interface uses SwiftUI; a Python and Qt interface supports the Windows workflow.</p><ul><li>Analyze overlap and align successive photographs.</li><li>Inspect the panorama and adjust control points.</li><li>Review processing activity and export the resulting image.</li></ul></div></section>
-      <section class="story-section"><h2>Mission planning tools</h2><div><p>A companion flight-planning workflow edits a local copy of an existing DJI waypoint mission, with grid planning and backed-up saves. It prepares mission files; it does not directly connect to or control an aircraft.</p></div></section>
+      <section class="story-section"><h2>The workflow</h2><div><p>Import the photos, stitch them, look at the result, export. The photo set, the preview, and the settings stay in one window. Long stitches can be cancelled.</p></div></section>
+      <section class="story-section"><h2>Checking the stitch</h2><div><p>Alignment runs locally. I can open the control points, see the overlap, and export at full resolution. SwiftUI on the Mac. Python and Qt on Windows.</p><ul><li>Find the overlap and align the frames.</li><li>Move control points if the stitch is wrong.</li><li>Export the panorama.</li></ul></div></section>
+      <section class="story-section"><h2>Waypoint files</h2><div><p>A second screen edits a local copy of a DJI waypoint mission, including a simple grid, and saves a backup first. It writes a mission file. It does not talk to the aircraft.</p></div></section>
     </div>
     <nav class="next-project" aria-label="More projects"><div><p class="eyebrow">Next project</p><h2>Lava Rock Crushing System</h2></div><a class="text-link" href="lava-rock-processing.html">Explore <span aria-hidden="true">→</span><span class="sr-only"> Lava Rock Crushing System</span></a></nav>
   </main>
-  <footer class="site-footer wrap"><p translate="no">Aevar Oefjoerd</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
+  <footer class="site-footer wrap"><p translate="no">Ævar Öfjörð</p><nav aria-label="Contact links"><a class="text-link" href="https://github.com/AevarOfjord">GitHub ↗</a><a class="text-link" href="mailto:ofjord99@gmail.com">Get in touch ↗</a></nav><a class="text-link" href="#top">Back to top ↑</a></footer>
+</div></div>
 </body>
 </html>
